@@ -3,7 +3,6 @@ import { fileURLToPath, URL } from 'node:url'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import fs from 'fs'
 
 export default defineConfig({
   plugins: [vue()],
@@ -46,22 +45,6 @@ export default defineConfig({
           return assetInfo.name
         }
       },
-/*       plugins: [
-        {
-          name: 'copy',
-          writeBundle() {
-            const src = resolve(__dirname, 'package.json')
-            const dest = resolve(__dirname, 'dist', 'package.json')
-            fs.copyFile(src, dest, (err) => {
-              if (err) {
-                console.error('Error al copiar archivos:', err)
-              } else {
-                console.log('Archivos estáticos copiado a dist')
-              }
-            })
-          }
-        }
-      ] */
     },
     minify: true,
     outDir: 'dist',
