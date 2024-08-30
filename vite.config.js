@@ -46,7 +46,7 @@ export default defineConfig({
           return assetInfo.name
         }
       },
-      plugins: [
+/*       plugins: [
         {
           name: 'copy',
           writeBundle() {
@@ -61,7 +61,7 @@ export default defineConfig({
             })
           }
         }
-      ]
+      ] */
     },
     minify: true,
     outDir: 'dist',

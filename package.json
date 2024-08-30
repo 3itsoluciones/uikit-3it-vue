@@ -8,12 +8,17 @@
   "files": [
     "dist"
   ],
-  "main": "./vue-uikit-3it.umd.cjs",
-  "module": "./vue-uikit-3it.js",
+  "main": "./dist/vue-uikit-3it.umd.cjs",
+  "module": "./dist/vue-uikit-3it.js",
   "exports": {
     ".": {
-      "import": "./vue-uikit-3it.js",
-      "require": "./vue-uikit-3it.umd.cjs"
+      "import": "./dist/vue-uikit-3it.js",
+      "require": "./dist/vue-uikit-3it.umd.cjs"
+    },
+    "./dist/vue-uikit-3it.css": {
+      "import": "./dist/vue-uikit-3it.css",
+      "require": "./dist/vue-uikit-3it.css",
+      "style": "./dist/vue-uikit-3it.css"
     }
   },
   "scripts": {
