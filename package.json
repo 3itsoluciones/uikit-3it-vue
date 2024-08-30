@@ -14,11 +14,6 @@
     ".": {
       "import": "./dist/vue-uikit-3it.js",
       "require": "./dist/vue-uikit-3it.umd.cjs"
-    },
-    "./dist/vue-uikit-3it.css": {
-      "import": "./dist/vue-uikit-3it.css",
-      "require": "./dist/vue-uikit-3it.css",
-      "style": "./dist/vue-uikit-3it.css"
     }
   },
   "scripts": {
