@@ -64,6 +64,6 @@ export default defineConfig({
       ]
     },
     minify: true,
-    outDir: 'dist/dist',
+    outDir: 'dist',
   },
 })
