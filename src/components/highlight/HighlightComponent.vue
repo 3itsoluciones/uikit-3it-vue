@@ -36,9 +36,3 @@ highlightCode()
   <div v-html="highlightedCode"></div>
 </template>
 
-<style lang="scss">
-.shiki {
-  margin-bottom: 0;
-  @include border-round(3px);
-}
-</style>

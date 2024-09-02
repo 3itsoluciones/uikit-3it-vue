@@ -13,9 +13,3 @@ const props = defineProps({
     <img :style="`width:${props.size}px`" src="/img/loading.svg" />
   </div>
 </template>
-
-<style lang="scss">
-.eit-loading {
-  @extend .eit-flex--center;
-}
-</style>

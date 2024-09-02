@@ -13,7 +13,8 @@
   "exports": {
     ".": {
       "import": "./dist/uikit-3it-vue.js",
-      "require": "./dist/uikit-3it-vue.umd.cjs"
+      "require": "./dist/uikit-3it-vue.umd.cjs",
+      "types": "./dist/uikit-3it-vue.d.ts"
     },
     "./style.css": "./dist/uikit-3it-vue.css",
     "./dist/*": "./dist/*"
