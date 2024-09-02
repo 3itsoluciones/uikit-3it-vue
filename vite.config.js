@@ -13,14 +13,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-/*   css: {
+  css: {
     preprocessorOptions: {
       scss: {
         api: 'modern',
         additionalData: '@import "@/assets/scss/main.scss";',
       }
     }
-  }, */
+  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.js'),

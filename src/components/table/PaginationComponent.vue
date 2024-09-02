@@ -69,3 +69,18 @@ watchEffect(() => {
     </button>
   </div>
 </template>
+
+<style lang="scss">
+.eit-paginator {
+  @extend .eit-flex--end;
+
+  &__input {
+    width: 60px;
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+</style>

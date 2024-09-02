@@ -8,16 +8,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/uikit-3it-vue.umd.cjs",
   "module": "./dist/uikit-3it-vue.js",
   "exports": {
     ".": {
-      "import": "./dist/uikit-3it-vue.js",
-      "require": "./dist/uikit-3it-vue.umd.cjs",
-      "types": "./dist/uikit-3it-vue.d.ts"
+      "import": "./dist/uikit-3it-vue.js"
     },
-    "./style.css": "./dist/uikit-3it-vue.css",
-    "./dist/*": "./dist/*"
+    "./style.css": "./dist/uikit-3it-vue.css"
   },
   "scripts": {
     "build": "vite build",
