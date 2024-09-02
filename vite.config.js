@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { relative } from 'node:path'
 
 export default defineConfig({
   plugins: [vue()],
@@ -28,15 +29,20 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
-        'vue', 
+        'vue',
         'shiki', 
-        'vue-router'
+        'vue-router',
+        'dayjs',
+        'dayjs/plugin/relativeTime',
+        'dayjs/locale/es',
       ],
       output: {
         globals: {
           vue: 'Vue',
           shiki: 'Shiki',
-          'vue-router': 'VueRouter'
+          'vue-router': 'VueRouter',
+          dayjs: 'dayjs',
+          'dayjs/plugin/relativeTime': 'dayjs_plugin_relativeTime',
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') {
