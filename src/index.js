@@ -47,6 +47,7 @@ export default {
     app.component('InputComponent', InputComponent)
     app.component('SelectComponent', SelectComponent)
     app.component('TextareaResizeComponent', TextareaResizeComponent)
+    
     //Loading
     app.component('LoadingComponent', LoadingComponent)
     app.component('SkeletonComponent', SkeletonComponent)

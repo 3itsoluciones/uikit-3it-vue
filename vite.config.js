@@ -22,8 +22,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.js'),
-      name: 'vue-uikit-3it',
-      fileName: 'vue-uikit-3it',
+      name: 'uikit-3it-vue',
+      fileName: 'uikit-3it-vue',
       formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
@@ -40,7 +40,7 @@ export default defineConfig({
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') {
-            return 'vue-uikit-3it.css'
+            return 'uikit-3it-vue.css'
           }
           return assetInfo.name
         }
