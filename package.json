@@ -15,7 +15,7 @@
       "import": "./dist/uikit-3it-vue.js",
       "require": "./dist/uikit-3it-vue.umd.cjs"
     },
-    "./dist/vue-select.css": {
+    "./dist/uikit-3it-vue.css": {
       "import": "./dist/uikit-3it-vue.css",
       "require": "./dist/uikit-3it-vue.css",
       "style": "./dist/uikit-3it-vue.css"
