@@ -13,7 +13,10 @@
     ".": {
       "import": "./dist/uikit-3it-vue.js"
     },
-    "./style.css": "./dist/uikit-3it-vue.css"
+    "./dist/*.css": {
+      "import": "./dist/*.css",
+      "require": "./dist/*.css"
+    }
   },
   "scripts": {
     "build": "vite build",
