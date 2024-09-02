@@ -13,13 +13,9 @@
   "exports": {
     ".": {
       "import": "./dist/uikit-3it-vue.js",
-      "require": "./dist/uikit-3it-vue.umd.cjs"
-    },
-    "./dist/uikit-3it-vue.css": {
-      "import": "./dist/uikit-3it-vue.css",
-      "require": "./dist/uikit-3it-vue.css",
+      "require": "./dist/uikit-3it-vue.umd.cjs",
       "style": "./dist/uikit-3it-vue.css"
-  }
+    }
   },
   "scripts": {
     "build": "vite build",
