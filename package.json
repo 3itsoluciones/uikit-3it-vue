@@ -8,12 +8,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-uikit-3it.umd.cjs",
-  "module": "./dist/vue-uikit-3it.js",
+  "main": "./dist/uikit-3it-vue.umd.cjs",
+  "module": "./dist/uikit-3it-vue.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-uikit-3it.js",
-      "require": "./dist/vue-uikit-3it.umd.cjs"
+      "import": "./dist/uikit-3it-vue.js",
+      "require": "./dist/uikit-3it-vue.umd.cjs"
     }
   },
   "scripts": {
