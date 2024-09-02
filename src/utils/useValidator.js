@@ -1,10 +1,10 @@
 export default function useValidator() {
-  
   //Default
   function validateDefault(value) {
     if (value === null || value === undefined) return false
     if (typeof value === 'string' && value.trim() === '') return false
-    if (typeof value === 'object' && Object.keys(value).length === 0) return false
+    if (typeof value === 'object' && Object.keys(value).length === 0)
+      return false
     if (Array.isArray(value) && value.length === 0) return false
     return true
   }
@@ -17,8 +17,8 @@ export default function useValidator() {
 
   //RUT
   function validateRut(rut) {
-    if(rut.length >= 11 && rut.length <= 12 && /[.-]/.test(rut)) return true
-    if(rut.length < 11) return false
+    if (rut.length >= 11 && rut.length <= 12 && /[.-]/.test(rut)) return true
+    if (rut.length < 11) return false
   }
 
   //Password
@@ -28,7 +28,13 @@ export default function useValidator() {
     const hasLowerCase = /[a-z]/.test(value)
     const hasNumber = /[0-9]/.test(value)
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value)
-    return hasMinimumLength && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar
+    return (
+      hasMinimumLength &&
+      hasUpperCase &&
+      hasLowerCase &&
+      hasNumber &&
+      hasSpecialChar
+    )
   }
 
   function validatePhone(phone) {
@@ -36,5 +42,11 @@ export default function useValidator() {
     return phoneParams.test(phone)
   }
 
-  return { validateDefault, validateEmail, validateRut, validatePassword, validatePhone }
+  return {
+    validateDefault,
+    validateEmail,
+    validateRut,
+    validatePassword,
+    validatePhone
+  }
 }

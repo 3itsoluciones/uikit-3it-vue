@@ -1,28 +1,26 @@
 <script setup>
-
-  const props = defineProps({
-    percentage: {
-      type: Number,
-      default: 50
-    },
-    type: {
-      type: String,
-      default: 'primary'
-    },
-	})
-
+const props = defineProps({
+  percentage: {
+    type: Number,
+    default: 50
+  },
+  type: {
+    type: String,
+    default: 'primary'
+  }
+})
 </script>
 
 <template>
   <div class="eit-progress eit-progress--30">
-    <div 
+    <div
       class="eit-progress__bar"
       :class="`eit-progress__bar--${props.type}`"
       :style="`width: ${props.percentage}%`"
     >
       {{ props.percentage }}%
     </div>
-    <div 
+    <div
       class="eit-progress__bar eit-progress__bar--transparent"
       :style="`width: ${100 - props.percentage}%`"
     >
@@ -32,7 +30,6 @@
 </template>
 
 <style lang="scss">
-
 .eit-progress {
   display: flex;
   @extend .eit-box-shadow--inset;
@@ -47,7 +44,7 @@
     justify-content: center;
     text-align: center;
     @extend .eit-border--round-x3;
-		@include transition('width 0.2s ease-in');
+    @include transition('width 0.2s ease-in');
 
     &--transparent {
       background-color: transparent;
@@ -83,5 +80,4 @@
     }
   }
 }
-
 </style>

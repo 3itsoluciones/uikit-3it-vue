@@ -11,5 +11,5 @@ export {
   useKeypress,
   useTable,
   useFormat,
-  useTooltip,
+  useTooltip
 }

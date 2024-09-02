@@ -37,11 +37,11 @@ export {
   DialogComponent,
   PropsComponent,
   ProgressBarComponent,
-  
-  //Message 
+
+  //Message
   AlertComponent,
   ToastComponent,
-  
+
   //Form
   InputComponent,
   SelectComponent,

@@ -6,7 +6,6 @@ dayjs.extend(relativeTime)
 dayjs.locale('es')
 
 export default function useFormat() {
-
   //Date
   function formatDate(value) {
     const date = dayjs(value).format('DD/MM/YYYY')
@@ -32,4 +31,3 @@ export default function useFormat() {
 
   return { formatDate, formatDateAgo, formatRut, formatCapitalize }
 }
-

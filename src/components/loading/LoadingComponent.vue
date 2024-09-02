@@ -6,22 +6,16 @@ const props = defineProps({
     default: '100'
   }
 })
-
 </script>
 
 <template>
   <div class="p-3 eit-loading">
-    <img 
-      :style="`width:${props.size}px`" 
-      src="/img/loading.svg"
-    >
+    <img :style="`width:${props.size}px`" src="/img/loading.svg" />
   </div>
 </template>
 
 <style lang="scss">
-
-  .eit-loading {
-    @extend .eit-flex--center;
-  }
-
+.eit-loading {
+  @extend .eit-flex--center;
+}
 </style>

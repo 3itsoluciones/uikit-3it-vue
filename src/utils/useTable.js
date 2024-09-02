@@ -1,5 +1,4 @@
 export default function useTable() {
-
   //Sort Table
   function sortTable(table) {
     const { sort, data } = table
@@ -15,7 +14,7 @@ export default function useTable() {
         bValue = bValue.name
       }
 
-      if (aValue === bValue) return 0;
+      if (aValue === bValue) return 0
       return (aValue > bValue ? 1 : -1) * (asc ? 1 : -1)
     })
     return data

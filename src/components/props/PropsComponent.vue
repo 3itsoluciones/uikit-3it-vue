@@ -1,22 +1,22 @@
 <script setup>
+//Components
+import BadgeComponent from '@/components/badge/BadgeComponent.vue'
 
-  //Components
-	import BadgeComponent from '@/components/badge/BadgeComponent.vue'
-
-	//Props
-	const props = defineProps({
-		data: {
-			type: Array,
-			default: '[]'
-		},
-	})
-
+//Props
+const props = defineProps({
+  data: {
+    type: Array,
+    default: () => []
+  }
+})
 </script>
 
 <template>
   <div class="row">
     <div class="col">
-      <h2 class="eit-font__size--x4 eit-color--text eit-font__weight--300 eit-border--bottom eit-border--color mb-3">
+      <h2
+        class="eit-font__size--x4 eit-color--text eit-font__weight--300 eit-border--bottom eit-border--color mb-3"
+      >
         <strong class="eit-font__weight--900">Props</strong>
       </h2>
 
@@ -30,10 +30,7 @@
             </tr>
           </thead>
           <tbody>
-            <template 
-              v-for="item in data"
-              :key="item.name"
-            >
+            <template v-for="item in props.data" :key="item.name">
               <tr>
                 <td>
                   <BadgeComponent

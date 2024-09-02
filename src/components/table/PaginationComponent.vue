@@ -4,8 +4,8 @@ import { ref, watch, watchEffect } from 'vue'
 const props = defineProps({
   data: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 })
 
 //Emits
@@ -17,7 +17,7 @@ const input = ref(props.data.currentPage)
 const nextPage = () => input.value++
 const prevPage = () => input.value--
 const handleChangePage = () => {
-  if(input.value <= 0) input.value = 1
+  if (input.value <= 0) input.value = 1
   if (input.value > props.data.finalPage) input.value = props.data.finalPage
 }
 const handleSelectInput = (event) => {
@@ -26,26 +26,26 @@ const handleSelectInput = (event) => {
 
 //Watch
 watch(input, () => {
-  if (input.value > 0 && input.value <= props.data.finalPage) emit("updatePaginator", input.value)
+  if (input.value > 0 && input.value <= props.data.finalPage)
+    emit('updatePaginator', input.value)
 })
 
-watchEffect (() => {
-  if(props.data) input.value = props.data.currentPage
+watchEffect(() => {
+  if (props.data) input.value = props.data.currentPage
 })
-
 </script>
 <template>
   <div class="eit-paginator gap-2">
     <button
-      @click="prevPage" 
+      @click="prevPage"
       :disabled="data.currentPage === 1"
       class="eit-btn eit-btn--square eit-btn-outline--gray"
     >
-    <font-awesome-icon icon="fa-solid fa-chevron-left"/>
+      <font-awesome-icon icon="fa-solid fa-chevron-left" />
     </button>
 
     <input
-      type="number" 
+      type="number"
       v-model.number="input"
       @input="handleChangePage"
       @keyup.enter="handleChangePage"
@@ -55,37 +55,32 @@ watchEffect (() => {
       aria-label="Número de página"
     />
     <span class="eit-color--text eit-font__size--x1">
-      de {{ data.finalPage }} 
-      <template v-if="data.finalPage === 1">
-        página
-      </template>
-      <template v-if="data.finalPage > 1">
-        páginas
-      </template>
+      de {{ data.finalPage }}
+      <template v-if="data.finalPage === 1"> página </template>
+      <template v-if="data.finalPage > 1"> páginas </template>
     </span>
 
-    <button 
-      @click="nextPage" 
+    <button
+      @click="nextPage"
       :disabled="data.currentPage === data.finalPage"
       class="eit-btn eit-btn--square eit-btn-outline--gray"
     >
-    <font-awesome-icon icon="fa-solid fa-chevron-right"/>
+      <font-awesome-icon icon="fa-solid fa-chevron-right" />
     </button>
   </div>
 </template>
 
 <style lang="scss">
-  .eit-paginator {
-    @extend .eit-flex--end;
-  
+.eit-paginator {
+  @extend .eit-flex--end;
+
   &__input {
     width: 60px;
-    &[type=number]::-webkit-inner-spin-button,
-    &[type=number]::-webkit-outer-spin-button {
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
   }
 }
 </style>
-
