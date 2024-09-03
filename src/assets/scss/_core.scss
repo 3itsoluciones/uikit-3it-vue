@@ -461,20 +461,18 @@ $eit-color-blue: #0094c0;
   }
   &__line-clamp {
     &--1 {
-      @supports (-webkit-line-clamp: 1) {
-        -webkit-line-clamp: 1;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
+      line-clamp: 1;
+      -webkit-line-clamp: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     &--2 {
-      @supports (-webkit-line-clamp: 2) {
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 }

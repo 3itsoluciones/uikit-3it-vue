@@ -1,4 +1,4 @@
-import { computed as S, resolveComponent as D, openBlock as t, createElementBlock as l, normalizeClass as C, Fragment as h, createTextVNode as x, toDisplayString as v, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as f, withCtx as O, renderList as P, renderSlot as j, mergeProps as se, createStaticVNode as ne, resolveDirective as le, withDirectives as M, ref as q, watch as T, watchEffect as z, withKeys as Q, vModelText as W, normalizeStyle as H, vModelDynamic as ae } from "vue";
+import { computed as R, resolveComponent as D, openBlock as t, createElementBlock as l, normalizeClass as C, Fragment as h, createTextVNode as x, toDisplayString as v, createCommentVNode as c, createBlock as S, createElementVNode as o, createVNode as f, withCtx as O, renderList as P, renderSlot as j, mergeProps as se, createStaticVNode as ne, resolveDirective as le, withDirectives as M, ref as q, watch as T, watchEffect as z, withKeys as Q, vModelText as W, normalizeStyle as H, vModelDynamic as ae } from "vue";
 import { useRoute as X } from "vue-router";
 import { codeToHtml as ie } from "shiki";
 import V from "dayjs";
@@ -34,7 +34,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitEvent"],
   setup(e, { emit: a }) {
-    const i = e, s = a, r = S(() => ["eit-btn", `${i.className}`]), n = () => {
+    const i = e, s = a, r = R(() => ["eit-btn", `${i.className}`]), n = () => {
       s("emitEvent");
     };
     return (d, u) => {
@@ -49,7 +49,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
           x(" " + v(i.loadingText), 1)
         ], 64)) : c("", !0),
         i.loading ? c("", !0) : (t(), l(h, { key: 1 }, [
-          i.icon ? (t(), R(g, {
+          i.icon ? (t(), S(g, {
             key: 0,
             icon: i.icon,
             class: "me-1"
@@ -65,7 +65,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, pe = {
   __name: "BreadcrumbComponent",
   setup(e) {
-    const a = X(), i = S(() => {
+    const a = X(), i = R(() => {
       let s = [], r = "";
       return a.matched.forEach((n, d) => {
         r += "/" + n.path.split("/")[d + 1], s.push({
@@ -97,7 +97,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
             class: "eit-breadcrumb__item"
           }, [
             j(s.$slots, u.name, se({ ref_for: !0 }, u), () => [
-              u.last ? (t(), l("span", _e, v(u.title), 1)) : (t(), R(d, {
+              u.last ? (t(), l("span", _e, v(u.title), 1)) : (t(), S(d, {
                 key: 0,
                 to: u.path,
                 class: "eit-color--text eit-color--text--link eit-color--underline"
@@ -138,7 +138,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
         key: `badge-${a.text}`,
         class: C(`eit-badge ${a.className}`)
       }, [
-        a.icon ? (t(), R(r, {
+        a.icon ? (t(), S(r, {
           key: 0,
           icon: a.icon,
           class: "me-1"
@@ -171,9 +171,9 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, Ce = /* @__PURE__ */ o("div", {
   class: "eit-skeleton eit-skeleton__text my-2",
   style: { width: "80%" }
-}, null, -1), Se = [
+}, null, -1), Re = [
   Ce
-], Re = { key: 1 }, je = /* @__PURE__ */ o("div", {
+], Se = { key: 1 }, je = /* @__PURE__ */ o("div", {
   class: "eit-skeleton eit-skeleton__text my-2",
   style: { width: "80%" }
 }, null, -1), qe = [
@@ -208,8 +208,8 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
         o("tbody", null, [
           (t(!0), l(h, null, P(a.table.row, (r) => (t(), l("tr", { key: r }, [
             (t(!0), l(h, null, P(a.table.column, (n) => (t(), l(h, { key: n }, [
-              n === 1 ? (t(), l("td", we, Se)) : c("", !0),
-              n > 1 ? (t(), l("td", Re, qe)) : c("", !0)
+              n === 1 ? (t(), l("td", we, Re)) : c("", !0),
+              n > 1 ? (t(), l("td", Se, qe)) : c("", !0)
             ], 64))), 128))
           ]))), 128))
         ])
@@ -384,12 +384,12 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
       const w = D("font-awesome-icon"), U = le("tippy");
       return t(), l("div", Ne, [
         o("div", Le, [
-          e.loading ? (t(), R(I, {
+          e.loading ? (t(), S(I, {
             key: 0,
             type: "table",
             table: { row: (K = e.skeleton) == null ? void 0 : K.row, column: (Y = e.skeleton) == null ? void 0 : Y.column }
           }, null, 8, ["table"])) : c("", !0),
-          !e.loading && !((G = e.data) != null && G.length) ? (t(), R(ee, {
+          !e.loading && !((G = e.data) != null && G.length) ? (t(), S(ee, {
             key: 1,
             ref: "alert",
             class: "mb-3",
@@ -467,18 +467,18 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
                         ]))), 128))
                       ])) : c("", !0),
                       A === "status" ? (t(), l(h, { key: 1 }, [
-                        $ ? (t(), R(L, {
+                        $ ? (t(), S(L, {
                           key: 0,
                           text: "Activo",
                           className: "eit-badge__outline--secondary"
                         })) : c("", !0),
-                        $ ? c("", !0) : (t(), R(L, {
+                        $ ? c("", !0) : (t(), S(L, {
                           key: 1,
                           text: "Inactivo",
                           className: "eit-badge__outline--gray"
                         }))
                       ], 64)) : c("", !0),
-                      _($) ? (t(), R(L, {
+                      _($) ? (t(), S(L, {
                         key: 2,
                         text: $.name,
                         className: $.className
@@ -721,7 +721,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
       ]);
     };
   }
-}, kt = { class: "row" }, $t = { class: "col-12" }, xt = { class: "d-flex" }, wt = { class: "flex-shrink-0" }, Ct = { class: "flex-grow-1" }, St = { class: "d-flex" }, Rt = { class: "flex-grow-1 d-flex flex-column ms-3" }, jt = { class: "eit-font--primary mb-0" }, qt = { class: "eit-color--text mb-0" }, Dt = { class: "flex-shrink-0" }, Pt = {
+}, kt = { class: "row" }, $t = { class: "col-12" }, xt = { class: "d-flex" }, wt = { class: "flex-shrink-0" }, Ct = { class: "flex-grow-1" }, Rt = { class: "d-flex" }, St = { class: "flex-grow-1 d-flex flex-column ms-3" }, jt = { class: "eit-font--primary mb-0" }, qt = { class: "eit-color--text mb-0" }, Dt = { class: "flex-shrink-0" }, Pt = {
   key: 0,
   class: "dropdown eit-dropdown d-none d-lg-block"
 }, Bt = {
@@ -817,7 +817,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
       return t(), l("section", {
         class: C(["eit-slide d-flex flex-column", [e.slide && "eit-slide--right", e.slideSmall && "eit-slide--small"]])
       }, [
-        i.loading ? (t(), R(I, {
+        i.loading ? (t(), S(I, {
           key: 0,
           type: "detail"
         })) : c("", !0),
@@ -841,8 +841,8 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
                   ])
                 ]),
                 o("div", Ct, [
-                  o("div", St, [
-                    o("div", Rt, [
+                  o("div", Rt, [
+                    o("div", St, [
                       o("h4", jt, [
                         o("strong", null, [
                           j(m.$slots, "title")
@@ -1018,7 +1018,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
       });
     })(), (r, n) => (t(), l("div", { innerHTML: i.value }, null, 8, Qt));
   }
-}, Xt = "/img/loading.svg", eo = { class: "p-3 eit-loading" }, te = {
+}, Xt = "" + new URL("img/loading.svg", import.meta.url).href, eo = { class: "p-3 eit-loading" }, te = {
   __name: "LoadingComponent",
   props: {
     size: {
@@ -1076,7 +1076,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
         ref: n,
         class: C(["eit-dialog", s.className])
       }, [
-        e.loading ? (t(), R(te, {
+        e.loading ? (t(), S(te, {
           key: 0,
           size: "70"
         })) : c("", !0),
@@ -1099,7 +1099,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
               className: "eit-btn-outline--gray",
               text: "Volver"
             }),
-            s.btnSubmit ? (t(), R(F, {
+            s.btnSubmit ? (t(), S(F, {
               key: 0,
               className: "eit-btn--primary",
               text: "Guardar",
@@ -1197,7 +1197,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, bo = {
   key: "info",
   class: "eit-toast__icon eit-font__size--x7"
-}, ko = { class: "flex-grow-1 ms-3" }, $o = { class: "d-flex" }, xo = { class: "flex-grow-1 me-3" }, wo = { class: "eit-toast__title" }, Co = { class: "eit-toast__text" }, So = { class: "flex-shrink-0" }, Ro = {
+}, ko = { class: "flex-grow-1 ms-3" }, $o = { class: "d-flex" }, xo = { class: "flex-grow-1 me-3" }, wo = { class: "eit-toast__title" }, Co = { class: "eit-toast__text" }, Ro = { class: "flex-shrink-0" }, So = {
   __name: "ToastComponent",
   props: {
     type: {
@@ -1219,7 +1219,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
     }
   },
   setup(e, { expose: a }) {
-    const i = e, s = q(!1), r = q("hidden"), n = q(""), d = S(() => ({
+    const i = e, s = q(!1), r = q("hidden"), n = q(""), d = R(() => ({
       show: s.value,
       hide: !s.value,
       [i.position]: i.position,
@@ -1265,7 +1265,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
                   ]),
                   o("p", Co, v(i.data.message), 1)
                 ]),
-                o("div", So, [
+                o("div", Ro, [
                   o("a", {
                     onClick: p[0] || (p[0] = (b) => g()),
                     href: "javascript:",
@@ -1356,9 +1356,9 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitValue", "emitPressEnter"],
   setup(e, { expose: a, emit: i }) {
-    const s = e, r = i, n = q(""), d = S(
+    const s = e, r = i, n = q(""), d = R(
       () => s.validation ? s.validation(n.value) : !0
-    ), u = S(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), g = S(() => s.floatLabel ? "" : s.placeHolder), m = S(() => [
+    ), u = R(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), g = R(() => s.floatLabel ? "" : s.placeHolder), m = R(() => [
       s.floatLabel || s.floatLeft || s.floatRight ? "eit-input__display" : "",
       s.floatLeft ? "eit-input__display__float-left" : "",
       s.floatRight ? "eit-input__display__float-right" : ""
@@ -1464,9 +1464,9 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitValue"],
   setup(e, { expose: a, emit: i }) {
-    const s = e, r = i, n = q(null), d = S(
+    const s = e, r = i, n = q(null), d = R(
       () => s.validation ? s.validation(n.value) : !0
-    ), u = S(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), g = () => Array.isArray(n.value) ? s.data.filter((b) => !n.value.some((y) => y.id === b.id)) : s.data, m = () => n.value ? s.data.filter((b) => b.id !== n.value.id) : s.data, p = S(() => s.multiple ? g() : m());
+    ), u = R(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), g = () => Array.isArray(n.value) ? s.data.filter((b) => !n.value.some((y) => y.id === b.id)) : s.data, m = () => n.value ? s.data.filter((b) => b.id !== n.value.id) : s.data, p = R(() => s.multiple ? g() : m());
     T(
       () => s.selected,
       (b) => {
@@ -1483,7 +1483,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
     };
     return a({ clean: _ }), (b, y) => {
       const N = D("v-select");
-      return t(), R(N, {
+      return t(), S(N, {
         options: p.value,
         modelValue: n.value,
         "onUpdate:modelValue": y[0] || (y[0] = (w) => n.value = w),
@@ -1539,7 +1539,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitValue"],
   setup(e, { expose: a, emit: i }) {
-    const s = e, r = i, n = q(null), d = q(""), u = S(() => s.validation && s.validation(d.value)), g = S(() => !u.value && s.requiredField && s.error ? "is-invalid" : ""), m = () => {
+    const s = e, r = i, n = q(null), d = q(""), u = R(() => s.validation && s.validation(d.value)), g = R(() => !u.value && s.requiredField && s.error ? "is-invalid" : ""), m = () => {
       d.value = "";
     };
     return T(
@@ -1587,10 +1587,10 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
   TabComponent: Jt,
   TableComponent: pt,
   TextareaResizeComponent: Lo,
-  ToastComponent: Ro
+  ToastComponent: So
 }, Symbol.toStringTag, { value: "Module" }));
 function Ao(e, a) {
-  const i = X(), s = S(() => i.path === "/login" ? a.platformDarkTheme ? a.logotipo.logo_dark : a.logotipo.logo_light : e.config.darkTheme ? a.logotipo.logo_dark : a.logotipo.logo_light), r = S(() => e.config.darkTheme ? a.logotipo.isotipo_dark : a.logotipo.isotipo_light);
+  const i = X(), s = R(() => i.path === "/login" ? a.platformDarkTheme ? a.logotipo.logo_dark : a.logotipo.logo_light : e.config.darkTheme ? a.logotipo.logo_dark : a.logotipo.logo_light), r = R(() => e.config.darkTheme ? a.logotipo.isotipo_dark : a.logotipo.isotipo_light);
   return { logotipo: s, isotipo: r };
 }
 const Mo = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({

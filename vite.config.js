@@ -7,6 +7,7 @@ import vue from '@vitejs/plugin-vue'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  base: '',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -17,9 +18,9 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         api: 'modern',
-        additionalData: '@import "@/assets/scss/main.scss";',
-      }
-    }
+        additionalData: '@import "@/assets/scss/main.scss";'
+      },
+    },
   },
   build: {
     lib: {
@@ -28,6 +29,7 @@ export default defineConfig({
       fileName: 'uikit-3it-vue',
       formats: ['es', 'cjs', 'umd'],
     },
+    emptyOutDir: true,
     rollupOptions: {
       external: [
         'vue',
@@ -35,7 +37,7 @@ export default defineConfig({
         'vue-router',
         'dayjs',
         'dayjs/plugin/relativeTime',
-        'dayjs/locale/es',
+        'dayjs/locale/es'
       ],
       output: {
         globals: {
@@ -45,12 +47,12 @@ export default defineConfig({
           dayjs: 'dayjs',
           'dayjs/plugin/relativeTime': 'dayjs_plugin_relativeTime',
         },
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') {
-            return 'uikit-3it-vue.css'
+        assetFileNames: ({ name }) => {
+          if (name === 'style.css') {
+            return 'css/uikit-3it-vue.css'
           }
-          return assetInfo.name
-        }
+          return name
+        },
       },
     },
     minify: true,

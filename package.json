@@ -8,14 +8,16 @@
   "files": [
     "dist"
   ],
+  "main": "./dist/uikit-3it-vue.umd.cjs",
   "module": "./dist/uikit-3it-vue.js",
   "exports": {
     ".": {
-      "import": "./dist/uikit-3it-vue.js"
+      "import": "./dist/uikit-3it-vue.js",
+      "require": "./dist/uikit-3it-vue.umd.cjs"
     },
-    "./dist/*.css": {
-      "import": "./dist/*.css",
-      "require": "./dist/*.css"
+    "./dist/css/*.css": {
+      "import": "./dist/css/*.css",
+      "require": "./dist/css/*.css"
     }
   },
   "scripts": {
