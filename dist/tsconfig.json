@@ -1,5 +1,0 @@
-{
-  "include": [
-    "types/uikit-3it-vue.d.ts", 
-  ]
-}
