@@ -24,7 +24,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: resolve(__dirname, 'src/index.js'),
       name: 'uikit-3it-vue',
       fileName: 'uikit-3it-vue',
       formats: ['es', 'cjs', 'umd'],

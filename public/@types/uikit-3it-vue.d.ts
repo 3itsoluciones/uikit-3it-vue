@@ -1,7 +1,4 @@
-export declare const uikit: any
-export declare const useTooltip: any
-
-/* declare module 'uikit-3it-vue' {
+declare module 'uikit-3it-vue' {
   const uikit: any
   const useLogos: any
   const useValidator: any
@@ -12,13 +9,13 @@ export declare const useTooltip: any
   const useTooltip: any
   
   export {
-    //uikit,
+    uikit,
     useLogos,
     useValidator,
     useInputMask,
     useKeypress,
     useTable,
     useFormat,
-    //useTooltip
+    useTooltip
   }
-} */
+}
