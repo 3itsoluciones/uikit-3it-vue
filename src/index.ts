@@ -6,9 +6,24 @@ import useInputMask from './utils/useInputMask.js'
 import useKeypress from './utils/useKeypress.js'
 import useTable from './utils/useTable.js'
 import useFormat from './utils/useFormat'
-import useTooltip from './utils/useTooltip'
+//import useTooltip from './utils/useTooltip'
 
 import { App } from 'vue' // Assuming you are using Vue 3
+
+function useTooltip() {
+  function handleTooltip(value, parent) {
+    if (parent)
+      return {
+        content: value,
+        theme: 'main',
+        placement: 'right',
+        appendTo: 'parent'
+      }
+    else return { content: value, theme: 'main', placement: 'right' }
+  }
+
+  return { handleTooltip }
+}
 
 const uikitVue = (function (exports: any) {
   'use strict'
