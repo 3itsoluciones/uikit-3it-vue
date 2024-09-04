@@ -1674,17 +1674,15 @@ function Oo() {
   }
   return { handleTooltip: e };
 }
-const Ho = {
-  useValidator: Ao,
+const Go = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  useFormat: zo,
   useInputMask: Vo,
   useKeypress: Eo,
   useTable: Mo,
-  useFormat: zo,
-  useTooltip: Oo
-}, Zo = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Ho
-}, Symbol.toStringTag, { value: "Module" })), Jo = {
+  useTooltip: Oo,
+  useValidator: Ao
+}, Symbol.toStringTag, { value: "Module" })), Zo = {
   install(e) {
     Object.keys(J).forEach((r) => {
       e.component(r, J[r]);
@@ -1692,6 +1690,6 @@ const Ho = {
   }
 };
 export {
-  Jo as default,
-  Zo as utils
+  Zo as default,
+  Go as utils
 };

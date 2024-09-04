@@ -2,10 +2,10 @@ import useValidator from './useValidator.js'
 import useInputMask from './useInputMask.js'
 import useKeypress from './useKeypress.js'
 import useTable from './useTable.js'
-import useFormat from './useFormat'
-import useTooltip from './useTooltip'
+import useFormat from './useFormat.js'
+import useTooltip from './useTooltip.js'
 
-export default {
+export {
   useValidator,
   useInputMask,
   useKeypress,
