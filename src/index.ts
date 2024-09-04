@@ -23,3 +23,9 @@ export default {
   useFormat,
   useTooltip
 }
+
+var uikit = (function (exports: any) {
+  'use strict'
+  exports.useTooltip = useTooltip
+  return exports
+})({})
