@@ -1,7 +1,7 @@
 import { useRoute } from 'vue-router'
 import { computed } from 'vue'
 
-export function useLogos(storeAuth, storeTheme) {
+export default function useLogos(storeAuth, storeTheme) {
   //Router
   const route = useRoute()
   //Computed
@@ -24,4 +24,3 @@ export function useLogos(storeAuth, storeTheme) {
   //Properties
   return { logotipo, isotipo }
 }
-export default useLogos

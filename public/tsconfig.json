@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "typeRoots": ["./node_modules/@types", "@types"]
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "include": [
-    "@types/uikit-3it-vue.d.ts"
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
   ]
 }
