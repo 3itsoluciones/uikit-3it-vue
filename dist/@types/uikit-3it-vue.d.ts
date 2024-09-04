@@ -7,6 +7,7 @@ declare module 'uikit-3it-vue' {
   const useKeypress: Function
   const useTooltip: Function
   export {
+    uikit,
     useValidator,
     useInputMask,
     useKeypress,
@@ -14,5 +15,4 @@ declare module 'uikit-3it-vue' {
     useFormat,
     useTooltip
   }
-  export default uikit
 }

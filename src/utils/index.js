@@ -5,7 +5,7 @@ import useTable from '@/utils/useTable.js'
 import useFormat from '@/utils/useFormat'
 import useTooltip from '@/utils/useTooltip'
 
-export {
+export default {
   useValidator,
   useInputMask,
   useKeypress,
