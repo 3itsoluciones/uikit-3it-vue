@@ -1589,7 +1589,7 @@ const ce = ["disabled"], de = /* @__PURE__ */ o("div", { class: "spinner-border 
   TextareaResizeComponent: Lo,
   ToastComponent: So
 }, Symbol.toStringTag, { value: "Module" }));
-function Io() {
+function Oo() {
   function e(n) {
     return !(n == null || typeof n == "string" && n.trim() === "" || typeof n == "object" && Object.keys(n).length === 0 || Array.isArray(n) && n.length === 0);
   }
@@ -1615,7 +1615,7 @@ function Io() {
     validatePhone: i
   };
 }
-function Uo() {
+function Fo() {
   function e(s) {
     return s.replace(/[.-]/g, "").replace(/^(\d{1,2})(\d{3})(\d{3})(\w{1})$/, "$1.$2.$3-$4");
   }
@@ -1627,7 +1627,7 @@ function Uo() {
   }
   return { inputMaskRut: e, inputMaskCurrency: r, inputMaskPhone: a };
 }
-function Ko() {
+function Io() {
   function e(r) {
     let a = String.fromCharCode(r.keyCode);
     if (/^[0-9Kk.-]/.test(a)) return !0;
@@ -1635,7 +1635,7 @@ function Ko() {
   }
   return { keyPressRut: e };
 }
-function Yo() {
+function Uo() {
   function e(r) {
     const { sort: a, data: s } = r, { keys: i, index: n, asc: d } = a, u = i[n];
     return s.sort((v, m) => {
@@ -1647,7 +1647,7 @@ function Yo() {
 }
 E.extend(re);
 E.locale("es");
-function Go() {
+function Ko() {
   function e(i) {
     return E(i).format("DD/MM/YYYY");
   }
@@ -1663,7 +1663,7 @@ function Go() {
   }
   return { formatDate: e, formatDateAgo: r, formatRut: a, formatCapitalize: s };
 }
-function Ao() {
+function Yo() {
   function e(r, a) {
     return a ? {
       content: r,
@@ -1674,22 +1674,20 @@ function Ao() {
   }
   return { handleTooltip: e };
 }
-const Vo = function(e) {
-  return e.useTooltip = Ao, e;
-}({}), Zo = {
+const Go = {
   install(e) {
     Object.keys(J).forEach((r) => {
       e.component(r, J[r]);
     });
-  },
-  uikitVue: Vo
+  }
+  //uikitVue,
 };
 export {
-  Zo as default,
-  Go as useFormat,
-  Uo as useInputMask,
-  Ko as useKeypress,
-  Yo as useTable,
-  Ao as useTooltip,
-  Io as useValidator
+  Go as default,
+  Ko as useFormat,
+  Fo as useInputMask,
+  Io as useKeypress,
+  Uo as useTable,
+  Yo as useTooltip,
+  Oo as useValidator
 };
