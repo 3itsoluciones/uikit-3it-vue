@@ -16,14 +16,14 @@ const uikitVue = (function (exports: any) {
   return exports
 })({})
 
-export {
+/* export {
   useValidator,
   useInputMask,
   useKeypress,
   useTable,
   useFormat,
   useTooltip
-}
+} */
 
 export default {
   install(app: App) {
@@ -32,4 +32,10 @@ export default {
     })
   },
   uikitVue,
+  useValidator,
+  useInputMask,
+  useKeypress,
+  useTable,
+  useFormat,
+  useTooltip
 }
