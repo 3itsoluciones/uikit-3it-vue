@@ -47,6 +47,7 @@ export default defineConfig({
           dayjs: 'dayjs',
           'dayjs/plugin/relativeTime': 'dayjs_plugin_relativeTime',
         },
+        exports: 'named',
         assetFileNames: ({ name }) => {
           if (name === 'style.css') {
             return 'css/uikit-3it-vue.css'
