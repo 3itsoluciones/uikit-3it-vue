@@ -1,0 +1,1 @@
+declare module 'uikit-3it-vue'
