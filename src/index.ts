@@ -10,12 +10,19 @@ import useTooltip from './utils/useTooltip'
 
 import { App } from 'vue' // Assuming you are using Vue 3
 
+const uikitVue = (function (exports: any) {
+  'use strict'
+  exports.useTooltip = useTooltip
+  return exports
+})({})
+
 export default {
   install(app: App) {
     Object.keys(components).forEach((key: string) => {
       app.component(key, components[key as keyof typeof components])
     })
   },
+  uikitVue,
   useValidator,
   useInputMask,
   useKeypress,
@@ -23,8 +30,3 @@ export default {
   useFormat,
   useTooltip
 }
-const uikitVue = (function (exports: any) {
-  'use strict'
-  exports.useTooltip = useTooltip
-  return exports
-})({})

@@ -1674,12 +1674,15 @@ function te() {
   }
   return { handleTooltip: e };
 }
-const Go = {
+const Oo = function(e) {
+  return e.useTooltip = te, e;
+}({}), Zo = {
   install(e) {
     Object.keys(J).forEach((r) => {
       e.component(r, J[r]);
     });
   },
+  uikitVue: Oo,
   useValidator: Vo,
   useInputMask: Eo,
   useKeypress: Mo,
@@ -1687,9 +1690,6 @@ const Go = {
   useFormat: Ho,
   useTooltip: te
 };
-(function(e) {
-  return e.useTooltip = te, e;
-})({});
 export {
-  Go as default
+  Zo as default
 };
