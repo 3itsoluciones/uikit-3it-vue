@@ -1,6 +1,6 @@
 import * as components from './components'
-import * as composables from './composables'
-import * as utils from './utils'
+import './composables'
+import './utils'
 
 export default {
   install(app) {
@@ -8,6 +8,4 @@ export default {
       app.component(key, components[key])
     })
   },
-  composables,
-  utils
 }
