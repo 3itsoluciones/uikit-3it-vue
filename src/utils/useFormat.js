@@ -26,7 +26,8 @@ export default function useFormat() {
   }
 
   function formatCapitalize(value) {
-    return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
+    if(value === null) return ''
+    else return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
   }
 
   return { formatDate, formatDateAgo, formatRut, formatCapitalize }

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 //Components
 import ButtonComponent from '@/components/button/ButtonComponent.vue'
@@ -43,15 +43,27 @@ const closeDialog = () => {
   dialog.value.classList.remove('show')
   emit('emitCloseDialog')
 }
+const handleKeyUp = (event) => {
+    if(event.key === 'Escape') closeDialog()
+  }
 const handleSubmit = () => {
   emit('emitSubmit')
 }
+
+onMounted(() => {
+  document.addEventListener('keyup', handleKeyUp)
+})
 
 defineExpose({ showDialog, closeDialog })
 </script>
 
 <template>
-  <dialog ref="dialog" class="eit-dialog" :class="props.className">
+  <dialog 
+    ref="dialog" 
+    class="eit-dialog" 
+    :class="props.className" 
+    @keyup.esc="closeDialog"
+  >
     <template v-if="loading">
       <LoadingComponent size="70" />
     </template>

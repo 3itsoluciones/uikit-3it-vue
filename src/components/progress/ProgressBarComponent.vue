@@ -1,35 +1,65 @@
 <script setup>
-const props = defineProps({
-  percentage: {
-    type: Number,
-    default: 50
-  },
-  type: {
-    type: String,
-    default: 'primary'
-  }
-})
+  import { computed } from 'vue'
+
+  const props = defineProps({
+    percentage: {
+      type: [Number, String],
+      default: 0
+    },
+    type: {
+      type: String,
+      default: 'primary'
+    },
+    loading: {
+      type: Boolean,
+      default: true
+    },
+	})
+
+  const controlParseFloat = computed(() => {
+    return parseFloat(props.percentage)
+  })
+
+  const controlRestPercentaje = computed(() => {
+    return controlParseFloat.value === 0 ? 0 : 100 - controlParseFloat.value
+  })
+
 </script>
 
 <template>
   <div class="eit-progress eit-progress--30">
-    <div
+    <div 
       class="eit-progress__bar"
       :class="`eit-progress__bar--${props.type}`"
       :style="`width: ${props.percentage}%`"
     >
-      {{ props.percentage }}%
+      <template v-if="controlParseFloat !== 0">
+        <template v-if="props.percentage > 5">
+          {{ props.percentage }}%
+        </template>  
+      </template>      
     </div>
-    <div
+    <div 
       class="eit-progress__bar eit-progress__bar--transparent"
-      :style="`width: ${100 - props.percentage}%`"
+      :style="`width: ${controlRestPercentaje === 0 ? 100 : controlRestPercentaje}%`"
     >
-      {{ 100 - props.percentage }}%
+      <template v-if="!props.loading">
+        <template v-if="controlRestPercentaje === 0 || controlRestPercentaje > 5">
+          {{ controlRestPercentaje }}%
+        </template>      
+      </template>
+      <template v-if="props.loading">
+        <span>
+          <span class="spinner-border spinner-border-sm"></span> 
+          Cargando...
+        </span>
+      </template>
     </div>
   </div>
 </template>
 
 <style lang="scss">
+
 .eit-progress {
   display: flex;
   @extend .eit-box-shadow--inset;
@@ -44,7 +74,7 @@ const props = defineProps({
     justify-content: center;
     text-align: center;
     @extend .eit-border--round-x3;
-    @include transition('width 0.2s ease-in');
+		@include transition('width 0.5s ease-in');
 
     &--transparent {
       background-color: transparent;
@@ -80,4 +110,5 @@ const props = defineProps({
     }
   }
 }
+
 </style>
