@@ -6,7 +6,7 @@ export default function useLogos(storeAuth, storeTheme) {
   const route = useRoute()
   //Computed
   const logotipo = computed(() => {
-    if (route.meta.layout === 'LayoutPublicType1')
+    if (!route.meta.requiresAuth)
       return storeTheme.platformDarkTheme
         ? storeTheme.logotipo.logo_dark
         : storeTheme.logotipo.logo_light
