@@ -59,5 +59,5 @@ export default defineConfig({
     minify: true,
     outDir: 'dist',
   },
-  assetsInclude: ['src/types']
+  publicDir: 'src/assets'
 })
