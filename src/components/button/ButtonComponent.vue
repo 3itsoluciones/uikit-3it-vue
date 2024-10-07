@@ -38,14 +38,14 @@ const calculateClass = computed(() => {
 })
 
 //Methods
-const emitEvent = () => {
-  emit('emitEvent')
+const emitEvent = (event) => {
+  emit("emitEvent", event)
 }
 </script>
 
 <template>
   <button
-    @click="emitEvent"
+    @click="emitEvent($event)"
     :class="calculateClass"
     class="d-flex align-items-center justify-content-center"
     :disabled="props.isDisabled"
