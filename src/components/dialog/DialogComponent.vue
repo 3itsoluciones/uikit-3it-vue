@@ -26,7 +26,11 @@ const props = defineProps({
   disabledSubmit: {
     type: Boolean,
     default: false
-  }
+  },
+  scrollable: {
+    type: Boolean,
+    default: false
+  },
 })
 
 //Emits
@@ -75,7 +79,7 @@ defineExpose({ showDialog, closeDialog })
           <font-awesome-icon :icon="['fas', 'xmark']" />
         </button>
       </div>
-      <div class="eit-dialog__body">
+      <div :class="`eit-dialog__body ${scrollable ? 'eit-dialog__body--scroll' : ''}`">
         <slot name="content"></slot>
       </div>
       <div class="d-flex gap-2 justify-content-end mt-3">
@@ -119,8 +123,10 @@ defineExpose({ showDialog, closeDialog })
   &__body {
     position: relative;
     flex: 1;
-    overflow-y: auto;
-    @extend .eit-scroll--custom;
+    &--scroll {
+      overflow-y: auto;
+      @extend .eit-scroll--custom;
+    }
   }
 
   &__close {
