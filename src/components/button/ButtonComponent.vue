@@ -47,7 +47,7 @@ const emitEvent = (event) => {
   <button
     @click="emitEvent($event)"
     :class="calculateClass"
-    class="d-flex align-items-center justify-content-center"
+    class="d-flex align-items-center justify-content-center gap-1"
     :disabled="props.isDisabled"
   >
     <template v-if="props.loading">
@@ -56,7 +56,7 @@ const emitEvent = (event) => {
     </template>
     <template v-if="!props.loading">
       <template v-if="props.icon">
-        <font-awesome-icon :icon="props.icon" class="me-1" />
+        <font-awesome-icon :icon="props.icon"/>
       </template>
       {{ text }}
     </template>

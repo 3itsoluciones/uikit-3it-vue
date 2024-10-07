@@ -41,7 +41,7 @@ const de = ["disabled"], ue = /* @__PURE__ */ n("div", { class: "spinner-border 
       const g = D("font-awesome-icon");
       return e(), s("button", {
         onClick: d[0] || (d[0] = (p) => l(p)),
-        class: R([r.value, "d-flex align-items-center justify-content-center"]),
+        class: R([r.value, "d-flex align-items-center justify-content-center gap-1"]),
         disabled: a.isDisabled
       }, [
         a.loading ? (e(), s(_, { key: 0 }, [
@@ -51,8 +51,7 @@ const de = ["disabled"], ue = /* @__PURE__ */ n("div", { class: "spinner-border 
         a.loading ? c("", !0) : (e(), s(_, { key: 1 }, [
           a.icon ? (e(), S(g, {
             key: 0,
-            icon: a.icon,
-            class: "me-1"
+            icon: a.icon
           }, null, 8, ["icon"])) : c("", !0),
           k(" " + v(t.text), 1)
         ], 64))
