@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
   <div class="p-3 eit-loading">
-    <img :style="`width:${props.size}px`" src="/img/loading.svg" />
+    <img :style="`width:${props.size}px`" src="@/assets/img/loading.svg" />
   </div>
 </template>
 
