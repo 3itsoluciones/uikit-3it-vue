@@ -70,7 +70,6 @@ const emit = defineEmits(['emitValue', 'emitPressEnter'])
 
 //Variables
 const output = ref('')
-const mask = ref('')
 const valid = computed(() =>
   props.validation ? props.validation(output.value) : true
 )
@@ -114,11 +113,7 @@ watch(output, () => {
 })
 
 watchEffect(() => {
-  if (props.inputMask) {
-    mask.value = props.inputMask(output.value)
-    output.value = mask.value
-  }
-
+  if (props.inputMask) output.value = props.inputMask(output.value)
   if (props.submitted) clean()
 })
 

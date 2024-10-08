@@ -17,5 +17,9 @@ export default function useInputMask() {
       .replace(/^(\d{3})(\d{4})(\d{4})$/, '+$1 $2-$3')
   }
 
-  return { inputMaskRut, inputMaskCurrency, inputMaskPhone }
+  function inputMaskPrueba(prueba) {
+    return prueba
+  }
+
+  return { inputMaskRut, inputMaskCurrency, inputMaskPhone, inputMaskPrueba }
 }
