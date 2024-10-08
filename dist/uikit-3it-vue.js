@@ -1491,7 +1491,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ n("div", { class: "spinner-border 
       },
       { immediate: !0 }
     ), T(l, () => {
-      r("emitValue", u.value ? l.value : "");
+      r("emitValue", u.value ? l.value : null);
     }), V(() => {
       o.submitted && h();
     });

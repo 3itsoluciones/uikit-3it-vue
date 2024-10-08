@@ -96,7 +96,7 @@ watch(
 
 watch(output, () => {
   //Emit
-  emit('emitValue', valid.value ? output.value : '')
+  emit('emitValue', valid.value ? output.value : null)
 })
 
 watchEffect(() => {
