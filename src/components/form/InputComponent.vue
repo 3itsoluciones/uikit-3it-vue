@@ -105,6 +105,7 @@ watch(
   () => props.input,
   (value) => {
     if (value) output.value = {...value}
+    else output.value = ''
   }
 )
 watch(output, () => {

@@ -1387,7 +1387,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ n("div", { class: "spinner-border 
     return T(
       () => o.input,
       (b) => {
-        b && (l.value = { ...b });
+        b ? l.value = { ...b } : l.value = "";
       }
     ), T(l, () => {
       r("emitValue", u.value ? l.value : "");
