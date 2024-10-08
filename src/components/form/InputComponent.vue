@@ -104,7 +104,7 @@ const clean = () => {
 watch(
   () => props.input,
   (value) => {
-    if (value) output.value = value
+    if (value) output.value = {...value}
   }
 )
 watch(output, () => {
