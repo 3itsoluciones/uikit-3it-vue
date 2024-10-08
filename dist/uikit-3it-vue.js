@@ -1,4 +1,4 @@
-import { computed as C, resolveComponent as D, openBlock as t, createElementBlock as s, normalizeClass as S, Fragment as _, createTextVNode as k, toDisplayString as v, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as m, withCtx as F, renderList as P, renderSlot as j, mergeProps as se, createStaticVNode as le, resolveDirective as ae, withDirectives as A, ref as q, watch as T, watchEffect as V, withKeys as K, vModelText as X, onMounted as ie, unref as O, normalizeStyle as H, vModelDynamic as re } from "vue";
+import { computed as C, resolveComponent as D, openBlock as t, createElementBlock as s, normalizeClass as S, Fragment as _, createTextVNode as k, toDisplayString as v, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as m, withCtx as H, renderList as P, renderSlot as j, mergeProps as se, createStaticVNode as le, resolveDirective as ae, withDirectives as A, ref as q, watch as T, watchEffect as O, withKeys as K, vModelText as X, onMounted as ie, unref as z, normalizeStyle as F, vModelDynamic as re } from "vue";
 import { useRoute as ee } from "vue-router";
 import { codeToHtml as ce } from "shiki";
 import E from "dayjs";
@@ -84,7 +84,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
               to: "/",
               class: "eit-color--text-soft eit-color--text-soft--link"
             }, {
-              default: F(() => [
+              default: H(() => [
                 m(l, { icon: "fa-solid fa-house" })
               ]),
               _: 1
@@ -101,7 +101,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                 to: d.path,
                 class: "eit-color--text eit-color--text--link eit-color--underline"
               }, {
-                default: F(() => [
+                default: H(() => [
                   k(v(d.title), 1)
                 ]),
                 _: 2
@@ -265,10 +265,10 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Le = { class: "row" }, Ae = { class: "col-12" }, Ee = { class: "table eit-table eit-table-responsive" }, Ve = ["onClick"], ze = /* @__PURE__ */ o("th", {
+}, Le = { class: "row" }, Ae = { class: "col-12" }, Ee = { class: "table eit-table eit-table-responsive" }, Oe = ["onClick"], Ve = /* @__PURE__ */ o("th", {
   scope: "col",
   class: "text-center"
-}, "Acciones", -1), Oe = { class: "pe-3 d-lg-none" }, Fe = ["onClick"], He = {
+}, "Acciones", -1), ze = { class: "pe-3 d-lg-none" }, He = ["onClick"], Fe = {
   key: 0,
   class: "d-flex flex-wrap gap-1"
 }, Ie = {
@@ -429,9 +429,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                       }, [
                         m(w, { icon: "fa-solid fa-sort" })
                       ]))
-                    ], 8, Ve)
+                    ], 8, Oe)
                   ]))), 128)),
-                  ze
+                  Ve
                 ])
               ]),
               o("tbody", null, [
@@ -441,27 +441,27 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                   (t(!0), s(_, null, P($, (x, L) => (t(), s("td", {
                     key: `value-${L}`
                   }, [
-                    o("strong", Oe, v(e.columns[Object.keys($).indexOf(L)]) + ":", 1),
+                    o("strong", ze, v(e.columns[Object.keys($).indexOf(L)]) + ":", 1),
                     Object.keys($)[e.columnLink] === L ? (t(), s(_, { key: 0 }, [
                       e.viewRecord ? (t(), s("a", {
                         key: 0,
-                        onClick: (z) => a($),
+                        onClick: (V) => a($),
                         href: "javascript:",
                         class: "eit-table__link"
-                      }, v(x), 9, Fe)) : c("", !0),
+                      }, v(x), 9, He)) : c("", !0),
                       e.viewRecord ? c("", !0) : (t(), s(_, { key: 1 }, [
                         k(v(x), 1)
                       ], 64))
                     ], 64)) : c("", !0),
                     Object.keys($)[e.columnLink] !== L ? (t(), s(_, { key: 1 }, [
-                      b(x) ? (t(), s("div", He, [
-                        (t(!0), s(_, null, P(x, (z, ne) => (t(), s("span", {
+                      b(x) ? (t(), s("div", Fe, [
+                        (t(!0), s(_, null, P(x, (V, ne) => (t(), s("span", {
                           key: `value-array-${ne}`,
                           class: "d-flex flex-wrap gap-1"
                         }, [
                           m(M, {
-                            text: z.name,
-                            className: z.className
+                            text: V.name,
+                            className: V.className
                           }, null, 8, ["text", "className"])
                         ]))), 128))
                       ])) : c("", !0),
@@ -672,7 +672,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     };
     return T(a, () => {
       a.value > 0 && a.value <= i.data.finalPage && n("updatePaginator", a.value);
-    }), V(() => {
+    }), O(() => {
       i.data && (a.value = i.data.currentPage);
     }), (p, f) => {
       const h = D("font-awesome-icon");
@@ -736,15 +736,15 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, Et = {
   key: 2,
   class: "m-2"
-}, Vt = /* @__PURE__ */ o("div", { class: "eit-border--bottom eit-border--color" }, null, -1), zt = [
-  Vt
-], Ot = {
+}, Ot = /* @__PURE__ */ o("div", { class: "eit-border--bottom eit-border--color" }, null, -1), Vt = [
+  Ot
+], zt = {
   key: 3,
   class: "mx-2"
-}, Ft = {
+}, Ht = {
   key: 4,
   class: "mx-2"
-}, Ht = { class: "row flex-grow-1" }, It = { class: "col-12 d-flex flex-column flex-grow-1" }, Kt = { class: "eit-slide__content flex-grow-1" }, Ut = {
+}, Ft = { class: "row flex-grow-1" }, It = { class: "col-12 d-flex flex-column flex-grow-1" }, Kt = { class: "eit-slide__content flex-grow-1" }, Ut = {
   __name: "DetailComponent",
   props: {
     //Data
@@ -883,8 +883,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                               k(" " + v(i.downloadRecord), 1)
                             ])
                           ])) : c("", !0),
-                          e.deleteRecord || e.enabledDisabledRecord ? (t(), s("li", Et, zt)) : c("", !0),
-                          i.enabledDisabledRecord ? (t(), s("li", Ot, [
+                          e.deleteRecord || e.enabledDisabledRecord ? (t(), s("li", Et, Vt)) : c("", !0),
+                          i.enabledDisabledRecord ? (t(), s("li", zt, [
                             o("a", {
                               onClick: f[2] || (f[2] = (b) => l(e.record)),
                               class: "dropdown-item dropdown-custom-menu-item",
@@ -906,7 +906,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                               ], 64)) : c("", !0)
                             ])
                           ])) : c("", !0),
-                          i.deleteRecord ? (t(), s("li", Ft, [
+                          i.deleteRecord ? (t(), s("li", Ht, [
                             o("a", {
                               onClick: f[3] || (f[3] = (b) => d(i.record)),
                               class: "dropdown-item dropdown-custom-menu-item eit-color--red",
@@ -927,7 +927,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
               ])
             ])
           ]),
-          o("div", Ht, [
+          o("div", Ft, [
             o("div", It, [
               o("div", Kt, [
                 j(p.$slots, "component")
@@ -1070,7 +1070,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         onKeyup: K(d, ["esc"])
       }, [
         o("div", to, [
-          e.loading ? (t(), R(O(oe), {
+          e.loading ? (t(), R(z(oe), {
             key: 0,
             size: "70"
           })) : c("", !0),
@@ -1090,12 +1090,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
               j(f.$slots, "content")
             ], 2),
             o("div", no, [
-              m(O(I), {
+              m(z(I), {
                 onClick: d,
                 className: "eit-btn-outline--gray",
                 text: "Volver"
               }),
-              n.btnSubmit ? (t(), R(O(I), {
+              n.btnSubmit ? (t(), R(z(I), {
                 key: 0,
                 className: "eit-btn--primary",
                 text: "Guardar",
@@ -1178,7 +1178,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     return (a, l) => (t(), s("div", mo, [
       o("div", {
         class: S(["eit-progress__bar", `eit-progress__bar--${r.type}`]),
-        style: H(`width: ${r.percentage}%`)
+        style: F(`width: ${r.percentage}%`)
       }, [
         i.value !== 0 ? (t(), s(_, { key: 0 }, [
           r.percentage > 5 ? (t(), s(_, { key: 0 }, [
@@ -1188,7 +1188,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 6),
       o("div", {
         class: "eit-progress__bar eit-progress__bar--transparent",
-        style: H(`width: ${n.value === 0 ? 100 : n.value}%`)
+        style: F(`width: ${n.value === 0 ? 100 : n.value}%`)
       }, [
         r.loading ? c("", !0) : (t(), s(_, { key: 0 }, [
           n.value === 0 || n.value > 5 ? (t(), s(_, { key: 0 }, [
@@ -1391,7 +1391,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }
     ), T(l, () => {
       a("emitValue", u.value ? l.value : "");
-    }), V(() => {
+    }), O(() => {
       n.inputMask && (l.value = n.inputMask(l.value)), n.submitted && h();
     }), r({ clean: h }), (b, y) => (t(), s("div", {
       class: S(p.value)
@@ -1492,7 +1492,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       { immediate: !0 }
     ), T(l, () => {
       a("emitValue", u.value ? l.value : null);
-    }), V(() => {
+    }), O(() => {
       n.submitted && h();
     });
     const h = () => {
@@ -1511,7 +1511,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         clearable: e.clearable,
         disabled: n.isDisabled
       }, {
-        "no-options": F(() => [
+        "no-options": H(() => [
           k(" No hay más resultados. ")
         ]),
         _: 1
@@ -1566,7 +1566,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }
     ), T(u, () => {
       l.value.style.height = "50px", l.value.style.height = `${l.value.scrollHeight}px`, a("emitValue", d.value ? u.value : "");
-    }), V(() => {
+    }), O(() => {
       n.submitted && p();
     }), r({ clean: p }), (f, h) => A((t(), s("textarea", {
       ref_key: "textarea",
@@ -1585,7 +1585,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ]
     ]);
   }
-}, Eo = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Vo = { class: "p-3 eit-loading" }, oe = {
+}, Eo = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Oo = { class: "p-3 eit-loading" }, oe = {
   __name: "LoadingComponent",
   props: {
     size: {
@@ -1596,9 +1596,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   setup(e) {
     const r = e;
-    return (i, n) => (t(), s("div", Vo, [
+    return (i, n) => (t(), s("div", Oo, [
       o("img", {
-        style: H(`width:${r.size}px`),
+        style: F(`width:${r.size}px`),
         src: Eo
       }, null, 4)
     ]));
@@ -1624,15 +1624,15 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   TextareaResizeComponent: Ao,
   ToastComponent: qo
 }, Symbol.toStringTag, { value: "Module" }));
-function zo(e, r) {
+function Vo(e, r) {
   const i = ee(), n = C(() => i.meta.requiresAuth ? e.config.darkTheme ? r.logotipo.logo_dark : r.logotipo.logo_light : r.platformDarkTheme ? r.logotipo.logo_dark : r.logotipo.logo_light), a = C(() => e.config.darkTheme ? r.logotipo.isotipo_dark : r.logotipo.isotipo_light);
   return { logotipo: n, isotipo: a };
 }
 const Xo = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  useLogos: zo
+  useLogos: Vo
 }, Symbol.toStringTag, { value: "Module" }));
-function Oo() {
+function zo() {
   function e(l) {
     return !(l == null || typeof l == "string" && l.trim() === "" || typeof l == "object" && Object.keys(l).length === 0 || Array.isArray(l) && l.length === 0);
   }
@@ -1658,7 +1658,7 @@ function Oo() {
     validatePhone: a
   };
 }
-function Fo() {
+function Ho() {
   function e(a) {
     return a.replace(/[.-]/g, "").replace(/^(\d{1,2})(\d{3})(\d{3})(\w{1})$/, "$1.$2.$3-$4");
   }
@@ -1666,14 +1666,14 @@ function Fo() {
     return a.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
   function i(a) {
-    return a.replace(/\D/g, "").replace(/^(\d{3})(\d{4})(\d{4})$/, "+$1 $2-$3");
+    return console.log("PHONE", a), a.replace(/\D/g, "").replace(/^(\d{3})(\d{4})(\d{4})$/, "+$1 $2-$3");
   }
   function n(a) {
     return a;
   }
   return { inputMaskRut: e, inputMaskCurrency: r, inputMaskPhone: i, inputMaskPrueba: n };
 }
-function Ho() {
+function Fo() {
   function e(r) {
     let i = String.fromCharCode(r.keyCode);
     if (/^[0-9Kk.-]/.test(i)) return !0;
@@ -1723,11 +1723,11 @@ function Uo() {
 const en = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   useFormat: Ko,
-  useInputMask: Fo,
-  useKeypress: Ho,
+  useInputMask: Ho,
+  useKeypress: Fo,
   useTable: Io,
   useTooltip: Uo,
-  useValidator: Oo
+  useValidator: zo
 }, Symbol.toStringTag, { value: "Module" })), tn = {
   install(e) {
     Object.keys(W).forEach((r) => {
