@@ -12,15 +12,10 @@ export default function useInputMask() {
 
   //Phone
   function inputMaskPhone(phone) {
-    console.log("PHONE", phone)
     return phone
       .replace(/\D/g, '')
       .replace(/^(\d{3})(\d{4})(\d{4})$/, '+$1 $2-$3')
   }
 
-  function inputMaskPrueba(prueba) {
-    return prueba
-  }
-
-  return { inputMaskRut, inputMaskCurrency, inputMaskPhone, inputMaskPrueba }
+  return { inputMaskRut, inputMaskCurrency, inputMaskPhone }
 }
