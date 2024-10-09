@@ -69,7 +69,7 @@ const props = defineProps({
 const emit = defineEmits(['emitValue', 'emitPressEnter'])
 
 //Variables
-const output = ref('')
+const output = ref(props.input)
 const valid = computed(() =>
   props.validation ? props.validation(output.value) : true
 )
@@ -100,11 +100,11 @@ const clean = () => {
   output.value = ''
 }
 
-//Watch
+// Watch
 watch(
   () => props.input,
   (value) => {
-    if (value) output.value = value
+    output.value = value
   }
 )
 watch(output, () => {
