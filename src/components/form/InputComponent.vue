@@ -112,6 +112,7 @@ watch(output, () => {
 watchEffect(() => {
   if (props.inputMask) output.value = props.inputMask(output.value)
   if (props.submitted) clean()
+  console.log("SUBMITED", props.submitted)
 })
 
 //Expose

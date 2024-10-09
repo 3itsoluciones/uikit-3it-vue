@@ -1,7 +1,7 @@
-import { computed as C, resolveComponent as D, openBlock as t, createElementBlock as s, normalizeClass as S, Fragment as _, createTextVNode as k, toDisplayString as v, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as m, withCtx as H, renderList as P, renderSlot as j, mergeProps as se, createStaticVNode as le, resolveDirective as ae, withDirectives as A, ref as q, watch as T, watchEffect as O, withKeys as K, vModelText as X, onMounted as ie, unref as z, normalizeStyle as F, vModelDynamic as re } from "vue";
+import { computed as C, resolveComponent as D, openBlock as t, createElementBlock as s, normalizeClass as S, Fragment as _, createTextVNode as k, toDisplayString as v, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as m, withCtx as H, renderList as P, renderSlot as j, mergeProps as se, createStaticVNode as le, resolveDirective as ae, withDirectives as E, ref as q, watch as T, watchEffect as O, withKeys as K, vModelText as X, onMounted as ie, unref as z, normalizeStyle as F, vModelDynamic as re } from "vue";
 import { useRoute as ee } from "vue-router";
 import { codeToHtml as ce } from "shiki";
-import E from "dayjs";
+import A from "dayjs";
 import de from "dayjs/plugin/relativeTime";
 import "dayjs/locale/es";
 const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border spinner-border-sm me-1" }, null, -1), I = {
@@ -265,7 +265,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Le = { class: "row" }, Ae = { class: "col-12" }, Ee = { class: "table eit-table eit-table-responsive" }, Oe = ["onClick"], Ve = /* @__PURE__ */ o("th", {
+}, Le = { class: "row" }, Ee = { class: "col-12" }, Ae = { class: "table eit-table eit-table-responsive" }, Oe = ["onClick"], Ve = /* @__PURE__ */ o("th", {
   scope: "col",
   class: "text-center"
 }, "Acciones", -1), ze = { class: "pe-3 d-lg-none" }, He = ["onClick"], Fe = {
@@ -382,7 +382,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       var G, Z, J, Q;
       const w = D("font-awesome-icon"), Y = ae("tippy");
       return t(), s("div", Le, [
-        o("div", Ae, [
+        o("div", Ee, [
           e.loading ? (t(), R(U, {
             key: 0,
             type: "table",
@@ -397,7 +397,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
             message: "<strong>No hay resultados</strong> para tu búsqueda."
           }, null, 512)) : c("", !0),
           !e.loading && ((Q = e.data) != null && Q.length) ? (t(), s(_, { key: 2 }, [
-            o("table", Ee, [
+            o("table", Ae, [
               o("thead", null, [
                 o("tr", null, [
                   (t(!0), s(_, null, P(e.columns, ($, B) => (t(), s("th", {
@@ -605,7 +605,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                           })
                         ], 8, mt)) : c("", !0),
                         e.enabledDisabledRecord ? (t(), s(_, { key: 3 }, [
-                          $.status ? c("", !0) : A((t(), s("a", {
+                          $.status ? c("", !0) : E((t(), s("a", {
                             key: 0,
                             onClick: (x) => p($),
                             href: "javascript:",
@@ -618,7 +618,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                           ], 8, pt)), [
                             [Y, { content: "Habilitar", theme: "main" }]
                           ]),
-                          $.status ? A((t(), s("a", {
+                          $.status ? E((t(), s("a", {
                             key: 1,
                             onClick: (x) => p($),
                             href: "javascript:",
@@ -684,7 +684,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         }, [
           m(h, { icon: "fa-solid fa-chevron-left" })
         ], 8, vt),
-        A(o("input", {
+        E(o("input", {
           type: "number",
           "onUpdate:modelValue": f[0] || (f[0] = (b) => a.value = b),
           onInput: d,
@@ -730,10 +730,10 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, Mt = { class: "dropdown-menu dropdown-custom-menu" }, Lt = {
   key: 0,
   class: "mx-2"
-}, At = {
+}, Et = {
   key: 1,
   class: "mx-2"
-}, Et = {
+}, At = {
   key: 2,
   class: "m-2"
 }, Ot = /* @__PURE__ */ o("div", { class: "eit-border--bottom eit-border--color" }, null, -1), Vt = [
@@ -870,7 +870,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                               k(" " + v(e.editRecord), 1)
                             ])
                           ])) : c("", !0),
-                          i.downloadRecord ? (t(), s("li", At, [
+                          i.downloadRecord ? (t(), s("li", Et, [
                             o("a", {
                               onClick: f[1] || (f[1] = (b) => g(i.record)),
                               class: "dropdown-item dropdown-custom-menu-item",
@@ -883,7 +883,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                               k(" " + v(i.downloadRecord), 1)
                             ])
                           ])) : c("", !0),
-                          e.deleteRecord || e.enabledDisabledRecord ? (t(), s("li", Et, Vt)) : c("", !0),
+                          e.deleteRecord || e.enabledDisabledRecord ? (t(), s("li", At, Vt)) : c("", !0),
                           i.enabledDisabledRecord ? (t(), s("li", zt, [
                             o("a", {
                               onClick: f[2] || (f[2] = (b) => l(e.record)),
@@ -1389,11 +1389,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     }), T(l, () => {
       a("emitValue", u.value ? l.value : "");
     }), O(() => {
-      n.inputMask && (l.value = n.inputMask(l.value)), n.submitted && h();
+      n.inputMask && (l.value = n.inputMask(l.value)), n.submitted && h(), console.log("SUBMITED", n.submitted);
     }), r({ clean: h }), (b, y) => (t(), s("div", {
       class: S(p.value)
     }, [
-      A(o("input", {
+      E(o("input", {
         autocomplete: "off",
         class: S(["form-control eit-input", d.value]),
         type: e.inputType,
@@ -1515,7 +1515,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }, 8, ["options", "modelValue", "label", "multiple", "placeholder", "class", "clearable", "disabled"]);
     };
   }
-}, Lo = ["maxlength", "placeholder"], Ao = {
+}, Lo = ["maxlength", "placeholder"], Eo = {
   __name: "TextareaResizeComponent",
   props: {
     //Data
@@ -1565,7 +1565,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       l.value.style.height = "50px", l.value.style.height = `${l.value.scrollHeight}px`, a("emitValue", d.value ? u.value : "");
     }), O(() => {
       n.submitted && p();
-    }), r({ clean: p }), (f, h) => A((t(), s("textarea", {
+    }), r({ clean: p }), (f, h) => E((t(), s("textarea", {
       ref_key: "textarea",
       ref: l,
       "onUpdate:modelValue": h[0] || (h[0] = (b) => u.value = b),
@@ -1582,7 +1582,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ]
     ]);
   }
-}, Eo = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Oo = { class: "p-3 eit-loading" }, oe = {
+}, Ao = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Oo = { class: "p-3 eit-loading" }, oe = {
   __name: "LoadingComponent",
   props: {
     size: {
@@ -1596,7 +1596,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     return (i, n) => (t(), s("div", Oo, [
       o("img", {
         style: F(`width:${r.size}px`),
-        src: Eo
+        src: Ao
       }, null, 4)
     ]));
   }
@@ -1618,7 +1618,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   SkeletonComponent: U,
   TabComponent: Wt,
   TableComponent: yt,
-  TextareaResizeComponent: Ao,
+  TextareaResizeComponent: Eo,
   ToastComponent: qo
 }, Symbol.toStringTag, { value: "Module" }));
 function Vo(e, r) {
@@ -1688,14 +1688,14 @@ function Io() {
   }
   return { sortTable: e };
 }
-E.extend(de);
-E.locale("es");
+A.extend(de);
+A.locale("es");
 function Ko() {
   function e(a) {
-    return E(a).format("DD/MM/YYYY");
+    return A(a).format("DD/MM/YYYY");
   }
   function r(a) {
-    return E(a).fromNow();
+    return A(a).fromNow();
   }
   function i(a) {
     let l = a.replace(/[^0-9kK]/g, ""), u = l.slice(0, -1).replace(/\B(?=(\d{3})+(?!\d))/g, "."), d = l.slice(-1).toUpperCase();
