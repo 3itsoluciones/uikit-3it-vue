@@ -69,7 +69,7 @@ const props = defineProps({
 const emit = defineEmits(['emitValue', 'emitPressEnter'])
 
 //Variables
-const output = ref(props.input)
+const output = ref('')
 const valid = computed(() =>
   props.validation ? props.validation(output.value) : true
 )

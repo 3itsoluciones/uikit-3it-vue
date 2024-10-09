@@ -1373,7 +1373,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitValue", "emitPressEnter"],
   setup(e, { expose: r, emit: i }) {
-    const n = e, a = i, l = q(n.input), u = C(
+    const n = e, a = i, l = q(""), u = C(
       () => n.validation ? n.validation(l.value) : !0
     ), d = C(() => !u.value && n.requiredField && n.error ? "is-invalid" : ""), g = C(() => n.floatLabel ? "" : n.placeHolder), p = C(() => [
       n.floatLabel || n.floatLeft || n.floatRight ? "eit-input__display" : "",
