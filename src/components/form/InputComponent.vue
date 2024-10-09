@@ -101,12 +101,9 @@ const clean = () => {
 }
 
 // Watch
-watch(
-  () => props.input,
-  (value) => {
-    output.value = value
-  }
-)
+watch(() => props.input, (value) => {
+  if(value) output.value = value
+})
 watch(output, () => {
   //Emit
   emit('emitValue', valid.value ? output.value : '')
