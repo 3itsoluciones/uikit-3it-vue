@@ -1254,7 +1254,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         ref_key: "toast",
         ref: n,
         class: S(["eit-toast__container", u.value]),
-        popover: ""
+        popover: "manual"
       }, [
         o("div", {
           class: S(["eit-toast box-shadow", `eit-toast--${a.data.type}`])

@@ -59,7 +59,7 @@ const handleCloseToast = () => {
 defineExpose({ handleShowToast, handleCloseToast })
 </script>
 <template>
-  <div ref="toast" class="eit-toast__container" :class="configToast" popover>
+  <div ref="toast" class="eit-toast__container" :class="configToast" popover="manual">
     <div class="eit-toast box-shadow" :class="`eit-toast--${props.data.type}`">
       <div class="d-flex">
         <div class="flex-shrink-0 eit-toast__left">
