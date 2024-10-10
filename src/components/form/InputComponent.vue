@@ -130,6 +130,7 @@ defineExpose({ clean })
       @keypress="props.keyPress && props.keyPress($event)"
       :placeholder="controlPlaceholder"
       @keyup.enter="handlePressEnter"
+      :disabled="isDisabled"
     />
     <template v-if="props.floatLabel">
       <label class="eit-label-float">

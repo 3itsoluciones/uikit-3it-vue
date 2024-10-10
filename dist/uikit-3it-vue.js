@@ -1392,7 +1392,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Ho = ["type", "maxlength", "placeholder"], Io = {
+}, Ho = ["type", "maxlength", "placeholder", "disabled"], Io = {
   key: 0,
   class: "eit-label-float"
 }, Ko = {
@@ -1495,7 +1495,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         maxlength: s.maxLength,
         onKeypress: v[1] || (v[1] = (N) => s.keyPress && s.keyPress(N)),
         placeholder: y.value,
-        onKeyup: K(m, ["enter"])
+        onKeyup: K(m, ["enter"]),
+        disabled: t.isDisabled
       }, null, 42, Ho), [
         [
           re,
