@@ -26,7 +26,7 @@ const props = defineProps({
 const popover = ref(null)
 
 //Computed
-const configpopover = computed(() => {
+const configPopover = computed(() => {
   return {
     [props.position]: props.position,
   }
@@ -35,16 +35,16 @@ const configpopover = computed(() => {
 /**Methods**/
 
 //Handles
-const handleShowpopover = () => {
+const handleShowPopover = () => {
   popover.value.showPopover()
 }
-const handleClosepopover = () => {
+const handleClosePopover = () => {
   popover.value.hidePopover()
 }
-defineExpose({ handleShowpopover, handleClosepopover })
+defineExpose({ handleShowPopover, handleClosePopover })
 </script>
 <template>
-  <div ref="popover" class="eit-popover__container" :class="configpopover" popover="manual">
+  <div ref="popover" class="eit-popover__container" :class="configPopover" popover="manual">
     <div class="eit-popover box-shadow" :class="`eit-popover--${props.data.type}`">
       <div class="d-flex">
         <div class="flex-shrink-0 eit-popover__left">

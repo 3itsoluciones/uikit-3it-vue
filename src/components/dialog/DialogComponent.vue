@@ -44,7 +44,7 @@
   const dialog = ref(null)
 
   const showDialog = () => {
-    dialog.value.showModal()
+    dialog.value.show()
     dialog.value.classList.add('show')
   }
   const closeDialog = () => {
