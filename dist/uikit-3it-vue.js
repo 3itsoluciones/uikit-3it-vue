@@ -1251,7 +1251,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ n("div", { class: "spinner-border 
     return i({ handleShowToast: d, handleCloseToast: g }), (p, f) => {
       const h = D("font-awesome-icon");
       return t(), s("div", {
-        class: S(["eit-toast__container", u.value])
+        class: S(["eit-toast__container", u.value]),
+        popover: ""
       }, [
         n("div", {
           class: S(["eit-toast box-shadow", `eit-toast--${a.data.type}`])
