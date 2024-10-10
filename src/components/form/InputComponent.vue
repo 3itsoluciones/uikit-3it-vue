@@ -124,13 +124,13 @@ defineExpose({ clean })
       autocomplete="off"
       class="form-control eit-input"
       :class="controlInputError"
-      :type="inputType"
+      :type="props.inputType"
       v-model.trim="output"
       :maxlength="props.maxLength"
       @keypress="props.keyPress && props.keyPress($event)"
       :placeholder="controlPlaceholder"
       @keyup.enter="handlePressEnter"
-      :disabled="isDisabled"
+      :disabled="props.isDisabled"
     />
     <template v-if="props.floatLabel">
       <label class="eit-label-float">
