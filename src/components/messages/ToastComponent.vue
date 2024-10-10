@@ -23,6 +23,7 @@ const props = defineProps({
 })
 
 //VARIABLES
+const toast = ref(null)
 const show = ref(false)
 const hidden = ref('hidden')
 const delay = ref('')
@@ -43,6 +44,7 @@ const configToast = computed(() => {
 const handleShowToast = () => {
   clearTimeout(delay.value)
   show.value = true
+  toast.value.showPopover()
   hidden.value = ''
   delay.value = setTimeout(() => {
     show.value = false
@@ -57,7 +59,7 @@ const handleCloseToast = () => {
 defineExpose({ handleShowToast, handleCloseToast })
 </script>
 <template>
-  <div class="eit-toast__container" :class="configToast" popover>
+  <div ref="toast" class="eit-toast__container" :class="configToast" popover>
     <div class="eit-toast box-shadow" :class="`eit-toast--${props.data.type}`">
       <div class="d-flex">
         <div class="flex-shrink-0 eit-toast__left">
