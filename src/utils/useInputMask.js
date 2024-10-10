@@ -17,5 +17,10 @@ export default function useInputMask() {
       .replace(/^(\d{3})(\d{4})(\d{4})$/, '+$1 $2-$3')
   }
 
-  return { inputMaskRut, inputMaskCurrency, inputMaskPhone }
+  //Currency
+  function inputOnlyLetters(letters) {
+    return letters.replace(/[^a-zA-Z]/g, '')
+  }
+
+  return { inputMaskRut, inputMaskCurrency, inputMaskPhone, inputOnlyLetters }
 }
