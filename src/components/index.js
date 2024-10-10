@@ -14,6 +14,7 @@ import ProgressBarComponent from '@/components/progress/ProgressBarComponent.vue
 //Message
 import AlertComponent from '@/components/messages/AlertComponent.vue'
 import ToastComponent from '@/components/messages/ToastComponent.vue'
+import PopoverComponent from '@/components/messages/PopoverComponent.vue'
 
 //Form
 import InputComponent from '@/components/form/InputComponent.vue'
@@ -41,6 +42,7 @@ export {
   //Message
   AlertComponent,
   ToastComponent,
+  PopoverComponent,
 
   //Form
   InputComponent,
