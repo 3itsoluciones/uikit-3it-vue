@@ -1051,7 +1051,7 @@ const ue = ["disabled"], pe = /* @__PURE__ */ o("div", { class: "spinner-border 
   ],
   setup(t, { expose: i, emit: a }) {
     const s = t, r = a, l = R(null), u = () => {
-      l.value.show(), l.value.classList.add("show");
+      l.value.showModal(), l.value.classList.add("show");
     }, d = () => {
       l.value.close(), l.value.classList.remove("show"), r("emitCloseDialog");
     }, g = (m) => {
