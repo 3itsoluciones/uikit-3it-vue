@@ -90,7 +90,7 @@ defineExpose({ handleShowPopover, handleClosePopover })
             </div>
             <div class="flex-shrink-0">
               <a
-                @click="handleClosepopover()"
+                @click="handleClosePopover()"
                 href="javascript:"
                 class="eit-popover__close"
               >
