@@ -1,4 +1,4 @@
-import { computed as S, resolveComponent as q, openBlock as e, createElementBlock as n, normalizeClass as C, Fragment as _, createTextVNode as k, toDisplayString as b, createCommentVNode as c, createBlock as j, createElementVNode as o, createVNode as p, withCtx as F, renderList as D, renderSlot as P, mergeProps as ne, createStaticVNode as le, resolveDirective as ae, withDirectives as z, ref as R, watch as T, watchEffect as E, withKeys as K, vModelText as X, onMounted as ie, unref as V, normalizeStyle as H, vModelDynamic as re } from "vue";
+import { computed as S, resolveComponent as P, openBlock as e, createElementBlock as n, normalizeClass as C, Fragment as _, createTextVNode as b, toDisplayString as g, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as f, withCtx as F, renderList as D, renderSlot as j, mergeProps as ne, createStaticVNode as le, resolveDirective as ae, withDirectives as z, ref as q, watch as T, watchEffect as E, withKeys as K, vModelText as X, onMounted as ie, unref as V, normalizeStyle as H, vModelDynamic as re } from "vue";
 import { useRoute as ee } from "vue-router";
 import { codeToHtml as ce } from "shiki";
 import A from "dayjs";
@@ -38,22 +38,22 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       s("emitEvent", d);
     };
     return (d, u) => {
-      const g = q("font-awesome-icon");
+      const y = P("font-awesome-icon");
       return e(), n("button", {
-        onClick: u[0] || (u[0] = (f) => l(f)),
+        onClick: u[0] || (u[0] = (p) => l(p)),
         class: C([r.value, "d-flex align-items-center justify-content-center gap-1"]),
         disabled: a.isDisabled
       }, [
         a.loading ? (e(), n(_, { key: 0 }, [
           fe,
-          k(" " + b(a.loadingText), 1)
+          b(" " + g(a.loadingText), 1)
         ], 64)) : c("", !0),
         a.loading ? c("", !0) : (e(), n(_, { key: 1 }, [
-          a.icon ? (e(), j(g, {
+          a.icon ? (e(), R(y, {
             key: 0,
             icon: a.icon
           }, null, 8, ["icon"])) : c("", !0),
-          k(" " + b(t.text), 1)
+          b(" " + g(t.text), 1)
         ], 64))
       ], 10, ue);
     };
@@ -76,33 +76,33 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }), s;
     });
     return (s, r) => {
-      const l = q("font-awesome-icon"), d = q("router-link");
+      const l = P("font-awesome-icon"), d = P("router-link");
       return e(), n("nav", pe, [
         o("ul", me, [
           o("li", null, [
-            p(d, {
+            f(d, {
               to: "/",
               class: "eit-color--text-soft eit-color--text-soft--link"
             }, {
               default: F(() => [
-                p(l, { icon: "fa-solid fa-house" })
+                f(l, { icon: "fa-solid fa-house" })
               ]),
               _: 1
             }),
             _e
           ]),
-          (e(!0), n(_, null, D(a.value, (u, g) => (e(), n("li", {
-            key: g,
+          (e(!0), n(_, null, D(a.value, (u, y) => (e(), n("li", {
+            key: y,
             class: "eit-breadcrumb__item"
           }, [
-            P(s.$slots, u.name, ne({ ref_for: !0 }, u), () => [
-              u.last ? (e(), n("span", he, b(u.title), 1)) : (e(), j(d, {
+            j(s.$slots, u.name, ne({ ref_for: !0 }, u), () => [
+              u.last ? (e(), n("span", he, g(u.title), 1)) : (e(), R(d, {
                 key: 0,
                 to: u.path,
                 class: "eit-color--text eit-color--text--link eit-color--underline"
               }, {
                 default: F(() => [
-                  k(b(u.title), 1)
+                  b(g(u.title), 1)
                 ]),
                 _: 2
               }, 1032, ["to"]))
@@ -132,12 +132,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   setup(t) {
     const i = t;
     return (a, s) => {
-      const r = q("font-awesome-icon");
+      const r = P("font-awesome-icon");
       return e(), n("span", {
         key: `badge-${i.text}`,
         class: C(`eit-badge ${i.className}`)
       }, [
-        i.icon ? (e(), j(r, {
+        i.icon ? (e(), R(r, {
           key: 0,
           icon: i.icon,
           class: "me-1"
@@ -172,11 +172,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   style: { width: "80%" }
 }, null, -1), je = [
   Re
-], Pe = { key: 1 }, qe = /* @__PURE__ */ o("div", {
+], qe = { key: 1 }, Pe = /* @__PURE__ */ o("div", {
   class: "eit-skeleton eit-skeleton__text my-2",
   style: { width: "80%" }
 }, null, -1), De = [
-  qe
+  Pe
 ], Be = /* @__PURE__ */ le('<div class="row"><div class="col-12"><div class="d-flex"><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__btn-square"></div></div><div class="flex-grow-1 ms-3"><div class="d-flex"><div class="flex-grow-1 ms-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:40%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></div><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30px;"></div></div></div></div></div></div></div><div class="row flex-grow-1"><div class="col-12 d-flex flex-column flex-grow-1"><div class="eit-slide__content flex-grow-1"><div class="mt-5"><div class="col-12"><h5 class="mb-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:20%;"></div></h5><ul class="list-unstyled"><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:40%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li></ul></div></div></div></div></div>', 2), U = {
   __name: "SkeletonComponent",
   props: {
@@ -208,7 +208,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           (e(!0), n(_, null, D(i.table.row, (r) => (e(), n("tr", { key: r }, [
             (e(!0), n(_, null, D(i.table.column, (l) => (e(), n(_, { key: l }, [
               l === 1 ? (e(), n("td", Se, je)) : c("", !0),
-              l > 1 ? (e(), n("td", Pe, De)) : c("", !0)
+              l > 1 ? (e(), n("td", qe, De)) : c("", !0)
             ], 64))), 128))
           ]))), 128))
         ])
@@ -246,13 +246,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   setup(t) {
     const i = t;
     return (a, s) => {
-      const r = q("font-awesome-icon");
+      const r = P("font-awesome-icon");
       return e(), n("div", {
         class: C(`eit-alert eit-alert--${i.type} ${i.animation.active ? "eit-alert--animation" : "eit-alert--default"} ${i.animation.show ? "eit-alert--animation--show" : ""}`)
       }, [
         o("div", Te, [
           o("div", Ne, [
-            p(r, {
+            f(r, {
               icon: i.icon,
               class: C(t.iconClass)
             }, null, 8, ["icon", "class"])
@@ -373,22 +373,22 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       s("deleteRecord", v);
     }, u = (v) => {
       s("downloadRecord", v);
-    }, g = (v) => {
+    }, y = (v) => {
       s("updateSort", { index: v, asc: !a.sort.asc });
-    }, f = (v) => {
+    }, p = (v) => {
       s("enabledDisabledRecord", v);
-    }, m = (v) => typeof v == "string", h = (v) => typeof v == "object" && !Array.isArray(v), y = (v) => Array.isArray(v);
+    }, m = (v) => typeof v == "string", h = (v) => typeof v == "object" && !Array.isArray(v), k = (v) => Array.isArray(v);
     return (v, N) => {
       var G, Z, J, Q;
-      const w = q("font-awesome-icon"), Y = ae("tippy");
+      const w = P("font-awesome-icon"), Y = ae("tippy");
       return e(), n("div", Me, [
         o("div", ze, [
-          t.loading ? (e(), j(U, {
+          t.loading ? (e(), R(U, {
             key: 0,
             type: "table",
             table: { row: (G = t.skeleton) == null ? void 0 : G.row, column: (Z = t.skeleton) == null ? void 0 : Z.column }
           }, null, 8, ["table"])) : c("", !0),
-          !t.loading && !((J = t.data) != null && J.length) ? (e(), j(te, {
+          !t.loading && !((J = t.data) != null && J.length) ? (e(), R(te, {
             key: 1,
             ref: "alert",
             class: "mb-3",
@@ -405,11 +405,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                     scope: "col"
                   }, [
                     o("a", {
-                      onClick: ($) => g(B),
+                      onClick: ($) => y(B),
                       href: "javascript:",
                       class: "d-flex justify-content-between"
                     }, [
-                      k(b(x) + " ", 1),
+                      b(g(x) + " ", 1),
                       t.sort.index === B ? (e(), n("span", {
                         key: `icono-${x}`,
                         class: "d-flex ms-2 eit-color--text"
@@ -417,17 +417,17 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                         t.sort.asc ? c("", !0) : (e(), n("span", {
                           key: `down-${x}`
                         }, [
-                          p(w, { icon: "fa-solid fa-sort-down align-baseline" })
+                          f(w, { icon: "fa-solid fa-sort-down align-baseline" })
                         ])),
                         t.sort.asc ? (e(), n("span", {
                           key: `up-${x}`
                         }, [
-                          p(w, { icon: "fa-solid fa-sort-up align-baseline" })
+                          f(w, { icon: "fa-solid fa-sort-up align-baseline" })
                         ])) : c("", !0)
                       ])) : (e(), n("span", {
                         key: `key-${x}`
                       }, [
-                        p(w, { icon: "fa-solid fa-sort" })
+                        f(w, { icon: "fa-solid fa-sort" })
                       ]))
                     ], 8, Ee)
                   ]))), 128)),
@@ -441,54 +441,54 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                   (e(!0), n(_, null, D(x, ($, M) => (e(), n("td", {
                     key: `value-${M}`
                   }, [
-                    o("strong", Ve, b(t.columns[Object.keys(x).indexOf(M)]) + ":", 1),
+                    o("strong", Ve, g(t.columns[Object.keys(x).indexOf(M)]) + ":", 1),
                     Object.keys(x)[t.columnLink] === M ? (e(), n(_, { key: 0 }, [
                       t.viewRecord ? (e(), n("a", {
                         key: 0,
                         onClick: (O) => r(x),
                         href: "javascript:",
                         class: "eit-table__link"
-                      }, b($), 9, Fe)) : c("", !0),
+                      }, g($), 9, Fe)) : c("", !0),
                       t.viewRecord ? c("", !0) : (e(), n(_, { key: 1 }, [
-                        k(b($), 1)
+                        b(g($), 1)
                       ], 64))
                     ], 64)) : c("", !0),
                     Object.keys(x)[t.columnLink] !== M ? (e(), n(_, { key: 1 }, [
-                      y($) ? (e(), n("div", He, [
+                      k($) ? (e(), n("div", He, [
                         (e(!0), n(_, null, D($, (O, se) => (e(), n("span", {
                           key: `value-array-${se}`,
                           class: "d-flex flex-wrap gap-1"
                         }, [
-                          p(L, {
+                          f(L, {
                             text: O.name,
                             className: O.className
                           }, null, 8, ["text", "className"])
                         ]))), 128))
                       ])) : c("", !0),
                       M === "status" ? (e(), n(_, { key: 1 }, [
-                        $ ? (e(), j(L, {
+                        $ ? (e(), R(L, {
                           key: 0,
                           text: "Activo",
                           className: "eit-badge__outline--secondary"
                         })) : c("", !0),
-                        $ ? c("", !0) : (e(), j(L, {
+                        $ ? c("", !0) : (e(), R(L, {
                           key: 1,
                           text: "Inactivo",
                           className: "eit-badge__outline--gray"
                         }))
                       ], 64)) : c("", !0),
-                      h($) ? (e(), j(L, {
+                      h($) ? (e(), R(L, {
                         key: 2,
                         text: $.name,
                         className: $.className
                       }, null, 8, ["text", "className"])) : c("", !0),
-                      m($) ? (e(), n("span", Ie, b($), 1)) : c("", !0)
+                      m($) ? (e(), n("span", Ie, g($), 1)) : c("", !0)
                     ], 64)) : c("", !0)
                   ]))), 128)),
                   o("td", Ke, [
                     o("div", Ue, [
                       o("a", Ye, [
-                        p(w, { icon: "fa-solid fa-ellipsis" })
+                        f(w, { icon: "fa-solid fa-ellipsis" })
                       ]),
                       o("ul", Ge, [
                         t.viewRecord ? (e(), n("li", Ze, [
@@ -497,11 +497,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
-                            p(w, {
+                            f(w, {
                               icon: "fa-regular fa-eye",
                               class: "eit-color--blue"
                             }),
-                            k(" " + b(t.viewRecord), 1)
+                            b(" " + g(t.viewRecord), 1)
                           ], 8, Je)
                         ])) : c("", !0),
                         t.editRecord ? (e(), n("li", Qe, [
@@ -510,11 +510,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
-                            p(w, {
+                            f(w, {
                               icon: "fa-solid fa-square-pen",
                               class: "eit-color--yellow"
                             }),
-                            k(" " + b(t.editRecord), 1)
+                            b(" " + g(t.editRecord), 1)
                           ], 8, We)
                         ])) : c("", !0),
                         t.downloadRecord ? (e(), n("li", Xe, [
@@ -523,33 +523,33 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
-                            p(w, {
+                            f(w, {
                               icon: "fa-solid fa-download",
                               class: "eit-color--blue"
                             }),
-                            k(" " + b(t.downloadRecord), 1)
+                            b(" " + g(t.downloadRecord), 1)
                           ], 8, et)
                         ])) : c("", !0),
                         t.deleteRecord || t.enabledDisabledRecord ? (e(), n("li", tt, st)) : c("", !0),
                         t.enabledDisabledRecord ? (e(), n("li", nt, [
                           o("a", {
-                            onClick: ($) => f(x),
+                            onClick: ($) => p(x),
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
                             x.status ? c("", !0) : (e(), n(_, { key: 0 }, [
-                              p(w, {
+                              f(w, {
                                 icon: "fa-regular fa-circle-check",
                                 class: "eit-color--green"
                               }),
-                              k(" Habilitar ")
+                              b(" Habilitar ")
                             ], 64)),
                             x.status ? (e(), n(_, { key: 1 }, [
-                              p(w, {
+                              f(w, {
                                 icon: "fa-solid fa-ban",
                                 class: "eit-color--red"
                               }),
-                              k(" Deshabilitar ")
+                              b(" Deshabilitar ")
                             ], 64)) : c("", !0)
                           ], 8, lt)
                         ])) : c("", !0),
@@ -559,11 +559,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
-                            p(w, {
+                            f(w, {
                               icon: "fa-solid fa-trash",
                               class: "eit-color--red"
                             }),
-                            k(" " + b(t.deleteRecord), 1)
+                            b(" " + g(t.deleteRecord), 1)
                           ], 8, it)
                         ])) : c("", !0)
                       ])
@@ -577,7 +577,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                           href: "javascript:",
                           class: "eit-btn eit-btn-outline--gray eit-btn--square"
                         }, [
-                          p(w, {
+                          f(w, {
                             icon: "fa-regular fa-eye",
                             class: "eit-color--blue"
                           })
@@ -588,7 +588,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                           href: "javascript:",
                           class: "eit-btn eit-btn-outline--gray eit-btn--square"
                         }, [
-                          p(w, {
+                          f(w, {
                             icon: "fa-solid fa-square-pen",
                             class: "eit-color--yellow"
                           })
@@ -599,7 +599,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                           href: "javascript:",
                           class: "eit-btn eit-btn-outline--gray eit-btn--square"
                         }, [
-                          p(w, {
+                          f(w, {
                             icon: "fa-solid fa-download",
                             class: "eit-color--blue"
                           })
@@ -607,11 +607,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                         t.enabledDisabledRecord ? (e(), n(_, { key: 3 }, [
                           x.status ? c("", !0) : z((e(), n("a", {
                             key: 0,
-                            onClick: ($) => f(x),
+                            onClick: ($) => p(x),
                             href: "javascript:",
                             class: "eit-btn eit-btn-outline--gray eit-btn--square"
                           }, [
-                            p(w, {
+                            f(w, {
                               icon: "fa-regular fa-circle-check",
                               class: "eit-color--green"
                             })
@@ -620,11 +620,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                           ]),
                           x.status ? z((e(), n("a", {
                             key: 1,
-                            onClick: ($) => f(x),
+                            onClick: ($) => p(x),
                             href: "javascript:",
                             class: "eit-btn eit-btn-outline--gray eit-btn--square"
                           }, [
-                            p(w, {
+                            f(w, {
                               icon: "fa-solid fa-ban",
                               class: "eit-color--red"
                             })
@@ -638,7 +638,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                           href: "javascript:",
                           class: "eit-btn eit-btn-outline--gray eit-btn--square"
                         }, [
-                          p(w, {
+                          f(w, {
                             icon: "fa-solid fa-trash",
                             class: "eit-color--red"
                           })
@@ -649,7 +649,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                 ]))), 128))
               ])
             ]),
-            P(v.$slots, "paginator")
+            j(v.$slots, "paginator")
           ], 64)) : c("", !0)
         ])
       ]);
@@ -665,32 +665,32 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["updatePaginator"],
   setup(t, { emit: i }) {
-    const a = t, s = i, r = R(a.data.currentPage), l = () => r.value++, d = () => r.value--, u = () => {
+    const a = t, s = i, r = q(a.data.currentPage), l = () => r.value++, d = () => r.value--, u = () => {
       r.value <= 0 && (r.value = 1), r.value > a.data.finalPage && (r.value = a.data.finalPage);
-    }, g = (f) => {
-      f.target.select();
+    }, y = (p) => {
+      p.target.select();
     };
     return T(r, () => {
       r.value > 0 && r.value <= a.data.finalPage && s("updatePaginator", r.value);
     }), E(() => {
       a.data && (r.value = a.data.currentPage);
-    }), (f, m) => {
-      const h = q("font-awesome-icon");
+    }), (p, m) => {
+      const h = P("font-awesome-icon");
       return e(), n("div", vt, [
         o("button", {
           onClick: d,
           disabled: t.data.currentPage === 1,
           class: "eit-btn eit-btn--square eit-btn-outline--gray"
         }, [
-          p(h, { icon: "fa-solid fa-chevron-left" })
+          f(h, { icon: "fa-solid fa-chevron-left" })
         ], 8, gt),
         z(o("input", {
           type: "number",
-          "onUpdate:modelValue": m[0] || (m[0] = (y) => r.value = y),
+          "onUpdate:modelValue": m[0] || (m[0] = (k) => r.value = k),
           onInput: u,
           onKeyup: K(u, ["enter"]),
           onBlur: u,
-          onFocus: g,
+          onFocus: y,
           class: "eit-input eit-paginator__input eit-font__size--x1 text-center",
           "aria-label": "Número de página"
         }, null, 544), [
@@ -702,12 +702,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           ]
         ]),
         o("span", bt, [
-          k(" de " + b(t.data.finalPage) + " ", 1),
+          b(" de " + g(t.data.finalPage) + " ", 1),
           t.data.finalPage === 1 ? (e(), n(_, { key: 0 }, [
-            k(" página ")
+            b(" página ")
           ], 64)) : c("", !0),
           t.data.finalPage > 1 ? (e(), n(_, { key: 1 }, [
-            k(" páginas ")
+            b(" páginas ")
           ], 64)) : c("", !0)
         ]),
         o("button", {
@@ -715,12 +715,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           disabled: t.data.currentPage === t.data.finalPage,
           class: "eit-btn eit-btn--square eit-btn-outline--gray"
         }, [
-          p(h, { icon: "fa-solid fa-chevron-right" })
+          f(h, { icon: "fa-solid fa-chevron-right" })
         ], 8, kt)
       ]);
     };
   }
-}, $t = { class: "row" }, wt = { class: "col-12" }, Ct = { class: "d-flex" }, St = { class: "flex-shrink-0" }, Rt = { class: "flex-grow-1" }, jt = { class: "d-flex" }, Pt = { class: "flex-grow-1 d-flex flex-column ms-3" }, qt = { class: "eit-font--primary mb-0" }, Dt = { class: "eit-color--text mb-0" }, Bt = { class: "flex-shrink-0" }, Tt = {
+}, $t = { class: "row" }, wt = { class: "col-12" }, Ct = { class: "d-flex" }, St = { class: "flex-shrink-0" }, Rt = { class: "flex-grow-1" }, jt = { class: "d-flex" }, qt = { class: "flex-grow-1 d-flex flex-column ms-3" }, Pt = { class: "eit-font--primary mb-0" }, Dt = { class: "eit-color--text mb-0" }, Bt = { class: "flex-shrink-0" }, Tt = {
   key: 0,
   class: "dropdown eit-dropdown d-none d-lg-block"
 }, Nt = {
@@ -802,21 +802,21 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   setup(t, { emit: i }) {
     const a = t, s = i, r = () => {
       s("emitslide");
-    }, l = (f) => {
-      s("enabledDisabledRecord", f);
-    }, d = (f) => {
-      s("editRecord", f);
-    }, u = (f) => {
-      s("deleteRecord", f);
-    }, g = (f) => {
-      s("downloadRecord", f);
+    }, l = (p) => {
+      s("enabledDisabledRecord", p);
+    }, d = (p) => {
+      s("editRecord", p);
+    }, u = (p) => {
+      s("deleteRecord", p);
+    }, y = (p) => {
+      s("downloadRecord", p);
     };
-    return (f, m) => {
-      const h = q("font-awesome-icon");
+    return (p, m) => {
+      const h = P("font-awesome-icon");
       return e(), n("section", {
         class: C(["eit-slide d-flex flex-column", [t.slide && "eit-slide--right", t.slideSmall && "eit-slide--small"]])
       }, [
-        a.loading ? (e(), j(U, {
+        a.loading ? (e(), R(U, {
           key: 0,
           type: "detail"
         })) : c("", !0),
@@ -829,11 +829,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                     class: "eit-btn eit-btn--gray eit-btn--square",
                     onClick: r
                   }, [
-                    p(h, {
+                    f(h, {
                       icon: "fa-solid fa-angle-right",
                       class: "eit-font__size--x5 d-none d-lg-block"
                     }),
-                    p(h, {
+                    f(h, {
                       icon: "fa-solid fa-angle-down",
                       class: "eit-font__size--x5 d-lg-none"
                     })
@@ -841,82 +841,82 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                 ]),
                 o("div", Rt, [
                   o("div", jt, [
-                    o("div", Pt, [
-                      o("h4", qt, [
+                    o("div", qt, [
+                      o("h4", Pt, [
                         o("strong", null, [
-                          P(f.$slots, "title")
+                          j(p.$slots, "title")
                         ])
                       ]),
                       o("p", Dt, [
-                        P(f.$slots, "subtitle")
+                        j(p.$slots, "subtitle")
                       ])
                     ]),
                     o("div", Bt, [
                       a.dropdown ? (e(), n("div", Tt, [
                         o("a", Nt, [
-                          p(h, { icon: "fa-solid fa-ellipsis" })
+                          f(h, { icon: "fa-solid fa-ellipsis" })
                         ]),
                         o("ul", Lt, [
                           a.editRecord ? (e(), n("li", Mt, [
                             o("a", {
-                              onClick: m[0] || (m[0] = (y) => d(a.record)),
+                              onClick: m[0] || (m[0] = (k) => d(a.record)),
                               class: "dropdown-item dropdown-custom-menu-item",
                               href: "javascript:"
                             }, [
-                              p(h, {
+                              f(h, {
                                 icon: "fa-solid fa-square-pen",
                                 class: "eit-color--yellow"
                               }),
-                              k(" " + b(t.editRecord), 1)
+                              b(" " + g(t.editRecord), 1)
                             ])
                           ])) : c("", !0),
                           a.downloadRecord ? (e(), n("li", zt, [
                             o("a", {
-                              onClick: m[1] || (m[1] = (y) => g(a.record)),
+                              onClick: m[1] || (m[1] = (k) => y(a.record)),
                               class: "dropdown-item dropdown-custom-menu-item",
                               href: "javascript:"
                             }, [
-                              p(h, {
+                              f(h, {
                                 icon: "fa-solid fa-download",
                                 class: "eit-color--blue"
                               }),
-                              k(" " + b(a.downloadRecord), 1)
+                              b(" " + g(a.downloadRecord), 1)
                             ])
                           ])) : c("", !0),
                           t.deleteRecord || t.enabledDisabledRecord ? (e(), n("li", At, Ot)) : c("", !0),
                           a.enabledDisabledRecord ? (e(), n("li", Vt, [
                             o("a", {
-                              onClick: m[2] || (m[2] = (y) => l(t.record)),
+                              onClick: m[2] || (m[2] = (k) => l(t.record)),
                               class: "dropdown-item dropdown-custom-menu-item",
                               href: "javascript:"
                             }, [
                               a.record.status ? c("", !0) : (e(), n(_, { key: 0 }, [
-                                p(h, {
+                                f(h, {
                                   icon: "fa-regular fa-circle-check",
                                   class: "eit-color--green"
                                 }),
-                                k(" Habilitar ")
+                                b(" Habilitar ")
                               ], 64)),
                               a.record.status ? (e(), n(_, { key: 1 }, [
-                                p(h, {
+                                f(h, {
                                   icon: "fa-solid fa-ban",
                                   class: "eit-color--red"
                                 }),
-                                k(" Deshabilitar ")
+                                b(" Deshabilitar ")
                               ], 64)) : c("", !0)
                             ])
                           ])) : c("", !0),
                           a.deleteRecord ? (e(), n("li", Ft, [
                             o("a", {
-                              onClick: m[3] || (m[3] = (y) => u(a.record)),
+                              onClick: m[3] || (m[3] = (k) => u(a.record)),
                               class: "dropdown-item dropdown-custom-menu-item eit-color--red",
                               href: "javascript:"
                             }, [
-                              p(h, {
+                              f(h, {
                                 icon: "fa-solid fa-trash",
                                 class: "eit-color--red"
                               }),
-                              k(" " + b(a.deleteRecord), 1)
+                              b(" " + g(a.deleteRecord), 1)
                             ])
                           ])) : c("", !0)
                         ])
@@ -930,11 +930,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           o("div", Ht, [
             o("div", It, [
               o("div", Kt, [
-                P(f.$slots, "component")
+                j(p.$slots, "component")
               ])
             ])
           ]),
-          P(f.$slots, "footer")
+          j(p.$slots, "footer")
         ], 64))
       ], 2);
     };
@@ -959,7 +959,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     }
   },
   setup(t) {
-    const i = t, a = (l) => l < 99 ? l : "+99", s = R(0), r = (l) => {
+    const i = t, a = (l) => l < 99 ? l : "+99", s = q(0), r = (l) => {
       s.value = l;
     };
     return (l, d) => (e(), n(_, null, [
@@ -967,25 +967,25 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         o("ul", {
           class: C(`eit-tabs ${i.className}`)
         }, [
-          (e(!0), n(_, null, D(t.data, (u, g) => (e(), n("li", {
-            key: g,
+          (e(!0), n(_, null, D(t.data, (u, y) => (e(), n("li", {
+            key: y,
             class: "eit-tabs__item"
           }, [
             o("a", {
               href: "javascript:",
-              onClick: (f) => r(g),
-              class: C(["eit-tabs__item__link", s.value === g ? "active" : ""])
+              onClick: (p) => r(y),
+              class: C(["eit-tabs__item__link", s.value === y ? "active" : ""])
             }, [
-              k(b(u.name) + " ", 1),
-              u.number ? (e(), n("span", Zt, b(a(u.number)), 1)) : c("", !0)
+              b(g(u.name) + " ", 1),
+              u.number ? (e(), n("span", Zt, g(a(u.number)), 1)) : c("", !0)
             ], 10, Gt)
           ]))), 128))
         ], 2),
-        P(l.$slots, "dropdown")
+        j(l.$slots, "dropdown")
       ]),
       o("div", Jt, [
         o("div", Qt, [
-          P(l.$slots, `tab-${s.value}`)
+          j(l.$slots, `tab-${s.value}`)
         ])
       ])
     ], 64));
@@ -1008,7 +1008,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     }
   },
   setup(t) {
-    const i = t, a = R("");
+    const i = t, a = q("");
     return (async () => {
       const r = `${i.code}`;
       a.value = await ce(r, {
@@ -1050,19 +1050,19 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     "emitCloseDialog"
   ],
   setup(t, { expose: i, emit: a }) {
-    const s = t, r = a, l = R(null), d = () => {
+    const s = t, r = a, l = q(null), d = () => {
       l.value.showModal(), l.value.classList.add("show");
     }, u = () => {
       l.value.close(), l.value.classList.remove("show"), r("emitCloseDialog");
-    }, g = (m) => {
+    }, y = (m) => {
       m.key === "Escape" && u();
-    }, f = () => {
+    }, p = () => {
       r("emitSubmit");
     };
     return ie(() => {
-      document.addEventListener("keyup", g);
+      document.addEventListener("keyup", y);
     }), i({ showDialog: d, closeDialog: u }), (m, h) => {
-      const y = q("font-awesome-icon");
+      const k = P("font-awesome-icon");
       return e(), n("dialog", {
         ref_key: "dialog",
         ref: l,
@@ -1070,38 +1070,38 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         onKeyup: K(u, ["esc"])
       }, [
         o("div", to, [
-          t.loading ? (e(), j(V(oe), {
+          t.loading ? (e(), R(V(oe), {
             key: 0,
             size: "70"
           })) : c("", !0),
           t.loading ? c("", !0) : (e(), n(_, { key: 1 }, [
             o("div", oo, [
-              P(m.$slots, "head"),
+              j(m.$slots, "head"),
               o("button", {
                 onClick: u,
                 class: "eit-dialog__close"
               }, [
-                p(y, { icon: ["fas", "xmark"] })
+                f(k, { icon: ["fas", "xmark"] })
               ])
             ]),
             o("div", {
               class: C(`eit-dialog__body ${t.scrollable ? "eit-dialog__body--scroll" : ""}`)
             }, [
-              P(m.$slots, "content")
+              j(m.$slots, "content")
             ], 2),
             o("div", so, [
-              p(V(I), {
+              f(V(I), {
                 onClick: u,
                 className: "eit-btn-outline--gray",
                 text: "Volver"
               }),
-              s.btnSubmit ? (e(), j(V(I), {
+              s.btnSubmit ? (e(), R(V(I), {
                 key: 0,
                 className: "eit-btn--primary",
                 text: "Guardar",
                 loadingText: "Guardando...",
                 loading: t.loadingSubmit,
-                onEmitEvent: f,
+                onEmitEvent: p,
                 isDisabled: t.disabledSubmit
               }, null, 8, ["loading", "isDisabled"])) : c("", !0)
             ])
@@ -1139,16 +1139,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                 key: r.name
               }, [
                 o("td", null, [
-                  p(L, {
+                  f(L, {
                     text: r.name,
                     className: "eit-badge__outline--gray"
                   }, null, 8, ["text"])
                 ]),
                 o("td", null, [
-                  o("code", null, b(r.type), 1)
+                  o("code", null, g(r.type), 1)
                 ]),
                 o("td", null, [
-                  o("code", null, b(r.default), 1)
+                  o("code", null, g(r.default), 1)
                 ])
               ]))), 128))
             ])
@@ -1182,7 +1182,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }, [
         a.value !== 0 ? (e(), n(_, { key: 0 }, [
           i.percentage > 5 ? (e(), n(_, { key: 0 }, [
-            k(b(i.percentage) + "% ", 1)
+            b(g(i.percentage) + "% ", 1)
           ], 64)) : c("", !0)
         ], 64)) : c("", !0)
       ], 6),
@@ -1192,12 +1192,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }, [
         i.loading ? c("", !0) : (e(), n(_, { key: 0 }, [
           s.value === 0 || s.value > 5 ? (e(), n(_, { key: 0 }, [
-            k(b(s.value) + "% ", 1)
+            b(g(s.value) + "% ", 1)
           ], 64)) : c("", !0)
         ], 64)),
         i.loading ? (e(), n("span", mo, [
           _o,
-          k(" Cargando... ")
+          b(" Cargando... ")
         ])) : c("", !0)
       ], 4)
     ]));
@@ -1214,7 +1214,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, xo = {
   key: "info",
   class: "eit-toast__icon eit-font__size--x7"
-}, $o = { class: "flex-grow-1 ms-3" }, wo = { class: "d-flex" }, Co = { class: "flex-grow-1 me-3" }, So = { class: "eit-toast__title" }, Ro = { class: "eit-toast__text" }, jo = { class: "flex-shrink-0" }, Po = {
+}, $o = { class: "flex-grow-1 ms-3" }, wo = { class: "d-flex" }, Co = { class: "flex-grow-1 me-3" }, So = { class: "eit-toast__title" }, Ro = { class: "eit-toast__text" }, jo = { class: "flex-shrink-0" }, qo = {
   __name: "ToastComponent",
   props: {
     type: {
@@ -1236,25 +1236,22 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     }
   },
   setup(t, { expose: i }) {
-    const a = t, s = R(null), r = R(!1), l = R("hidden"), d = R(""), u = S(() => ({
-      show: r.value,
-      hide: !r.value,
+    const a = t, s = q(!1), r = q("hidden"), l = q(""), d = S(() => ({
+      show: s.value,
+      hide: !s.value,
       [a.position]: a.position,
-      hidden: l.value
-    })), g = () => {
-      clearTimeout(d.value), r.value = !0, s.value.showPopover(), l.value = "", d.value = setTimeout(() => {
-        r.value = !1, setTimeout(() => l.value = "hidden", "300");
+      hidden: r.value
+    })), u = () => {
+      clearTimeout(l.value), s.value = !0, r.value = "", l.value = setTimeout(() => {
+        s.value = !1, setTimeout(() => r.value = "hidden", "300");
       }, a.visible);
-    }, f = () => {
-      r.value = !1, setTimeout(() => l.value = "hidden", "300"), clearTimeout(d.value);
+    }, y = () => {
+      s.value = !1, setTimeout(() => r.value = "hidden", "300"), clearTimeout(l.value);
     };
-    return i({ handleShowToast: g, handleCloseToast: f }), (m, h) => {
-      const y = q("font-awesome-icon");
+    return i({ handleShowToast: u, handleCloseToast: y }), (p, m) => {
+      const h = P("font-awesome-icon");
       return e(), n("div", {
-        ref_key: "toast",
-        ref: s,
-        class: C(["eit-toast__container", u.value]),
-        popover: "manual"
+        class: C(["eit-toast__container", d.value])
       }, [
         o("div", {
           class: C(["eit-toast box-shadow", `eit-toast--${a.data.type}`])
@@ -1262,16 +1259,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           o("div", yo, [
             o("div", vo, [
               a.type === "success" ? (e(), n("span", go, [
-                p(y, { icon: "fa-solid fa-circle-check" })
+                f(h, { icon: "fa-solid fa-circle-check" })
               ])) : c("", !0),
               a.type === "error" ? (e(), n("span", bo, [
-                p(y, { icon: "fa-solid fa-circle-xmark" })
+                f(h, { icon: "fa-solid fa-circle-xmark" })
               ])) : c("", !0),
               a.type === "warning" ? (e(), n("span", ko, [
-                p(y, { icon: "fa-solid fa-triangle-exclamation" })
+                f(h, { icon: "fa-solid fa-triangle-exclamation" })
               ])) : c("", !0),
               a.type === "info" ? (e(), n("span", xo, [
-                p(y, { icon: "fa-solid fa-circle-info" })
+                f(h, { icon: "fa-solid fa-circle-info" })
               ])) : c("", !0)
             ]),
             o("div", $o, [
@@ -1279,19 +1276,19 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                 o("div", Co, [
                   o("p", So, [
                     a.data.code ? (e(), n(_, { key: 0 }, [
-                      k(b(a.data.code), 1)
+                      b(g(a.data.code), 1)
                     ], 64)) : c("", !0),
-                    k(" " + b(a.data.title), 1)
+                    b(" " + g(a.data.title), 1)
                   ]),
-                  o("p", Ro, b(a.data.message), 1)
+                  o("p", Ro, g(a.data.message), 1)
                 ]),
                 o("div", jo, [
                   o("a", {
-                    onClick: h[0] || (h[0] = (v) => f()),
+                    onClick: m[0] || (m[0] = (k) => y()),
                     href: "javascript:",
                     class: "eit-toast__close"
                   }, [
-                    p(y, { icon: "fa-solid fa-xmark" })
+                    f(h, { icon: "fa-solid fa-xmark" })
                   ])
                 ])
               ])
@@ -1301,7 +1298,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, qo = { class: "d-flex" }, Do = { class: "flex-shrink-0 eit-popover__left" }, Bo = {
+}, Po = { class: "d-flex" }, Do = { class: "flex-shrink-0 eit-popover__left" }, Bo = {
   key: "success",
   class: "eit-popover__icon eit-font__size--x7"
 }, To = {
@@ -1335,15 +1332,15 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     }
   },
   setup(t, { expose: i }) {
-    const a = t, s = R(null), r = S(() => ({
+    const a = t, s = q(null), r = S(() => ({
       [a.position]: a.position
     })), l = () => {
       s.value.showPopover();
     }, d = () => {
       s.value.hidePopover();
     };
-    return i({ handleShowPopover: l, handleClosePopover: d }), (u, g) => {
-      const f = q("font-awesome-icon");
+    return i({ handleShowPopover: l, handleClosePopover: d }), (u, y) => {
+      const p = P("font-awesome-icon");
       return e(), n("div", {
         ref_key: "popover",
         ref: s,
@@ -1353,19 +1350,19 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         o("div", {
           class: C(["eit-popover box-shadow", `eit-popover--${a.data.type}`])
         }, [
-          o("div", qo, [
+          o("div", Po, [
             o("div", Do, [
               a.type === "success" ? (e(), n("span", Bo, [
-                p(f, { icon: "fa-solid fa-circle-check" })
+                f(p, { icon: "fa-solid fa-circle-check" })
               ])) : c("", !0),
               a.type === "error" ? (e(), n("span", To, [
-                p(f, { icon: "fa-solid fa-circle-xmark" })
+                f(p, { icon: "fa-solid fa-circle-xmark" })
               ])) : c("", !0),
               a.type === "warning" ? (e(), n("span", No, [
-                p(f, { icon: "fa-solid fa-triangle-exclamation" })
+                f(p, { icon: "fa-solid fa-triangle-exclamation" })
               ])) : c("", !0),
               a.type === "info" ? (e(), n("span", Lo, [
-                p(f, { icon: "fa-solid fa-circle-info" })
+                f(p, { icon: "fa-solid fa-circle-info" })
               ])) : c("", !0)
             ]),
             o("div", Mo, [
@@ -1373,19 +1370,19 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                 o("div", Ao, [
                   o("p", Eo, [
                     a.data.code ? (e(), n(_, { key: 0 }, [
-                      k(b(a.data.code), 1)
+                      b(g(a.data.code), 1)
                     ], 64)) : c("", !0),
-                    k(" " + b(a.data.title), 1)
+                    b(" " + g(a.data.title), 1)
                   ]),
-                  o("p", Oo, b(a.data.message), 1)
+                  o("p", Oo, g(a.data.message), 1)
                 ]),
                 o("div", Vo, [
                   o("a", {
-                    onClick: g[0] || (g[0] = (m) => d()),
+                    onClick: y[0] || (y[0] = (m) => d()),
                     href: "javascript:",
                     class: "eit-popover__close"
                   }, [
-                    p(f, { icon: "fa-solid fa-xmark" })
+                    f(p, { icon: "fa-solid fa-xmark" })
                   ])
                 ])
               ])
@@ -1470,9 +1467,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitValue", "emitPressEnter"],
   setup(t, { expose: i, emit: a }) {
-    const s = t, r = a, l = R(""), d = S(
+    const s = t, r = a, l = q(""), d = S(
       () => s.validation ? s.validation(l.value) : !0
-    ), u = S(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), g = S(() => s.floatLabel ? "" : s.placeHolder), f = S(() => [
+    ), u = S(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), y = S(() => s.floatLabel ? "" : s.placeHolder), p = S(() => [
       s.floatLabel || s.floatLeft || s.floatRight ? "eit-input__display" : "",
       s.floatLeft ? "eit-input__display__float-left" : "",
       s.floatRight ? "eit-input__display__float-right" : ""
@@ -1481,14 +1478,14 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     }, h = () => {
       l.value = "";
     };
-    return T(() => s.input, (y) => {
-      y && (l.value = y);
+    return T(() => s.input, (k) => {
+      k && (l.value = k);
     }), T(l, () => {
       r("emitValue", d.value ? l.value : "");
     }), E(() => {
       s.inputMask && (l.value = s.inputMask(l.value)), s.submitted && h();
-    }), i({ clean: h }), (y, v) => (e(), n("div", {
-      class: C(f.value)
+    }), i({ clean: h }), (k, v) => (e(), n("div", {
+      class: C(p.value)
     }, [
       z(o("input", {
         autocomplete: "off",
@@ -1497,7 +1494,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         "onUpdate:modelValue": v[0] || (v[0] = (N) => l.value = N),
         maxlength: s.maxLength,
         onKeypress: v[1] || (v[1] = (N) => s.keyPress && s.keyPress(N)),
-        placeholder: g.value,
+        placeholder: y.value,
         onKeyup: K(m, ["enter"])
       }, null, 42, Ho), [
         [
@@ -1507,12 +1504,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           { trim: !0 }
         ]
       ]),
-      s.floatLabel ? (e(), n("label", Io, b(s.floatLabel), 1)) : c("", !0),
+      s.floatLabel ? (e(), n("label", Io, g(s.floatLabel), 1)) : c("", !0),
       s.floatLeft ? (e(), n("span", Ko, [
-        P(y.$slots, "float-left")
+        j(k.$slots, "float-left")
       ])) : c("", !0),
       s.floatRight ? (e(), n("span", Uo, [
-        P(y.$slots, "float-right")
+        j(k.$slots, "float-right")
       ])) : c("", !0)
     ], 2));
   }
@@ -1575,13 +1572,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitValue"],
   setup(t, { expose: i, emit: a }) {
-    const s = t, r = a, l = R(null), d = S(
+    const s = t, r = a, l = q(null), d = S(
       () => s.validation ? s.validation(l.value) : !0
-    ), u = S(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), g = () => Array.isArray(l.value) ? s.data.filter((y) => !l.value.some((v) => v.id === y.id)) : s.data, f = () => l.value ? s.data.filter((y) => y.id !== l.value.id) : s.data, m = S(() => s.multiple ? g() : f());
+    ), u = S(() => !d.value && s.requiredField && s.error ? "is-invalid" : ""), y = () => Array.isArray(l.value) ? s.data.filter((k) => !l.value.some((v) => v.id === k.id)) : s.data, p = () => l.value ? s.data.filter((k) => k.id !== l.value.id) : s.data, m = S(() => s.multiple ? y() : p());
     T(
       () => s.selected,
-      (y) => {
-        y && (l.value = y);
+      (k) => {
+        k && (l.value = k);
       },
       { immediate: !0 }
     ), T(l, () => {
@@ -1592,9 +1589,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     const h = () => {
       l.value = s.multiple ? [] : null;
     };
-    return i({ clean: h }), (y, v) => {
-      const N = q("v-select");
-      return e(), j(N, {
+    return i({ clean: h }), (k, v) => {
+      const N = P("v-select");
+      return e(), R(N, {
         options: m.value,
         modelValue: l.value,
         "onUpdate:modelValue": v[0] || (v[0] = (w) => l.value = w),
@@ -1606,7 +1603,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         disabled: s.isDisabled
       }, {
         "no-options": F(() => [
-          k(" No hay más resultados. ")
+          b(" No hay más resultados. ")
         ]),
         _: 1
       }, 8, ["options", "modelValue", "label", "multiple", "placeholder", "class", "clearable", "disabled"]);
@@ -1650,7 +1647,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   emits: ["emitValue"],
   setup(t, { expose: i, emit: a }) {
-    const s = t, r = a, l = R(null), d = R(""), u = S(() => s.validation && s.validation(d.value)), g = S(() => !u.value && s.requiredField && s.error ? "is-invalid" : ""), f = () => {
+    const s = t, r = a, l = q(null), d = q(""), u = S(() => s.validation && s.validation(d.value)), y = S(() => !u.value && s.requiredField && s.error ? "is-invalid" : ""), p = () => {
       d.value = "";
     };
     return T(
@@ -1661,14 +1658,14 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
     ), T(d, () => {
       l.value.style.height = "50px", l.value.style.height = `${l.value.scrollHeight}px`, r("emitValue", u.value ? d.value : "");
     }), E(() => {
-      s.submitted && f();
-    }), i({ clean: f }), (m, h) => z((e(), n("textarea", {
+      s.submitted && p();
+    }), i({ clean: p }), (m, h) => z((e(), n("textarea", {
       ref_key: "textarea",
       ref: l,
-      "onUpdate:modelValue": h[0] || (h[0] = (y) => d.value = y),
+      "onUpdate:modelValue": h[0] || (h[0] = (k) => d.value = k),
       maxlength: t.maxLength,
       autocomplete: "off",
-      class: C(["form-control eit-textarea eit-textarea-resize", g.value]),
+      class: C(["form-control eit-textarea eit-textarea-resize", y.value]),
       placeholder: t.placeHolder
     }, null, 10, Zo)), [
       [
@@ -1717,7 +1714,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   TabComponent: Wt,
   TableComponent: yt,
   TextareaResizeComponent: Jo,
-  ToastComponent: Po
+  ToastComponent: qo
 }, Symbol.toStringTag, { value: "Module" }));
 function Xo(t, i) {
   const a = ee(), s = S(() => a.meta.requiresAuth ? t.config.darkTheme ? i.logotipo.logo_dark : i.logotipo.logo_light : i.platformDarkTheme ? i.logotipo.logo_dark : i.logotipo.logo_light), r = S(() => t.config.darkTheme ? i.logotipo.isotipo_dark : i.logotipo.isotipo_light);
@@ -1739,8 +1736,8 @@ function es() {
     if (l.length < 11) return !1;
   }
   function s(l) {
-    const d = l.length >= 8, u = /[A-Z]/.test(l), g = /[a-z]/.test(l), f = /[0-9]/.test(l), m = /[!@#$%^&*(),.?":{}|<>]/.test(l);
-    return d && u && g && f && m;
+    const d = l.length >= 8, u = /[A-Z]/.test(l), y = /[a-z]/.test(l), p = /[0-9]/.test(l), m = /[!@#$%^&*(),.?":{}|<>]/.test(l);
+    return d && u && y && p && m;
   }
   function r(l) {
     return /^\+\d{3} \d{4}-\d{4}$/.test(l);
@@ -1776,8 +1773,8 @@ function os() {
 function ss() {
   function t(i) {
     const { sort: a, data: s } = i, { keys: r, index: l, asc: d } = a, u = r[l];
-    return s.sort((g, f) => {
-      let m = g[u], h = f[u];
+    return s.sort((y, p) => {
+      let m = y[u], h = p[u];
       return typeof m == "object" && m !== null && (m = m.name, h = h.name), m === h ? 0 : (m > h ? 1 : -1) * (d ? 1 : -1);
     }), s;
   }

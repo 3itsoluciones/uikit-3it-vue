@@ -113,7 +113,7 @@ defineExpose({ handleShowPopover, handleClosePopover })
   @include border-round(10px);
   @extend .eit-bg--color;
   @media (max-width: 767px) {
-    width: 100%;
+  width: 100%;
   }
   &.top {
     top: 0;
