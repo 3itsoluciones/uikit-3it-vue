@@ -33,6 +33,14 @@
 			type: Boolean,
       default: false
 		},
+    btnSubmitConfig: {
+      type: Object,
+      default: () => ({
+        text: 'Guardar',
+        loadingText: 'Guardando...',
+        className: 'eit-btn--primary'
+      })
+    }
 	})
 
 	//Emits
@@ -101,9 +109,9 @@
           />
           <template v-if="props.btnSubmit">
             <ButtonComponent
-              className="eit-btn--primary" 
-              text="Guardar"
-              loadingText="Guardando..."
+              :className="props.btnSubmitConfig.className" 
+              :text="props.btnSubmitConfig.text"
+              :loadingText="props.btnSubmitConfig.loadingText"
               :loading="loadingSubmit"
               @emitEvent="handleSubmit"
               :isDisabled="disabledSubmit"
