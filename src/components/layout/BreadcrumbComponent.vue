@@ -43,10 +43,10 @@ const processedRoutes = computed(() => {
             :to="route.path"
             class="eit-color--text eit-color--text--link eit-color--underline"
           >
-            {{ route.title }}
+            {{ route.name }}
           </router-link>
           <span v-else class="eit-color--text-soft">
-            {{ route.title }}
+            {{ route.name }}
           </span>
         </slot>
       </li>
