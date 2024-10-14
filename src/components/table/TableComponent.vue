@@ -166,7 +166,11 @@ const handleCheckArray = (value) => {
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(row, index) in data" :key="`row-${index}`">
+            <tr 
+              v-for="(row, index) in data" 
+              :key="`row-${index}`"
+              :class="row?.status ? '' : 'disabled'"
+            >
               <td v-for="(value, key) in row" :key="`value-${key}`">
                 <strong class="pe-3 d-lg-none"
                   >{{ columns[Object.keys(row).indexOf(key)] }}:</strong
@@ -487,6 +491,10 @@ const handleCheckArray = (value) => {
         @extend .eit-border--color;
         @extend .eit-color--text;
       }
+    }
+    tr.disabled {
+      @extend .eit-bg--color-mute;
+      @extend .eit-color--text-soft;
     }
   }
   @media only screen and (max-width: 991px) {
