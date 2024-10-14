@@ -495,6 +495,7 @@ const handleCheckArray = (value) => {
     tr.disabled {
       @extend .eit-bg--color-soft;
       @extend .eit-color--text-soft;
+      @include transition('color 0.2s ease-in');
     }
   }
   @media only screen and (max-width: 991px) {
