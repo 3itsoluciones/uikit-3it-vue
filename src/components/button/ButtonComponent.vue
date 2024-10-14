@@ -15,6 +15,10 @@ const props = defineProps({
     type: String,
     default: ''
   },
+  iconClass: {
+    type: String,
+    default: ''
+  },
   loading: {
     type: Boolean,
     default: false
@@ -56,7 +60,7 @@ const emitEvent = (event) => {
     </template>
     <template v-if="!props.loading">
       <template v-if="props.icon">
-        <font-awesome-icon :icon="props.icon"/>
+        <font-awesome-icon :icon="props.icon" :class="iconClass"/>
       </template>
       {{ text }}
     </template>
