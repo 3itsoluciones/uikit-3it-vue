@@ -493,7 +493,7 @@ const handleCheckArray = (value) => {
       }
     }
     tr.disabled {
-      @extend .eit-bg--color-mute;
+      @extend .eit-bg--color-soft;
       @extend .eit-color--text-soft;
     }
   }
