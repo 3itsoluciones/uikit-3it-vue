@@ -19,7 +19,7 @@ export default function useInputMask() {
 
   //Currency
   function inputOnlyLetters(letters) {
-    return letters.replace(/[^a-zA-Z]/g, '')
+    return letters.replace(/[^a-zA-Z\s]/g, '')
   }
 
   return { inputMaskRut, inputMaskCurrency, inputMaskPhone, inputOnlyLetters }

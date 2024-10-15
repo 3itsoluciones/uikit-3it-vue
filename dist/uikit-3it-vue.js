@@ -1776,7 +1776,7 @@ function ts() {
     return i.replace(/\D/g, "").replace(/^(\d{3})(\d{4})(\d{4})$/, "+$1 $2-$3");
   }
   function s(i) {
-    return i.replace(/[^a-zA-Z]/g, "");
+    return i.replace(/[^a-zA-Z\s]/g, "");
   }
   return { inputMaskRut: t, inputMaskCurrency: r, inputMaskPhone: l, inputOnlyLetters: s };
 }
