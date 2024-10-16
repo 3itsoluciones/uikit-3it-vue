@@ -208,8 +208,8 @@ const handleDownloadRecord = (record) => {
           </div>
         </div>
       </div>
-      <div class="flex-grow-1">
-        <div class="d-flex flex-column flex-grow-1">
+      <div class="row flex-grow-1">
+        <div class="col-12 d-flex flex-column flex-grow-1">
           <div class="eit-slide__content flex-grow-1">
             <slot name="component"></slot>
           </div>

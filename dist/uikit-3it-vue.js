@@ -750,7 +750,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, Ft = {
   key: 4,
   class: "mx-2"
-}, Ht = { class: "flex-grow-1" }, It = { class: "d-flex flex-column flex-grow-1" }, Kt = { class: "eit-slide__content flex-grow-1" }, Ut = {
+}, Ht = { class: "row flex-grow-1" }, It = { class: "col-12 d-flex flex-column flex-grow-1" }, Kt = { class: "eit-slide__content flex-grow-1" }, Ut = {
   __name: "DetailComponent",
   props: {
     //Data
