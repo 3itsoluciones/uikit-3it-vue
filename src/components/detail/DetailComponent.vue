@@ -65,18 +65,17 @@ const emit = defineEmits([
 const handleCloseSlide = () => {
   emit('emitslide')
 }
-const handleEnabledDisabledRecord = (record) => {
-  emit('enabledDisabledRecord', record)
+const handleEnabledDisabledRecord = () => {
+  emit('enabledDisabledRecord', props.record)
 }
-const handleEditRecord = (record) => {
-  console.log(record)
-  emit('editRecord', record)
+const handleEditRecord = () => {
+  emit('editRecord', props.record)
 }
-const handleDeleteRecord = (record) => {
-  emit('deleteRecord', record)
+const handleDeleteRecord = () => {
+  emit('deleteRecord', props.record)
 }
-const handleDownloadRecord = (record) => {
-  emit('downloadRecord', record)
+const handleDownloadRecord = () => {
+  emit('downloadRecord', props.record)
 }
 </script>
 
@@ -133,7 +132,7 @@ const handleDownloadRecord = (record) => {
                       <ul class="dropdown-menu dropdown-custom-menu">
                         <li v-if="props.editRecord" class="mx-2">
                           <a
-                            @click="handleEditRecord(props.record)"
+                            @click="handleEditRecord"
                             class="dropdown-item dropdown-custom-menu-item"
                             href="javascript:"
                           >
@@ -146,7 +145,7 @@ const handleDownloadRecord = (record) => {
                         </li>
                         <li v-if="props.downloadRecord" class="mx-2">
                           <a
-                            @click="handleDownloadRecord(props.record)"
+                            @click="handleDownloadRecord"
                             class="dropdown-item dropdown-custom-menu-item"
                             href="javascript:"
                           >
@@ -167,7 +166,7 @@ const handleDownloadRecord = (record) => {
                         </li>
                         <li v-if="props.enabledDisabledRecord" class="mx-2">
                           <a
-                            @click="handleEnabledDisabledRecord(record)"
+                            @click="handleEnabledDisabledRecord"
                             class="dropdown-item dropdown-custom-menu-item"
                             href="javascript:"
                           >
@@ -189,7 +188,7 @@ const handleDownloadRecord = (record) => {
                         </li>
                         <li v-if="props.deleteRecord" class="mx-2">
                           <a
-                            @click="handleDeleteRecord(props.record)"
+                            @click="handleDeleteRecord"
                             class="dropdown-item dropdown-custom-menu-item eit-color--red"
                             href="javascript:"
                           >
