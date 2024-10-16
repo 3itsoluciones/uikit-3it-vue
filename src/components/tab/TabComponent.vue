@@ -61,6 +61,7 @@ const handleActiveTab = (index) => {
 .eit-tabs {
   display: inline-flex;
   list-style: none;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 0;
   &__item {
@@ -87,6 +88,9 @@ const handleActiveTab = (index) => {
         border-color: lch(from var(--eit-color-primary) l c h / 0.5);
         background-color: lch(from var(--eit-color-primary) l c h / 0.05);
       }
+    }
+    @media (min-width: 992px) {
+      width: 100%;
     }
   }
   &__badge {
