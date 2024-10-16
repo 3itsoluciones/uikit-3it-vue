@@ -948,7 +948,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, Yt = { class: "d-flex justify-content-between align-items-center" }, Gt = ["onClick"], Zt = {
   key: 0,
   class: "eit-tabs__badge"
-}, Jt = { class: "row" }, Qt = { class: "col-12" }, Wt = {
+}, Jt = { class: "d-flex flex-column" }, Qt = {
   __name: "TabComponent",
   props: {
     //Data
@@ -990,13 +990,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         j(a.$slots, "dropdown")
       ]),
       o("div", Jt, [
-        o("div", Qt, [
-          j(a.$slots, `tab-${s.value}`)
-        ])
+        j(a.$slots, `tab-${s.value}`)
       ])
     ], 64));
   }
-}, Xt = ["innerHTML"], eo = {
+}, Wt = ["innerHTML"], Xt = {
   __name: "HighlightComponent",
   props: {
     code: {
@@ -1021,9 +1019,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         lang: r.lang,
         theme: r.theme
       });
-    })(), (i, a) => (e(), n("div", { innerHTML: l.value }, null, 8, Xt));
+    })(), (i, a) => (e(), n("div", { innerHTML: l.value }, null, 8, Wt));
   }
-}, to = { class: "eit-dialog__content" }, oo = { class: "d-flex justify-content-between align-items-center" }, so = { class: "d-flex gap-2 justify-content-end mt-3" }, no = {
+}, eo = { class: "eit-dialog__content" }, to = { class: "d-flex justify-content-between align-items-center" }, oo = { class: "d-flex gap-2 justify-content-end mt-3" }, so = {
   __name: "DialogComponent",
   props: {
     className: {
@@ -1083,13 +1081,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         class: w(["eit-dialog", s.className]),
         onKeyup: K(u, ["esc"])
       }, [
-        o("div", to, [
+        o("div", eo, [
           t.loading ? (e(), R(V(oe), {
             key: 0,
             size: "70"
           })) : c("", !0),
           t.loading ? c("", !0) : (e(), n(_, { key: 1 }, [
-            o("div", oo, [
+            o("div", to, [
               j(m.$slots, "head"),
               o("button", {
                 onClick: u,
@@ -1103,7 +1101,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
             }, [
               j(m.$slots, "content")
             ], 2),
-            o("div", so, [
+            o("div", oo, [
               f(V(I), {
                 onClick: u,
                 className: "eit-btn-outline--gray",
@@ -1124,15 +1122,15 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 34);
     };
   }
-}, ao = { class: "row" }, lo = { class: "col" }, io = /* @__PURE__ */ o("h2", { class: "eit-font__size--x4 eit-color--text eit-font__weight--300 eit-border--bottom eit-border--color mb-3" }, [
+}, no = { class: "row" }, ao = { class: "col" }, lo = /* @__PURE__ */ o("h2", { class: "eit-font__size--x4 eit-color--text eit-font__weight--300 eit-border--bottom eit-border--color mb-3" }, [
   /* @__PURE__ */ o("strong", { class: "eit-font__weight--900" }, "Props")
-], -1), ro = { class: "eit-table--overflow" }, co = { class: "table eit-table" }, uo = /* @__PURE__ */ o("thead", null, [
+], -1), io = { class: "eit-table--overflow" }, ro = { class: "table eit-table" }, co = /* @__PURE__ */ o("thead", null, [
   /* @__PURE__ */ o("tr", null, [
     /* @__PURE__ */ o("th", null, "Name"),
     /* @__PURE__ */ o("th", null, "Type"),
     /* @__PURE__ */ o("th", null, "Default")
   ])
-], -1), fo = {
+], -1), uo = {
   __name: "PropsComponent",
   props: {
     data: {
@@ -1142,12 +1140,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   setup(t) {
     const r = t;
-    return (l, s) => (e(), n("div", ao, [
-      o("div", lo, [
-        io,
-        o("div", ro, [
-          o("table", co, [
-            uo,
+    return (l, s) => (e(), n("div", no, [
+      o("div", ao, [
+        lo,
+        o("div", io, [
+          o("table", ro, [
+            co,
             o("tbody", null, [
               (e(!0), n(_, null, D(r.data, (i) => (e(), n("tr", {
                 key: i.name
@@ -1171,7 +1169,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ])
     ]));
   }
-}, po = { class: "eit-progress eit-progress--30" }, mo = { key: 1 }, _o = /* @__PURE__ */ o("span", { class: "spinner-border spinner-border-sm" }, null, -1), ho = {
+}, fo = { class: "eit-progress eit-progress--30" }, po = { key: 1 }, mo = /* @__PURE__ */ o("span", { class: "spinner-border spinner-border-sm" }, null, -1), _o = {
   __name: "ProgressBarComponent",
   props: {
     percentage: {
@@ -1189,7 +1187,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   setup(t) {
     const r = t, l = S(() => parseFloat(r.percentage)), s = S(() => l.value === 0 ? 0 : 100 - l.value);
-    return (i, a) => (e(), n("div", po, [
+    return (i, a) => (e(), n("div", fo, [
       o("div", {
         class: w(["eit-progress__bar", `eit-progress__bar--${r.type}`]),
         style: H(`width: ${r.percentage}%`)
@@ -1209,26 +1207,26 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
             b(v(s.value) + "% ", 1)
           ], 64)) : c("", !0)
         ], 64)),
-        r.loading ? (e(), n("span", mo, [
-          _o,
+        r.loading ? (e(), n("span", po, [
+          mo,
           b(" Cargando... ")
         ])) : c("", !0)
       ], 4)
     ]));
   }
-}, yo = { class: "d-flex" }, go = { class: "flex-shrink-0 eit-toast__left" }, vo = {
+}, ho = { class: "d-flex" }, yo = { class: "flex-shrink-0 eit-toast__left" }, go = {
   key: "success",
   class: "eit-toast__icon eit-font__size--x7"
-}, bo = {
+}, vo = {
   key: "error",
   class: "eit-toast__icon eit-font__size--x7"
-}, ko = {
+}, bo = {
   key: "warning",
   class: "eit-toast__icon eit-font__size--x7"
-}, xo = {
+}, ko = {
   key: "info",
   class: "eit-toast__icon eit-font__size--x7"
-}, $o = { class: "flex-grow-1 ms-3" }, wo = { class: "d-flex" }, Co = { class: "flex-grow-1 me-3" }, So = { class: "eit-toast__title" }, Ro = { class: "eit-toast__text" }, jo = { class: "flex-shrink-0" }, qo = {
+}, xo = { class: "flex-grow-1 ms-3" }, $o = { class: "d-flex" }, wo = { class: "flex-grow-1 me-3" }, Co = { class: "eit-toast__title" }, So = { class: "eit-toast__text" }, Ro = { class: "flex-shrink-0" }, jo = {
   __name: "ToastComponent",
   props: {
     type: {
@@ -1270,33 +1268,33 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         o("div", {
           class: w(["eit-toast box-shadow", `eit-toast--${l.data.type}`])
         }, [
-          o("div", yo, [
-            o("div", go, [
-              l.type === "success" ? (e(), n("span", vo, [
+          o("div", ho, [
+            o("div", yo, [
+              l.type === "success" ? (e(), n("span", go, [
                 f(h, { icon: "fa-solid fa-circle-check" })
               ])) : c("", !0),
-              l.type === "error" ? (e(), n("span", bo, [
+              l.type === "error" ? (e(), n("span", vo, [
                 f(h, { icon: "fa-solid fa-circle-xmark" })
               ])) : c("", !0),
-              l.type === "warning" ? (e(), n("span", ko, [
+              l.type === "warning" ? (e(), n("span", bo, [
                 f(h, { icon: "fa-solid fa-triangle-exclamation" })
               ])) : c("", !0),
-              l.type === "info" ? (e(), n("span", xo, [
+              l.type === "info" ? (e(), n("span", ko, [
                 f(h, { icon: "fa-solid fa-circle-info" })
               ])) : c("", !0)
             ]),
-            o("div", $o, [
-              o("div", wo, [
-                o("div", Co, [
-                  o("p", So, [
+            o("div", xo, [
+              o("div", $o, [
+                o("div", wo, [
+                  o("p", Co, [
                     l.data.code ? (e(), n(_, { key: 0 }, [
                       b(v(l.data.code), 1)
                     ], 64)) : c("", !0),
                     b(" " + v(l.data.title), 1)
                   ]),
-                  o("p", Ro, v(l.data.message), 1)
+                  o("p", So, v(l.data.message), 1)
                 ]),
-                o("div", jo, [
+                o("div", Ro, [
                   o("a", {
                     onClick: m[0] || (m[0] = (x) => y()),
                     href: "javascript:",
@@ -1312,19 +1310,19 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Po = { class: "d-flex" }, Do = { class: "flex-shrink-0 eit-popover__left" }, To = {
+}, qo = { class: "d-flex" }, Po = { class: "flex-shrink-0 eit-popover__left" }, Do = {
   key: "success",
   class: "eit-popover__icon eit-font__size--x7"
-}, Bo = {
+}, To = {
   key: "error",
   class: "eit-popover__icon eit-font__size--x7"
-}, No = {
+}, Bo = {
   key: "warning",
   class: "eit-popover__icon eit-font__size--x7"
-}, Lo = {
+}, No = {
   key: "info",
   class: "eit-popover__icon eit-font__size--x7"
-}, Mo = { class: "flex-grow-1 ms-3" }, zo = { class: "d-flex" }, Ao = { class: "flex-grow-1 me-3" }, Oo = { class: "eit-popover__title" }, Eo = { class: "eit-popover__text" }, Vo = { class: "flex-shrink-0" }, Fo = {
+}, Lo = { class: "flex-grow-1 ms-3" }, Mo = { class: "d-flex" }, zo = { class: "flex-grow-1 me-3" }, Ao = { class: "eit-popover__title" }, Oo = { class: "eit-popover__text" }, Eo = { class: "flex-shrink-0" }, Vo = {
   __name: "PopoverComponent",
   props: {
     type: {
@@ -1364,33 +1362,33 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         o("div", {
           class: w(["eit-popover box-shadow", `eit-popover--${l.data.type}`])
         }, [
-          o("div", Po, [
-            o("div", Do, [
-              l.type === "success" ? (e(), n("span", To, [
+          o("div", qo, [
+            o("div", Po, [
+              l.type === "success" ? (e(), n("span", Do, [
                 f(p, { icon: "fa-solid fa-circle-check" })
               ])) : c("", !0),
-              l.type === "error" ? (e(), n("span", Bo, [
+              l.type === "error" ? (e(), n("span", To, [
                 f(p, { icon: "fa-solid fa-circle-xmark" })
               ])) : c("", !0),
-              l.type === "warning" ? (e(), n("span", No, [
+              l.type === "warning" ? (e(), n("span", Bo, [
                 f(p, { icon: "fa-solid fa-triangle-exclamation" })
               ])) : c("", !0),
-              l.type === "info" ? (e(), n("span", Lo, [
+              l.type === "info" ? (e(), n("span", No, [
                 f(p, { icon: "fa-solid fa-circle-info" })
               ])) : c("", !0)
             ]),
-            o("div", Mo, [
-              o("div", zo, [
-                o("div", Ao, [
-                  o("p", Oo, [
+            o("div", Lo, [
+              o("div", Mo, [
+                o("div", zo, [
+                  o("p", Ao, [
                     l.data.code ? (e(), n(_, { key: 0 }, [
                       b(v(l.data.code), 1)
                     ], 64)) : c("", !0),
                     b(" " + v(l.data.title), 1)
                   ]),
-                  o("p", Eo, v(l.data.message), 1)
+                  o("p", Oo, v(l.data.message), 1)
                 ]),
-                o("div", Vo, [
+                o("div", Eo, [
                   o("a", {
                     onClick: y[0] || (y[0] = (m) => d()),
                     href: "javascript:",
@@ -1406,16 +1404,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Ho = ["type", "maxlength", "placeholder", "disabled"], Io = {
+}, Fo = ["type", "maxlength", "placeholder", "disabled"], Ho = {
   key: 0,
   class: "eit-label-float"
-}, Ko = {
+}, Io = {
   key: 1,
   class: "eit-input__display__icon eit-input__display__float-left--icon"
-}, Uo = {
+}, Ko = {
   key: 2,
   class: "eit-input__display__icon eit-input__display__float-right--icon"
-}, Yo = {
+}, Uo = {
   __name: "InputComponent",
   props: {
     inputType: {
@@ -1511,7 +1509,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         placeholder: y.value,
         onKeyup: K(m, ["enter"]),
         disabled: s.isDisabled
-      }, null, 42, Ho), [
+      }, null, 42, Fo), [
         [
           re,
           a.value,
@@ -1519,16 +1517,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           { trim: !0 }
         ]
       ]),
-      s.floatLabel ? (e(), n("label", Io, v(s.floatLabel), 1)) : c("", !0),
-      s.floatLeft ? (e(), n("span", Ko, [
+      s.floatLabel ? (e(), n("label", Ho, v(s.floatLabel), 1)) : c("", !0),
+      s.floatLeft ? (e(), n("span", Io, [
         j(x.$slots, "float-left")
       ])) : c("", !0),
-      s.floatRight ? (e(), n("span", Uo, [
+      s.floatRight ? (e(), n("span", Ko, [
         j(x.$slots, "float-right")
       ])) : c("", !0)
     ], 2));
   }
-}, Go = {
+}, Yo = {
   __name: "SelectComponent",
   props: {
     //Data
@@ -1624,7 +1622,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }, 8, ["options", "modelValue", "label", "multiple", "placeholder", "class", "clearable", "disabled"]);
     };
   }
-}, Zo = ["maxlength", "placeholder"], Jo = {
+}, Go = ["maxlength", "placeholder"], Zo = {
   __name: "TextareaResizeComponent",
   props: {
     //Data
@@ -1682,7 +1680,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       autocomplete: "off",
       class: w(["form-control eit-textarea eit-textarea-resize", y.value]),
       placeholder: t.placeHolder
-    }, null, 10, Zo)), [
+    }, null, 10, Go)), [
       [
         X,
         d.value,
@@ -1691,7 +1689,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ]
     ]);
   }
-}, Qo = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Wo = { class: "p-3 eit-loading" }, oe = {
+}, Jo = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Qo = { class: "p-3 eit-loading" }, oe = {
   __name: "LoadingComponent",
   props: {
     size: {
@@ -1702,10 +1700,10 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   },
   setup(t) {
     const r = t;
-    return (l, s) => (e(), n("div", Wo, [
+    return (l, s) => (e(), n("div", Qo, [
       o("img", {
         style: H(`width:${r.size}px`),
-        src: Qo
+        src: Jo
       }, null, 4)
     ]));
   }
@@ -1716,30 +1714,30 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   BreadcrumbComponent: ye,
   ButtonComponent: I,
   DetailComponent: Ut,
-  DialogComponent: no,
-  HighlightComponent: eo,
-  InputComponent: Yo,
+  DialogComponent: so,
+  HighlightComponent: Xt,
+  InputComponent: Uo,
   LoadingComponent: oe,
   PaginationComponent: xt,
-  PopoverComponent: Fo,
-  ProgressBarComponent: ho,
-  PropsComponent: fo,
-  SelectComponent: Go,
+  PopoverComponent: Vo,
+  ProgressBarComponent: _o,
+  PropsComponent: uo,
+  SelectComponent: Yo,
   SkeletonComponent: U,
-  TabComponent: Wt,
+  TabComponent: Qt,
   TableComponent: yt,
-  TextareaResizeComponent: Jo,
-  ToastComponent: qo
+  TextareaResizeComponent: Zo,
+  ToastComponent: jo
 }, Symbol.toStringTag, { value: "Module" }));
-function Xo(t, r) {
+function Wo(t, r) {
   const l = ee(), s = S(() => l.meta.requiresAuth ? t.config.darkTheme ? r.logotipo.logo_dark : r.logotipo.logo_light : r.platformDarkTheme ? r.logotipo.logo_dark : r.logotipo.logo_light), i = S(() => t.config.darkTheme ? r.logotipo.isotipo_dark : r.logotipo.isotipo_light);
   return { logotipo: s, isotipo: i };
 }
-const fs = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const us = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  useLogos: Xo
+  useLogos: Wo
 }, Symbol.toStringTag, { value: "Module" }));
-function es() {
+function Xo() {
   function t(a) {
     return !(a == null || typeof a == "string" && a.trim() === "" || typeof a == "object" && Object.keys(a).length === 0 || Array.isArray(a) && a.length === 0);
   }
@@ -1765,7 +1763,7 @@ function es() {
     validatePhone: i
   };
 }
-function ts() {
+function es() {
   function t(i) {
     return i.replace(/[.-]/g, "").replace(/^(\d{1,2})(\d{3})(\d{3})(\w{1})$/, "$1.$2.$3-$4");
   }
@@ -1780,7 +1778,7 @@ function ts() {
   }
   return { inputMaskRut: t, inputMaskCurrency: r, inputMaskPhone: l, inputOnlyLetters: s };
 }
-function os() {
+function ts() {
   function t(r) {
     let l = String.fromCharCode(r.keyCode);
     if (/^[0-9Kk.-]/.test(l)) return !0;
@@ -1788,7 +1786,7 @@ function os() {
   }
   return { keyPressRut: t };
 }
-function ss() {
+function os() {
   function t(r) {
     const { sort: l, data: s } = r, { keys: i, index: a, asc: d } = l, u = i[a];
     return s.sort((y, p) => {
@@ -1800,7 +1798,7 @@ function ss() {
 }
 A.extend(de);
 A.locale("es");
-function ns() {
+function ss() {
   function t(i) {
     return A(i).format("DD/MM/YYYY");
   }
@@ -1816,7 +1814,7 @@ function ns() {
   }
   return { formatDate: t, formatDateAgo: r, formatRut: l, formatCapitalize: s };
 }
-function as() {
+function ns() {
   function t(r, l) {
     return l ? {
       content: r,
@@ -1827,15 +1825,15 @@ function as() {
   }
   return { handleTooltip: t };
 }
-const ps = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const fs = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  useFormat: ns,
-  useInputMask: ts,
-  useKeypress: os,
-  useTable: ss,
-  useTooltip: as,
-  useValidator: es
-}, Symbol.toStringTag, { value: "Module" })), ms = {
+  useFormat: ss,
+  useInputMask: es,
+  useKeypress: ts,
+  useTable: os,
+  useTooltip: ns,
+  useValidator: Xo
+}, Symbol.toStringTag, { value: "Module" })), ps = {
   install(t) {
     Object.keys(W).forEach((r) => {
       t.component(r, W[r]);
@@ -1843,7 +1841,7 @@ const ps = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   }
 };
 export {
-  fs as composables,
-  ms as default,
-  ps as utils
+  us as composables,
+  ps as default,
+  fs as utils
 };

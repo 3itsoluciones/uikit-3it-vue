@@ -52,10 +52,8 @@ const handleActiveTab = (index) => {
     </ul>
     <slot name="dropdown"></slot>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <slot :name="`tab-${tab}`"></slot>
-    </div>
+  <div class="d-flex flex-column">
+    <slot :name="`tab-${tab}`"></slot>
   </div>
 </template>
 
