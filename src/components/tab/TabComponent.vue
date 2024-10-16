@@ -89,7 +89,7 @@ const handleActiveTab = (index) => {
         background-color: lch(from var(--eit-color-primary) l c h / 0.05);
       }
     }
-    @media (min-width: 992px) {
+    @media (max-width: 991px) {
       width: 100%;
     }
   }
