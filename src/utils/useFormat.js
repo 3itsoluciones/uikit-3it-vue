@@ -30,5 +30,11 @@ export default function useFormat() {
     else return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
   }
 
-  return { formatDate, formatDateAgo, formatRut, formatCapitalize }
+  //Currency
+  function formatCurrency(value, currency = 'USD') {
+    return new Intl.NumberFormat('es-ES', { style: 'currency', currency }).format(value)
+  }
+
+
+  return { formatDate, formatDateAgo, formatRut, formatCapitalize, formatCurrency }
 }
