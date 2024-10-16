@@ -69,6 +69,7 @@ const handleEnabledDisabledRecord = (record) => {
   emit('enabledDisabledRecord', record)
 }
 const handleEditRecord = (record) => {
+  console.log(record)
   emit('editRecord', record)
 }
 const handleDeleteRecord = (record) => {
