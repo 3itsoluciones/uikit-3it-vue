@@ -209,6 +209,15 @@ defineExpose({ clean })
 			}
 		}
 	}
+	&.vs--searching {
+		.vs__dropdown-toggle {
+			.vs__selected-options {
+				.vs__selected {
+					display: none!important;
+				}
+			}
+		}
+	}
 	&.vs--multiple {
 		.vs__dropdown-toggle {
 			@extend .eit-box-shadow--inset;
@@ -237,11 +246,6 @@ defineExpose({ clean })
 				@extend .eit-color--text-soft;
 				@extend .eit-bg--color-mute;
 			}
-		}
-	}
-	&.vs--searching {
-		.vs__selected {
-			display: none!important;
 		}
 	}
 }
