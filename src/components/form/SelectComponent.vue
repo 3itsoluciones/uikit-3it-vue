@@ -241,7 +241,7 @@ defineExpose({ clean })
 	}
 	&.vs---searching {
 		.vs__selected {
-			display: none;
+			display: none!important;
 		}
 	}
 }
