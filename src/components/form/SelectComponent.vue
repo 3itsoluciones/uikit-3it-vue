@@ -17,12 +17,10 @@ const props = defineProps({
       return []
     }
   },
-  selectable: {
-    type: [Object, String],
-    default() {
-      return {}
-    }
-  },
+	selectable: {
+		type: Function,
+    default: null
+	},
   //Composables
   validation: {
     type: Function,
@@ -127,7 +125,7 @@ defineExpose({ clean })
     :class="controlSelectError"
     :clearable="clearable"
     :disabled="props.isDisabled"
-		:selectable="(option) => !option.includes(props.selectable)"
+		:selectable="props.selectable"
   >
     <template #no-options> No hay más resultados. </template>
   </v-select>
