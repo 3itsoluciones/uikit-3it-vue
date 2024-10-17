@@ -239,5 +239,8 @@ defineExpose({ clean })
 			}
 		}
 	}
+	&.vs---searching {
+		display: none;
+	}
 }
 </style>
