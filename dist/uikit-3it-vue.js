@@ -1544,7 +1544,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       }
     },
     selectable: {
-      type: [Object],
+      type: [Object, String],
       default() {
         return {};
       }

@@ -18,7 +18,7 @@ const props = defineProps({
     }
   },
   selectable: {
-    type: [Object],
+    type: [Object, String],
     default() {
       return {}
     }
