@@ -239,7 +239,7 @@ defineExpose({ clean })
 			}
 		}
 	}
-	&.vs---searching {
+	&.vs--searching {
 		.vs__selected {
 			display: none!important;
 		}
