@@ -1,4 +1,4 @@
-import { computed as S, resolveComponent as q, openBlock as e, createElementBlock as a, normalizeClass as w, Fragment as p, createTextVNode as b, toDisplayString as v, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as f, withCtx as F, renderList as D, renderSlot as j, mergeProps as ne, createStaticVNode as ae, resolveDirective as le, withDirectives as z, ref as P, watch as N, watchEffect as O, withKeys as K, vModelText as X, onMounted as ie, unref as V, normalizeStyle as H, vModelDynamic as re } from "vue";
+import { computed as S, resolveComponent as q, openBlock as e, createElementBlock as a, normalizeClass as w, Fragment as p, createTextVNode as b, toDisplayString as v, createCommentVNode as c, createBlock as R, createElementVNode as o, createVNode as f, withCtx as V, renderList as D, renderSlot as j, mergeProps as ne, createStaticVNode as ae, resolveDirective as le, withDirectives as z, ref as P, watch as N, watchEffect as O, withKeys as U, vModelText as X, onMounted as ie, unref as F, normalizeStyle as H, vModelDynamic as re } from "vue";
 import { useRoute as ee } from "vue-router";
 import { codeToHtml as ce } from "shiki";
 import A from "dayjs";
@@ -89,7 +89,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
               to: "/",
               class: "eit-color--text-soft eit-color--text-soft--link"
             }, {
-              default: F(() => [
+              default: V(() => [
                 f(n, { icon: "fa-solid fa-house" })
               ]),
               _: 1
@@ -106,7 +106,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                 to: u.path,
                 class: "eit-color--text eit-color--text--link eit-color--underline"
               }, {
-                default: F(() => [
+                default: V(() => [
                   b(v(u.name), 1)
                 ]),
                 _: 2
@@ -182,7 +182,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   style: { width: "80%" }
 }, null, -1), De = [
   qe
-], Te = /* @__PURE__ */ ae('<div class="row"><div class="col-12"><div class="d-flex"><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__btn-square"></div></div><div class="flex-grow-1 ms-3"><div class="d-flex"><div class="flex-grow-1 ms-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:40%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></div><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30px;"></div></div></div></div></div></div></div><div class="row flex-grow-1"><div class="col-12 d-flex flex-column flex-grow-1"><div class="eit-slide__content flex-grow-1"><div class="mt-5"><div class="col-12"><h5 class="mb-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:20%;"></div></h5><ul class="list-unstyled"><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:40%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li></ul></div></div></div></div></div>', 2), U = {
+], Te = /* @__PURE__ */ ae('<div class="row"><div class="col-12"><div class="d-flex"><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__btn-square"></div></div><div class="flex-grow-1 ms-3"><div class="d-flex"><div class="flex-grow-1 ms-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:40%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></div><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30px;"></div></div></div></div></div></div></div><div class="row flex-grow-1"><div class="col-12 d-flex flex-column flex-grow-1"><div class="eit-slide__content flex-grow-1"><div class="mt-5"><div class="col-12"><h5 class="mb-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:20%;"></div></h5><ul class="list-unstyled"><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:40%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li></ul></div></div></div></div></div>', 2), K = {
   __name: "SkeletonComponent",
   props: {
     type: {
@@ -273,13 +273,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, Me = { class: "row" }, ze = { class: "col-12" }, Ae = { class: "table eit-table eit-table-responsive" }, Oe = ["onClick"], Ee = /* @__PURE__ */ o("th", {
   scope: "col",
   class: "text-center"
-}, "Acciones", -1), Ve = { class: "pe-3 d-lg-none" }, Fe = ["onClick"], He = {
+}, "Acciones", -1), Fe = { class: "pe-3 d-lg-none" }, Ve = ["onClick"], He = {
   key: 0,
   class: "d-flex flex-wrap gap-1"
 }, Ie = {
   key: 3,
   class: "eit-table__string"
-}, Ke = { class: "text-center" }, Ue = { class: "dropdown eit-dropdown d-none d-lg-block" }, Ye = {
+}, Ue = { class: "text-center" }, Ke = { class: "dropdown eit-dropdown d-none d-lg-block" }, Ye = {
   href: "javascript:",
   class: "eit-btn-action",
   "data-bs-toggle": "dropdown"
@@ -388,7 +388,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       const C = q("font-awesome-icon"), Y = le("tippy");
       return e(), a("div", Me, [
         o("div", ze, [
-          t.loading ? (e(), R(U, {
+          t.loading ? (e(), R(K, {
             key: 0,
             type: "table",
             table: { row: (G = t.skeleton) == null ? void 0 : G.row, column: (Z = t.skeleton) == null ? void 0 : Z.column }
@@ -447,14 +447,14 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                   (e(!0), a(p, null, D(k, (x, M) => (e(), a("td", {
                     key: `value-${M}`
                   }, [
-                    o("strong", Ve, v(t.columns[Object.keys(k).indexOf(M)]) + ":", 1),
+                    o("strong", Fe, v(t.columns[Object.keys(k).indexOf(M)]) + ":", 1),
                     Object.keys(k)[t.columnLink] === M ? (e(), a(p, { key: 0 }, [
                       t.viewRecord ? (e(), a("a", {
                         key: 0,
                         onClick: (E) => r(k),
                         href: "javascript:",
                         class: "eit-table__link"
-                      }, v(x), 9, Fe)) : c("", !0),
+                      }, v(x), 9, Ve)) : c("", !0),
                       t.viewRecord ? c("", !0) : (e(), a(p, { key: 1 }, [
                         b(v(x), 1)
                       ], 64))
@@ -491,8 +491,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                       y(x) ? (e(), a("span", Ie, v(x), 1)) : c("", !0)
                     ], 64)) : c("", !0)
                   ]))), 128)),
-                  o("td", Ke, [
-                    o("div", Ue, [
+                  o("td", Ue, [
+                    o("div", Ke, [
                       o("a", Ye, [
                         f(C, { icon: "fa-solid fa-ellipsis" })
                       ]),
@@ -694,7 +694,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           type: "number",
           "onUpdate:modelValue": y[0] || (y[0] = ($) => r.value = $),
           onInput: u,
-          onKeyup: K(u, ["enter"]),
+          onKeyup: U(u, ["enter"]),
           onBlur: u,
           onFocus: h,
           class: "eit-input eit-paginator__input eit-font__size--x1 text-center",
@@ -744,13 +744,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   class: "m-2"
 }, Ot = /* @__PURE__ */ o("div", { class: "eit-border--bottom eit-border--color" }, null, -1), Et = [
   Ot
-], Vt = {
+], Ft = {
   key: 3,
   class: "mx-2"
-}, Ft = {
+}, Vt = {
   key: 4,
   class: "mx-2"
-}, Ht = { class: "row flex-grow-1" }, It = { class: "col-12 d-flex flex-column flex-grow-1" }, Kt = { class: "eit-slide__content flex-grow-1" }, Ut = {
+}, Ht = { class: "row flex-grow-1" }, It = { class: "col-12 d-flex flex-column flex-grow-1" }, Ut = { class: "eit-slide__content flex-grow-1" }, Kt = {
   __name: "DetailComponent",
   props: {
     //Data
@@ -822,7 +822,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       return e(), a("section", {
         class: w(["eit-slide d-flex flex-column", [t.slide && "eit-slide--right", t.slideSmall && "eit-slide--small"]])
       }, [
-        l.loading ? (e(), R(U, {
+        l.loading ? (e(), R(K, {
           key: 0,
           type: "detail"
         })) : c("", !0),
@@ -890,7 +890,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                             ])
                           ])) : c("", !0),
                           t.deleteRecord || t.enabledDisabledRecord ? (e(), a("li", At, Et)) : c("", !0),
-                          l.enabledDisabledRecord ? (e(), a("li", Vt, [
+                          l.enabledDisabledRecord ? (e(), a("li", Ft, [
                             o("a", {
                               onClick: n,
                               class: "dropdown-item dropdown-custom-menu-item",
@@ -912,7 +912,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
                               ], 64)) : c("", !0)
                             ])
                           ])) : c("", !0),
-                          l.deleteRecord ? (e(), a("li", Ft, [
+                          l.deleteRecord ? (e(), a("li", Vt, [
                             o("a", {
                               onClick: u,
                               class: "dropdown-item dropdown-custom-menu-item eit-color--red",
@@ -935,7 +935,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
           ]),
           o("div", Ht, [
             o("div", It, [
-              o("div", Kt, [
+              o("div", Ut, [
                 j(m.$slots, "component")
               ])
             ])
@@ -1079,10 +1079,10 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         ref_key: "dialog",
         ref: n,
         class: w(["eit-dialog", s.className]),
-        onKeyup: K(u, ["esc"])
+        onKeyup: U(u, ["esc"])
       }, [
         o("div", eo, [
-          t.loading ? (e(), R(V(oe), {
+          t.loading ? (e(), R(F(oe), {
             key: 0,
             size: "70"
           })) : c("", !0),
@@ -1102,12 +1102,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
               j(y.$slots, "content")
             ], 2),
             o("div", oo, [
-              f(V(I), {
+              f(F(I), {
                 onClick: u,
                 className: "eit-btn-outline--gray",
                 text: "Volver"
               }),
-              s.btnSubmit ? (e(), R(V(I), {
+              s.btnSubmit ? (e(), R(F(I), {
                 key: 0,
                 className: s.btnSubmitConfig.className,
                 text: s.btnSubmitConfig.text,
@@ -1322,7 +1322,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
 }, Bo = {
   key: "info",
   class: "eit-popover__icon eit-font__size--x7"
-}, Lo = { class: "flex-grow-1 ms-3" }, Mo = { class: "d-flex" }, zo = { class: "flex-grow-1 me-3" }, Ao = { class: "eit-popover__title" }, Oo = { class: "eit-popover__text" }, Eo = { class: "flex-shrink-0" }, Vo = {
+}, Lo = { class: "flex-grow-1 ms-3" }, Mo = { class: "d-flex" }, zo = { class: "flex-grow-1 me-3" }, Ao = { class: "eit-popover__title" }, Oo = { class: "eit-popover__text" }, Eo = { class: "flex-shrink-0" }, Fo = {
   __name: "PopoverComponent",
   props: {
     type: {
@@ -1404,16 +1404,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Fo = ["type", "maxlength", "placeholder", "disabled"], Ho = {
+}, Vo = ["type", "maxlength", "placeholder", "disabled"], Ho = {
   key: 0,
   class: "eit-label-float"
 }, Io = {
   key: 1,
   class: "eit-input__display__icon eit-input__display__float-left--icon"
-}, Ko = {
+}, Uo = {
   key: 2,
   class: "eit-input__display__icon eit-input__display__float-right--icon"
-}, Uo = {
+}, Ko = {
   __name: "InputComponent",
   props: {
     inputType: {
@@ -1507,9 +1507,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         maxlength: s.maxLength,
         onKeypress: g[1] || (g[1] = (B) => s.keyPress && s.keyPress(B)),
         placeholder: h.value,
-        onKeyup: K(y, ["enter"]),
+        onKeyup: U(y, ["enter"]),
         disabled: s.isDisabled
-      }, null, 42, Fo), [
+      }, null, 42, Vo), [
         [
           re,
           n.value,
@@ -1521,7 +1521,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
       s.floatLeft ? (e(), a("span", Io, [
         j($.$slots, "float-left")
       ])) : c("", !0),
-      s.floatRight ? (e(), a("span", Ko, [
+      s.floatRight ? (e(), a("span", Uo, [
         j($.$slots, "float-right")
       ])) : c("", !0)
     ], 2));
@@ -1620,7 +1620,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
         disabled: s.isDisabled,
         selectable: s.selectable
       }, {
-        "no-options": F(() => [
+        "no-options": V(() => [
           b(" No hay más resultados. ")
         ]),
         _: 1
@@ -1718,17 +1718,17 @@ const ue = ["disabled"], fe = /* @__PURE__ */ o("div", { class: "spinner-border 
   BadgeComponent: L,
   BreadcrumbComponent: ye,
   ButtonComponent: I,
-  DetailComponent: Ut,
+  DetailComponent: Kt,
   DialogComponent: so,
   HighlightComponent: Xt,
-  InputComponent: Uo,
+  InputComponent: Ko,
   LoadingComponent: oe,
   PaginationComponent: xt,
-  PopoverComponent: Vo,
+  PopoverComponent: Fo,
   ProgressBarComponent: _o,
   PropsComponent: uo,
   SelectComponent: Yo,
-  SkeletonComponent: U,
+  SkeletonComponent: K,
   TabComponent: Qt,
   TableComponent: yt,
   TextareaResizeComponent: Zo,
@@ -1818,7 +1818,7 @@ function ss() {
     return n === null ? "" : n.charAt(0).toUpperCase() + n.slice(1).toLowerCase();
   }
   function r(n, d = "CLP") {
-    return new Intl.NumberFormat("es-CL", { style: "currency", currency: d }).format(n);
+    return d === "UF" || d === "UTM" ? new Intl.NumberFormat("es-CL").format(n) : new Intl.NumberFormat("es-CL", { style: "currency", currency: d }).format(n);
   }
   return { formatDate: t, formatDateAgo: i, formatRut: l, formatCapitalize: s, formatCurrency: r };
 }
