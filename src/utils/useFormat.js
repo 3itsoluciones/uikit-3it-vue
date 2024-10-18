@@ -31,9 +31,8 @@ export default function useFormat() {
   }
 
   //Currency
-  function formatCurrency(value, currency = 'CLP') {
-    if(currency === 'UF' || currency === 'UTM') return new Intl.NumberFormat('es-CL').format(value)
-    else return new Intl.NumberFormat('es-CL', { style: 'currency', currency }).format(value)
+  function formatCurrency(value) {
+    return new Intl.NumberFormat('es-CL').format(value)
   }
 
 
