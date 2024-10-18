@@ -31,8 +31,8 @@ export default function useFormat() {
   }
 
   //Currency
-  function formatCurrency(value, currency = 'USD') {
-    return new Intl.NumberFormat('es-ES', { style: 'currency', currency }).format(value)
+  function formatCurrency(value, currency = 'CLP') {
+    return new Intl.NumberFormat('es-CL', { style: 'currency', currency }).format(value)
   }
 
 
