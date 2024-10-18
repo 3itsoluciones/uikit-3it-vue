@@ -89,6 +89,11 @@ const filterOptions = computed(() => {
   return props.multiple ? filterForMultiple() : filterForSingle()
 })
 
+/** Methods **/
+const handleSelectable = (option) => {
+	return props.selectable ? props.selectable(option) : (option) => option.includes(option)
+}
+
 //Watch
 watch(
   () => props.selected,
@@ -125,7 +130,7 @@ defineExpose({ clean })
     :class="controlSelectError"
     :clearable="clearable"
     :disabled="props.isDisabled"
-		:selectable="props.selectable"
+		:selectable="handleSelectable"
   >
     <template #no-options> No hay más resultados. </template>
   </v-select>
