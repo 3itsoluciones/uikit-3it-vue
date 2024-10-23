@@ -11,6 +11,10 @@ export default function useFormat() {
     const date = dayjs(value).format('DD/MM/YYYY')
     return date
   }
+  function formatDateToBack(value) {
+    const date = dayjs(value).format('YYYY-MM-DD')
+    return date
+  }
   function formatDateAgo(value) {
     const date = dayjs(value).fromNow()
     return date
@@ -35,6 +39,17 @@ export default function useFormat() {
     return new Intl.NumberFormat('es-CL').format(value)
   }
 
-
-  return { formatDate, formatDateAgo, formatRut, formatCapitalize, formatCurrency }
+  function formatCurrencyToBack(value) {
+    const cleanedString = value.replace(/\./g, '')
+    return Number(cleanedString)
+  }
+  return { 
+    formatDate, 
+    formatDateToBack, 
+    formatDateAgo, 
+    formatRut, 
+    formatCapitalize, 
+    formatCurrency,
+    formatCurrencyToBack
+  }
 }
