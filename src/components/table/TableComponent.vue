@@ -104,6 +104,9 @@ const handleCheckObject = (value) => {
 const handleCheckArray = (value) => {
   return Array.isArray(value)
 }
+const handleCheckNull = (value) => {
+  return value === null
+}
 
 //Status
 const handleRecordStatus = (row) => {
@@ -240,6 +243,13 @@ const handleRecordStatus = (row) => {
                       {{ value }}
                     </span>
                   </template>
+
+                  <template v-if="handleCheckNull(value)">
+                    <span class="eit-table__string">
+                      Sin datos
+                    </span>
+                  </template>
+
                 </template>
               </td>
               <td class="text-center">
