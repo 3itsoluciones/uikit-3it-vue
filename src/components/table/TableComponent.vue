@@ -105,7 +105,8 @@ const handleCheckArray = (value) => {
   return Array.isArray(value)
 }
 const handleCheckOthers = (value) => {
-  return value === null || value === undefined || value === ''
+  if (value === null || value === undefined) return true
+  if (typeof value === 'string' && value.trim() === '') return true
 }
 
 //Status
