@@ -99,13 +99,13 @@ const handleCheckString = (value) => {
   return typeof value === 'string'
 }
 const handleCheckObject = (value) => {
-  return typeof value === 'object' && !Array.isArray(value)
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
 }
 const handleCheckArray = (value) => {
   return Array.isArray(value)
 }
 const handleCheckOthers = (value) => {
-  if (value === null || value === undefined || value === "") return true
+  if (value === null || value === undefined) return true
 }
 //Status
 const handleRecordStatus = (row) => {
@@ -230,13 +230,7 @@ const handleRecordStatus = (row) => {
                     </template>
                   </template>
 
-                  <template v-if="handleCheckOthers(value)">
-                    <span class="eit-table__string">
-                      Sin datos
-                    </span>
-                  </template>
-
-                  <template v-else-if="handleCheckObject(value)">
+                  <template v-if="handleCheckObject(value)">
                     <BadgeComponent
                       :text="value.name"
                       :className="value.className"
@@ -245,7 +239,13 @@ const handleRecordStatus = (row) => {
 
                   <template v-if="handleCheckString(value)">
                     <span class="eit-table__string">
-                      {{ value }}
+                      {{ value ? value : 'Sin datos' }}
+                    </span>
+                  </template>
+
+                  <template v-if="handleCheckOthers(value)">
+                    <span class="eit-table__string">
+                      Sin datos
                     </span>
                   </template>
 

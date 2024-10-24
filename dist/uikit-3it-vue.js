@@ -277,7 +277,7 @@ const pe = ["disabled"], me = /* @__PURE__ */ s("div", { class: "spinner-border 
   key: 0,
   class: "d-flex flex-wrap gap-1"
 }, Ye = {
-  key: 2,
+  key: 3,
   class: "eit-table__string"
 }, Ue = {
   key: 4,
@@ -385,8 +385,8 @@ const pe = ["disabled"], me = /* @__PURE__ */ s("div", { class: "spinner-border 
       o("updateSort", { index: v, asc: !a.sort.asc });
     }, _ = (v) => {
       o("enabledDisabledRecord", v);
-    }, h = (v) => typeof v == "string", y = (v) => typeof v == "object" && !Array.isArray(v), w = (v) => Array.isArray(v), S = (v) => {
-      if (v == null || v === "") return !0;
+    }, h = (v) => typeof v == "string", y = (v) => typeof v == "object" && v !== null && !Array.isArray(v), w = (v) => Array.isArray(v), S = (v) => {
+      if (v == null) return !0;
     }, j = (v) => Object.keys(v).includes("status") ? !v.status && "disabled" : "";
     return (v, G) => {
       var J, Q, W, X;
@@ -488,12 +488,13 @@ const pe = ["disabled"], me = /* @__PURE__ */ s("div", { class: "spinner-border 
                           className: "eit-badge__outline--gray"
                         }))
                       ], 64)) : c("", !0),
-                      S(x) ? (e(), n("span", Ye, " Sin datos ")) : y(x) ? (e(), D(M, {
-                        key: 3,
+                      y(x) ? (e(), D(M, {
+                        key: 2,
                         text: x.name,
                         className: x.className
                       }, null, 8, ["text", "className"])) : c("", !0),
-                      h(x) ? (e(), n("span", Ue, g(x), 1)) : c("", !0)
+                      h(x) ? (e(), n("span", Ye, g(x || "Sin datos"), 1)) : c("", !0),
+                      S(x) ? (e(), n("span", Ue, " Sin datos ")) : c("", !0)
                     ], 64)) : c("", !0)
                   ]))), 128)),
                   s("td", Ge, [
