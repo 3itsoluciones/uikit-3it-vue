@@ -169,7 +169,7 @@ const handleCheckArray = (value) => {
             <tr 
               v-for="(row, index) in data" 
               :key="`row-${index}`"
-              :class="!row.status && 'disabled'"
+              :class="Object.keys(row)['status'] ? (!row.status && 'disabled') : '' "
             >
               <td v-for="(value, key) in row" :key="`value-${key}`">
                 <strong class="pe-3 d-lg-none"
