@@ -105,7 +105,7 @@ const handleCheckArray = (value) => {
   return Array.isArray(value)
 }
 const handleCheckOthers = (value) => {
-  if (value === null || value === undefined) return true
+  if (value === null || value === undefined || value === '') return true
 }
 //Status
 const handleRecordStatus = (row) => {
