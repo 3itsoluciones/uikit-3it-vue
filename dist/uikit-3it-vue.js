@@ -442,7 +442,7 @@ const fe = ["disabled"], pe = /* @__PURE__ */ s("div", { class: "spinner-border 
               s("tbody", null, [
                 (e(!0), n(m, null, T(t.data, (k, B) => (e(), n("tr", {
                   key: `row-${B}`,
-                  class: $(R)
+                  class: $(R(k))
                 }, [
                   (e(!0), n(m, null, T(k, (x, M) => (e(), n("td", {
                     key: `value-${M}`
@@ -652,7 +652,7 @@ const fe = ["disabled"], pe = /* @__PURE__ */ s("div", { class: "spinner-border 
                       ])
                     ])
                   ])
-                ]))), 128))
+                ], 2))), 128))
               ])
             ]),
             D(h.$slots, "paginator")
