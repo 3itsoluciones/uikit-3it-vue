@@ -442,7 +442,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
               s("tbody", null, [
                 (e(!0), n(m, null, T(t.data, (k, B) => (e(), n("tr", {
                   key: `row-${B}`,
-                  class: $(k != null && k.status ? "" : "disabled")
+                  class: $(!(k != null && k.status) && "disabled")
                 }, [
                   (e(!0), n(m, null, T(k, (x, M) => (e(), n("td", {
                     key: `value-${M}`
