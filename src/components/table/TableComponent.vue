@@ -232,7 +232,13 @@ const handleRecordStatus = (row) => {
                     </template>
                   </template>
 
-                  <template v-if="handleCheckObject(value)">
+                  <template v-if="handleCheckOthers(value)">
+                    <span class="eit-table__string">
+                      Sin datos
+                    </span>
+                  </template>
+
+                  <template v-else-if="handleCheckObject(value)">
                     <BadgeComponent
                       :text="value.name"
                       :className="value.className"
@@ -242,12 +248,6 @@ const handleRecordStatus = (row) => {
                   <template v-if="handleCheckString(value)">
                     <span class="eit-table__string">
                       {{ value }}
-                    </span>
-                  </template>
-
-                  <template v-if="handleCheckOthers(value)">
-                    <span class="eit-table__string">
-                      Sin datos
                     </span>
                   </template>
 

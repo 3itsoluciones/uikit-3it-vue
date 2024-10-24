@@ -277,7 +277,7 @@ const pe = ["disabled"], me = /* @__PURE__ */ s("div", { class: "spinner-border 
   key: 0,
   class: "d-flex flex-wrap gap-1"
 }, Ye = {
-  key: 3,
+  key: 2,
   class: "eit-table__string"
 }, Ue = {
   key: 4,
@@ -488,13 +488,12 @@ const pe = ["disabled"], me = /* @__PURE__ */ s("div", { class: "spinner-border 
                           className: "eit-badge__outline--gray"
                         }))
                       ], 64)) : c("", !0),
-                      y(x) ? (e(), D(M, {
-                        key: 2,
+                      S(x) ? (e(), n("span", Ye, " Sin datos ")) : y(x) ? (e(), D(M, {
+                        key: 3,
                         text: x.name,
                         className: x.className
                       }, null, 8, ["text", "className"])) : c("", !0),
-                      h(x) ? (e(), n("span", Ye, v(x), 1)) : c("", !0),
-                      S(x) ? (e(), n("span", Ue, " Sin datos ")) : c("", !0)
+                      h(x) ? (e(), n("span", Ue, v(x), 1)) : c("", !0)
                     ], 64)) : c("", !0)
                   ]))), 128)),
                   s("td", Ge, [
