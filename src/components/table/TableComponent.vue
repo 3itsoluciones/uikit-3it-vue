@@ -105,7 +105,7 @@ const handleCheckArray = (value) => {
   return Array.isArray(value)
 }
 const handleCheckOthers = (value) => {
-  if (value === null || value === undefined || value === '') return true
+  if (value === null || value === undefined) return true
 }
 //Status
 const handleRecordStatus = (row) => {
@@ -236,6 +236,8 @@ const handleRecordStatus = (row) => {
                       :className="value.className"
                     />
                   </template>
+
+                  {{ handleCheckString(value) }}
 
                   <template v-if="handleCheckString(value)">
                     <span class="eit-table__string">
