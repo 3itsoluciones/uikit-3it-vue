@@ -208,7 +208,7 @@ const handleRecordStatus = (row) => {
                         class="d-flex flex-wrap gap-1"
                       >
                         <BadgeComponent
-                          :text="item.name"
+                          :text="item.name ? item.name : 'Sin datos'"
                           :className="item.className"
                         />
                       </span>
@@ -237,11 +237,8 @@ const handleRecordStatus = (row) => {
                     />
                   </template>
 
-                  {{ handleCheckString(value) }}
-
                   <template v-if="handleCheckString(value)">
                     <span class="eit-table__string">
-                      ENTRO
                       {{ value ? value : 'Sin datos' }}
                     </span>
                   </template>
