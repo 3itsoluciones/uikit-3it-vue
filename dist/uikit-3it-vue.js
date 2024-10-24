@@ -1,10 +1,10 @@
-import { computed as S, resolveComponent as P, openBlock as e, createElementBlock as n, normalizeClass as $, Fragment as m, createTextVNode as b, toDisplayString as v, createCommentVNode as c, createBlock as j, createElementVNode as s, createVNode as f, withCtx as H, renderList as T, renderSlot as D, mergeProps as ne, createStaticVNode as ae, resolveDirective as le, withDirectives as A, ref as q, watch as N, watchEffect as E, withKeys as Y, vModelText as X, onMounted as ie, unref as F, normalizeStyle as I, vModelDynamic as re } from "vue";
-import { useRoute as ee } from "vue-router";
-import { codeToHtml as ce } from "shiki";
+import { computed as S, resolveComponent as P, openBlock as e, createElementBlock as n, normalizeClass as $, Fragment as m, createTextVNode as b, toDisplayString as v, createCommentVNode as c, createBlock as j, createElementVNode as s, createVNode as f, withCtx as F, renderList as T, renderSlot as D, mergeProps as ae, createStaticVNode as le, resolveDirective as ie, withDirectives as A, ref as q, watch as N, watchEffect as O, withKeys as K, vModelText as ee, onMounted as re, unref as V, normalizeStyle as H, vModelDynamic as ce } from "vue";
+import { useRoute as te } from "vue-router";
+import { codeToHtml as de } from "shiki";
 import z from "dayjs";
-import de from "dayjs/plugin/relativeTime";
+import ue from "dayjs/plugin/relativeTime";
 import "dayjs/locale/es";
-const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border spinner-border-sm me-1" }, null, -1), K = {
+const fe = ["disabled"], pe = /* @__PURE__ */ s("div", { class: "spinner-border spinner-border-sm me-1" }, null, -1), I = {
   __name: "ButtonComponent",
   props: {
     className: {
@@ -49,7 +49,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
         disabled: a.isDisabled
       }, [
         a.loading ? (e(), n(m, { key: 0 }, [
-          fe,
+          pe,
           b(" " + v(a.loadingText), 1)
         ], 64)) : c("", !0),
         a.loading ? c("", !0) : (e(), n(m, { key: 1 }, [
@@ -60,16 +60,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
           }, null, 8, ["icon", "class"])) : c("", !0),
           b(" " + v(t.text), 1)
         ], 64))
-      ], 10, ue);
+      ], 10, fe);
     };
   }
-}, pe = { "aria-label": "breadcrumb" }, me = { class: "eit-breadcrumb" }, _e = /* @__PURE__ */ s("span", { class: "px-2 eit-color--text-soft" }, "/", -1), he = {
+}, me = { "aria-label": "breadcrumb" }, _e = { class: "eit-breadcrumb" }, he = /* @__PURE__ */ s("span", { class: "px-2 eit-color--text-soft" }, "/", -1), ye = {
   key: 1,
   class: "eit-color--text-soft"
-}, ye = {
+}, ge = {
   __name: "BreadcrumbComponent",
   setup(t) {
-    const i = ee(), a = S(() => {
+    const i = te(), a = S(() => {
       let o = [], r = "";
       return i.matched.forEach((l, u) => {
         r += "/" + l.path.split("/")[u + 1], o.push({
@@ -82,31 +82,31 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
     });
     return (o, r) => {
       const l = P("font-awesome-icon"), u = P("router-link");
-      return e(), n("nav", pe, [
-        s("ul", me, [
+      return e(), n("nav", me, [
+        s("ul", _e, [
           s("li", null, [
             f(u, {
               to: "/",
               class: "eit-color--text-soft eit-color--text-soft--link"
             }, {
-              default: H(() => [
+              default: F(() => [
                 f(l, { icon: "fa-solid fa-house" })
               ]),
               _: 1
             }),
-            _e
+            he
           ]),
           (e(!0), n(m, null, T(a.value, (d, p) => (e(), n("li", {
             key: p,
             class: "eit-breadcrumb__item"
           }, [
-            D(o.$slots, d.name, ne({ ref_for: !0 }, d), () => [
-              d.last ? (e(), n("span", he, v(d.name), 1)) : (e(), j(u, {
+            D(o.$slots, d.name, ae({ ref_for: !0 }, d), () => [
+              d.last ? (e(), n("span", ye, v(d.name), 1)) : (e(), j(u, {
                 key: 0,
                 to: d.path,
                 class: "eit-color--text eit-color--text--link eit-color--underline"
               }, {
-                default: H(() => [
+                default: F(() => [
                   b(v(d.name), 1)
                 ]),
                 _: 2
@@ -117,7 +117,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ]);
     };
   }
-}, ge = ["innerHTML"], L = {
+}, ve = ["innerHTML"], L = {
   __name: "BadgeComponent",
   props: {
     className: {
@@ -149,40 +149,40 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
         }, null, 8, ["icon"])) : c("", !0),
         s("span", {
           innerHTML: i.text
-        }, null, 8, ge)
+        }, null, 8, ve)
       ], 2);
     };
   }
-}, ve = {
-  key: 0,
-  class: "table eit-table eit-table-responsive"
 }, be = {
   key: 0,
-  class: "eit-skeleton__table-first-td"
-}, ke = /* @__PURE__ */ s("div", {
-  class: "eit-skeleton eit-skeleton__title",
-  style: { width: "80%" }
-}, null, -1), xe = [
-  ke
-], $e = { key: 1 }, we = /* @__PURE__ */ s("div", {
-  class: "eit-skeleton eit-skeleton__title",
-  style: { width: "60%" }
-}, null, -1), Ce = [
-  we
-], Se = {
+  class: "table eit-table eit-table-responsive"
+}, ke = {
   key: 0,
   class: "eit-skeleton__table-first-td"
-}, Re = /* @__PURE__ */ s("div", {
+}, xe = /* @__PURE__ */ s("div", {
+  class: "eit-skeleton eit-skeleton__title",
+  style: { width: "80%" }
+}, null, -1), $e = [
+  xe
+], we = { key: 1 }, Ce = /* @__PURE__ */ s("div", {
+  class: "eit-skeleton eit-skeleton__title",
+  style: { width: "60%" }
+}, null, -1), Se = [
+  Ce
+], Re = {
+  key: 0,
+  class: "eit-skeleton__table-first-td"
+}, je = /* @__PURE__ */ s("div", {
   class: "eit-skeleton eit-skeleton__text my-2",
   style: { width: "80%" }
-}, null, -1), je = [
-  Re
-], De = { key: 1 }, qe = /* @__PURE__ */ s("div", {
+}, null, -1), De = [
+  je
+], qe = { key: 1 }, Pe = /* @__PURE__ */ s("div", {
   class: "eit-skeleton eit-skeleton__text my-2",
   style: { width: "80%" }
-}, null, -1), Pe = [
-  qe
-], Te = /* @__PURE__ */ ae('<div class="row"><div class="col-12"><div class="d-flex"><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__btn-square"></div></div><div class="flex-grow-1 ms-3"><div class="d-flex"><div class="flex-grow-1 ms-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:40%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></div><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30px;"></div></div></div></div></div></div></div><div class="row flex-grow-1"><div class="col-12 d-flex flex-column flex-grow-1"><div class="eit-slide__content flex-grow-1"><div class="mt-5"><div class="col-12"><h5 class="mb-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:20%;"></div></h5><ul class="list-unstyled"><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:40%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li></ul></div></div></div></div></div>', 2), U = {
+}, null, -1), Te = [
+  Pe
+], Be = /* @__PURE__ */ le('<div class="row"><div class="col-12"><div class="d-flex"><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__btn-square"></div></div><div class="flex-grow-1 ms-3"><div class="d-flex"><div class="flex-grow-1 ms-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:40%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></div><div class="flex-shrink-0"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30px;"></div></div></div></div></div></div></div><div class="row flex-grow-1"><div class="col-12 d-flex flex-column flex-grow-1"><div class="eit-slide__content flex-grow-1"><div class="mt-5"><div class="col-12"><h5 class="mb-3"><div class="eit-skeleton eit-skeleton__title my-2" style="width:20%;"></div></h5><ul class="list-unstyled"><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:40%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:30%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:20%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li><li class="mb-4"><div class="eit-skeleton eit-skeleton__text my-2" style="width:25%;"></div><div class="eit-skeleton eit-skeleton__text my-2" style="width:35%;"></div></li></ul></div></div></div></div></div>', 2), Y = {
   __name: "SkeletonComponent",
   props: {
     type: {
@@ -200,30 +200,30 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
   setup(t) {
     const i = t;
     return (a, o) => (e(), n(m, null, [
-      i.type === "table" ? (e(), n("table", ve, [
+      i.type === "table" ? (e(), n("table", be, [
         s("thead", null, [
           s("tr", null, [
             (e(!0), n(m, null, T(i.table.column, (r) => (e(), n(m, { key: r }, [
-              r === 1 ? (e(), n("th", be, xe)) : c("", !0),
-              r > 1 ? (e(), n("th", $e, Ce)) : c("", !0)
+              r === 1 ? (e(), n("th", ke, $e)) : c("", !0),
+              r > 1 ? (e(), n("th", we, Se)) : c("", !0)
             ], 64))), 128))
           ])
         ]),
         s("tbody", null, [
           (e(!0), n(m, null, T(i.table.row, (r) => (e(), n("tr", { key: r }, [
             (e(!0), n(m, null, T(i.table.column, (l) => (e(), n(m, { key: l }, [
-              l === 1 ? (e(), n("td", Se, je)) : c("", !0),
-              l > 1 ? (e(), n("td", De, Pe)) : c("", !0)
+              l === 1 ? (e(), n("td", Re, De)) : c("", !0),
+              l > 1 ? (e(), n("td", qe, Te)) : c("", !0)
             ], 64))), 128))
           ]))), 128))
         ])
       ])) : c("", !0),
       i.type === "detail" ? (e(), n(m, { key: 1 }, [
-        Te
+        Be
       ], 64)) : c("", !0)
     ], 64));
   }
-}, Be = { class: "d-flex align-items-center" }, Ne = { class: "flex-shrink-0 d-flex align-items-center eit-alert__icon me-2" }, Le = ["innerHTML"], te = {
+}, Ne = { class: "d-flex align-items-center" }, Le = { class: "flex-shrink-0 d-flex align-items-center eit-alert__icon me-2" }, Me = ["innerHTML"], oe = {
   __name: "AlertComponent",
   props: {
     type: {
@@ -255,8 +255,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       return e(), n("div", {
         class: $(`eit-alert eit-alert--${i.type} ${i.animation.active ? "eit-alert--animation" : "eit-alert--default"} ${i.animation.show ? "eit-alert--animation--show" : ""}`)
       }, [
-        s("div", Be, [
-          s("div", Ne, [
+        s("div", Ne, [
+          s("div", Le, [
             f(r, {
               icon: i.icon,
               class: $(t.iconClass)
@@ -265,45 +265,45 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
           s("div", {
             class: "flex-grow-1 eit-alert__text",
             innerHTML: i.message
-          }, null, 8, Le)
+          }, null, 8, Me)
         ])
       ], 2);
     };
   }
-}, Me = { class: "row" }, ze = { class: "col-12" }, Ae = { class: "table eit-table eit-table-responsive" }, Oe = ["onClick"], Ee = /* @__PURE__ */ s("th", {
+}, ze = { class: "row" }, Ae = { class: "col-12" }, Oe = { class: "table eit-table eit-table-responsive" }, Ee = ["onClick"], Ve = /* @__PURE__ */ s("th", {
   scope: "col",
   class: "text-center"
-}, "Acciones", -1), Ve = { class: "pe-3 d-lg-none" }, Fe = ["onClick"], He = {
+}, "Acciones", -1), Fe = { class: "pe-3 d-lg-none" }, He = ["onClick"], Ie = {
   key: 0,
   class: "d-flex flex-wrap gap-1"
-}, Ie = {
+}, Ke = {
   key: 3,
   class: "eit-table__string"
-}, Ke = { class: "text-center" }, Ye = { class: "dropdown eit-dropdown d-none d-lg-block" }, Ue = {
+}, Ye = { class: "text-center" }, Ue = { class: "dropdown eit-dropdown d-none d-lg-block" }, Ge = {
   href: "javascript:",
   class: "eit-btn-action",
   "data-bs-toggle": "dropdown"
-}, Ge = { class: "dropdown-menu dropdown-custom-menu" }, Ze = {
+}, Ze = { class: "dropdown-menu dropdown-custom-menu" }, Je = {
   key: 0,
   class: "mx-2"
-}, Je = ["onClick"], Qe = {
+}, Qe = ["onClick"], We = {
   key: 1,
   class: "mx-2"
-}, We = ["onClick"], Xe = {
+}, Xe = ["onClick"], et = {
   key: 2,
   class: "mx-2"
-}, et = ["onClick"], tt = {
+}, tt = ["onClick"], ot = {
   key: 3,
   class: "m-2"
-}, ot = /* @__PURE__ */ s("div", { class: "eit-border--bottom eit-border--color" }, null, -1), st = [
-  ot
-], nt = {
+}, st = /* @__PURE__ */ s("div", { class: "eit-border--bottom eit-border--color" }, null, -1), nt = [
+  st
+], at = {
   key: 4,
   class: "mx-2"
-}, at = ["onClick"], lt = {
+}, lt = ["onClick"], it = {
   key: 5,
   class: "mx-2"
-}, it = ["onClick"], rt = { class: "d-flex w-100 justify-content-between align-items-center d-lg-none text-end" }, ct = /* @__PURE__ */ s("strong", null, "Acciones:", -1), dt = { class: "d-flex flex-wrap gap-2 ms-3" }, ut = ["onClick"], ft = ["onClick"], pt = ["onClick"], mt = ["onClick"], _t = ["onClick"], ht = ["onClick"], yt = {
+}, rt = ["onClick"], ct = { class: "d-flex w-100 justify-content-between align-items-center d-lg-none text-end" }, dt = /* @__PURE__ */ s("strong", null, "Acciones:", -1), ut = { class: "d-flex flex-wrap gap-2 ms-3" }, ft = ["onClick"], pt = ["onClick"], mt = ["onClick"], _t = ["onClick"], ht = ["onClick"], yt = ["onClick"], gt = {
   __name: "TableComponent",
   props: {
     //Data
@@ -382,18 +382,18 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       o("updateSort", { index: h, asc: !a.sort.asc });
     }, _ = (h) => {
       o("enabledDisabledRecord", h);
-    }, y = (h) => typeof h == "string", g = (h) => typeof h == "object" && !Array.isArray(h), C = (h) => Array.isArray(h);
-    return (h, R) => {
-      var G, Z, J, Q;
-      const w = P("font-awesome-icon"), O = le("tippy");
-      return e(), n("div", Me, [
-        s("div", ze, [
-          t.loading ? (e(), j(U, {
+    }, y = (h) => typeof h == "string", g = (h) => typeof h == "object" && !Array.isArray(h), C = (h) => Array.isArray(h), R = (h) => Object.keys(h).includes("status") ? !h.status && "disabled" : "";
+    return (h, U) => {
+      var Z, J, Q, W;
+      const w = P("font-awesome-icon"), G = ie("tippy");
+      return e(), n("div", ze, [
+        s("div", Ae, [
+          t.loading ? (e(), j(Y, {
             key: 0,
             type: "table",
-            table: { row: (G = t.skeleton) == null ? void 0 : G.row, column: (Z = t.skeleton) == null ? void 0 : Z.column }
+            table: { row: (Z = t.skeleton) == null ? void 0 : Z.row, column: (J = t.skeleton) == null ? void 0 : J.column }
           }, null, 8, ["table"])) : c("", !0),
-          !t.loading && !((J = t.data) != null && J.length) ? (e(), j(te, {
+          !t.loading && !((Q = t.data) != null && Q.length) ? (e(), j(oe, {
             key: 1,
             ref: "alert",
             class: "mb-3",
@@ -401,8 +401,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
             icon: "fa-solid fa-info",
             message: "<strong>No hay resultados</strong> para tu búsqueda."
           }, null, 512)) : c("", !0),
-          !t.loading && ((Q = t.data) != null && Q.length) ? (e(), n(m, { key: 2 }, [
-            s("table", Ae, [
+          !t.loading && ((W = t.data) != null && W.length) ? (e(), n(m, { key: 2 }, [
+            s("table", Oe, [
               s("thead", null, [
                 s("tr", null, [
                   (e(!0), n(m, null, T(t.columns, (k, B) => (e(), n("th", {
@@ -434,40 +434,40 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                       }, [
                         f(w, { icon: "fa-solid fa-sort" })
                       ]))
-                    ], 8, Oe)
+                    ], 8, Ee)
                   ]))), 128)),
-                  Ee
+                  Ve
                 ])
               ]),
               s("tbody", null, [
                 (e(!0), n(m, null, T(t.data, (k, B) => (e(), n("tr", {
                   key: `row-${B}`,
-                  class: $(Object.keys(k).includes("status") ? !k.status && "disabled" : "")
+                  class: $(R)
                 }, [
                   (e(!0), n(m, null, T(k, (x, M) => (e(), n("td", {
                     key: `value-${M}`
                   }, [
-                    s("strong", Ve, v(t.columns[Object.keys(k).indexOf(M)]) + ":", 1),
+                    s("strong", Fe, v(t.columns[Object.keys(k).indexOf(M)]) + ":", 1),
                     Object.keys(k)[t.columnLink] === M ? (e(), n(m, { key: 0 }, [
                       t.viewRecord ? (e(), n("a", {
                         key: 0,
-                        onClick: (V) => r(k),
+                        onClick: (E) => r(k),
                         href: "javascript:",
                         class: "eit-table__link"
-                      }, v(x), 9, Fe)) : c("", !0),
+                      }, v(x), 9, He)) : c("", !0),
                       t.viewRecord ? c("", !0) : (e(), n(m, { key: 1 }, [
                         b(v(x), 1)
                       ], 64))
                     ], 64)) : c("", !0),
                     Object.keys(k)[t.columnLink] !== M ? (e(), n(m, { key: 1 }, [
-                      C(x) ? (e(), n("div", He, [
-                        (e(!0), n(m, null, T(x, (V, se) => (e(), n("span", {
-                          key: `value-array-${se}`,
+                      C(x) ? (e(), n("div", Ie, [
+                        (e(!0), n(m, null, T(x, (E, ne) => (e(), n("span", {
+                          key: `value-array-${ne}`,
                           class: "d-flex flex-wrap gap-1"
                         }, [
                           f(L, {
-                            text: V.name,
-                            className: V.className
+                            text: E.name,
+                            className: E.className
                           }, null, 8, ["text", "className"])
                         ]))), 128))
                       ])) : c("", !0),
@@ -488,16 +488,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                         text: x.name,
                         className: x.className
                       }, null, 8, ["text", "className"])) : c("", !0),
-                      y(x) ? (e(), n("span", Ie, v(x), 1)) : c("", !0)
+                      y(x) ? (e(), n("span", Ke, v(x), 1)) : c("", !0)
                     ], 64)) : c("", !0)
                   ]))), 128)),
-                  s("td", Ke, [
-                    s("div", Ye, [
-                      s("a", Ue, [
+                  s("td", Ye, [
+                    s("div", Ue, [
+                      s("a", Ge, [
                         f(w, { icon: "fa-solid fa-ellipsis" })
                       ]),
-                      s("ul", Ge, [
-                        t.viewRecord ? (e(), n("li", Ze, [
+                      s("ul", Ze, [
+                        t.viewRecord ? (e(), n("li", Je, [
                           s("a", {
                             onClick: (x) => r(k),
                             class: "dropdown-item dropdown-custom-menu-item",
@@ -508,9 +508,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               class: "eit-color--blue"
                             }),
                             b(" " + v(t.viewRecord), 1)
-                          ], 8, Je)
+                          ], 8, Qe)
                         ])) : c("", !0),
-                        t.editRecord ? (e(), n("li", Qe, [
+                        t.editRecord ? (e(), n("li", We, [
                           s("a", {
                             onClick: (x) => l(k),
                             class: "dropdown-item dropdown-custom-menu-item",
@@ -521,9 +521,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               class: "eit-color--yellow"
                             }),
                             b(" " + v(t.editRecord), 1)
-                          ], 8, We)
+                          ], 8, Xe)
                         ])) : c("", !0),
-                        t.downloadRecord ? (e(), n("li", Xe, [
+                        t.downloadRecord ? (e(), n("li", et, [
                           s("a", {
                             onClick: (x) => d(k),
                             class: "dropdown-item dropdown-custom-menu-item",
@@ -534,10 +534,10 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               class: "eit-color--blue"
                             }),
                             b(" " + v(t.downloadRecord), 1)
-                          ], 8, et)
+                          ], 8, tt)
                         ])) : c("", !0),
-                        t.deleteRecord || t.enabledDisabledRecord ? (e(), n("li", tt, st)) : c("", !0),
-                        t.enabledDisabledRecord ? (e(), n("li", nt, [
+                        t.deleteRecord || t.enabledDisabledRecord ? (e(), n("li", ot, nt)) : c("", !0),
+                        t.enabledDisabledRecord ? (e(), n("li", at, [
                           s("a", {
                             onClick: (x) => _(k),
                             class: "dropdown-item dropdown-custom-menu-item",
@@ -557,9 +557,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               }),
                               b(" Deshabilitar ")
                             ], 64)) : c("", !0)
-                          ], 8, at)
+                          ], 8, lt)
                         ])) : c("", !0),
-                        t.deleteRecord ? (e(), n("li", lt, [
+                        t.deleteRecord ? (e(), n("li", it, [
                           s("a", {
                             onClick: (x) => u(B),
                             class: "dropdown-item dropdown-custom-menu-item",
@@ -570,13 +570,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               class: "eit-color--red"
                             }),
                             b(" " + v(t.deleteRecord), 1)
-                          ], 8, it)
+                          ], 8, rt)
                         ])) : c("", !0)
                       ])
                     ]),
-                    s("div", rt, [
-                      ct,
-                      s("div", dt, [
+                    s("div", ct, [
+                      dt,
+                      s("div", ut, [
                         t.viewRecord ? (e(), n("a", {
                           key: 0,
                           onClick: (x) => r(k),
@@ -587,7 +587,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                             icon: "fa-regular fa-eye",
                             class: "eit-color--blue"
                           })
-                        ], 8, ut)) : c("", !0),
+                        ], 8, ft)) : c("", !0),
                         t.editRecord ? (e(), n("a", {
                           key: 1,
                           onClick: (x) => l(k),
@@ -598,7 +598,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                             icon: "fa-solid fa-square-pen",
                             class: "eit-color--yellow"
                           })
-                        ], 8, ft)) : c("", !0),
+                        ], 8, pt)) : c("", !0),
                         t.downloadRecord ? (e(), n("a", {
                           key: 2,
                           onClick: (x) => d(k),
@@ -609,7 +609,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                             icon: "fa-solid fa-download",
                             class: "eit-color--blue"
                           })
-                        ], 8, pt)) : c("", !0),
+                        ], 8, mt)) : c("", !0),
                         t.enabledDisabledRecord ? (e(), n(m, { key: 3 }, [
                           k.status ? c("", !0) : A((e(), n("a", {
                             key: 0,
@@ -621,8 +621,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               icon: "fa-regular fa-circle-check",
                               class: "eit-color--green"
                             })
-                          ], 8, mt)), [
-                            [O, { content: "Habilitar", theme: "main" }]
+                          ], 8, _t)), [
+                            [G, { content: "Habilitar", theme: "main" }]
                           ]),
                           k.status ? A((e(), n("a", {
                             key: 1,
@@ -634,8 +634,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               icon: "fa-solid fa-ban",
                               class: "eit-color--red"
                             })
-                          ], 8, _t)), [
-                            [O, { content: "Deshabilitar", theme: "main" }]
+                          ], 8, ht)), [
+                            [G, { content: "Deshabilitar", theme: "main" }]
                           ]) : c("", !0)
                         ], 64)) : c("", !0),
                         t.deleteRecord ? (e(), n("a", {
@@ -648,11 +648,11 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                             icon: "fa-solid fa-trash",
                             class: "eit-color--red"
                           })
-                        ], 8, ht)) : c("", !0)
+                        ], 8, yt)) : c("", !0)
                       ])
                     ])
                   ])
-                ], 2))), 128))
+                ]))), 128))
               ])
             ]),
             D(h.$slots, "paginator")
@@ -661,7 +661,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ]);
     };
   }
-}, gt = { class: "eit-paginator gap-2" }, vt = ["disabled"], bt = { class: "eit-color--text eit-font__size--x1" }, kt = ["disabled"], xt = {
+}, vt = { class: "eit-paginator gap-2" }, bt = ["disabled"], kt = { class: "eit-color--text eit-font__size--x1" }, xt = ["disabled"], $t = {
   __name: "PaginationComponent",
   props: {
     data: {
@@ -678,36 +678,36 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
     };
     return N(r, () => {
       r.value > 0 && r.value <= a.data.finalPage && o("updatePaginator", r.value);
-    }), E(() => {
+    }), O(() => {
       a.data && (r.value = a.data.currentPage);
     }), (_, y) => {
       const g = P("font-awesome-icon");
-      return e(), n("div", gt, [
+      return e(), n("div", vt, [
         s("button", {
           onClick: u,
           disabled: t.data.currentPage === 1,
           class: "eit-btn eit-btn--square eit-btn-outline--gray"
         }, [
           f(g, { icon: "fa-solid fa-chevron-left" })
-        ], 8, vt),
+        ], 8, bt),
         A(s("input", {
           type: "number",
           "onUpdate:modelValue": y[0] || (y[0] = (C) => r.value = C),
           onInput: d,
-          onKeyup: Y(d, ["enter"]),
+          onKeyup: K(d, ["enter"]),
           onBlur: d,
           onFocus: p,
           class: "eit-input eit-paginator__input eit-font__size--x1 text-center",
           "aria-label": "Número de página"
         }, null, 544), [
           [
-            X,
+            ee,
             r.value,
             void 0,
             { number: !0 }
           ]
         ]),
-        s("span", bt, [
+        s("span", kt, [
           b(" de " + v(t.data.finalPage) + " ", 1),
           t.data.finalPage === 1 ? (e(), n(m, { key: 0 }, [
             b(" página ")
@@ -722,35 +722,35 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
           class: "eit-btn eit-btn--square eit-btn-outline--gray"
         }, [
           f(g, { icon: "fa-solid fa-chevron-right" })
-        ], 8, kt)
+        ], 8, xt)
       ]);
     };
   }
-}, $t = { class: "row" }, wt = { class: "col-12" }, Ct = { class: "d-flex" }, St = { class: "flex-shrink-0" }, Rt = { class: "flex-grow-1" }, jt = { class: "d-flex" }, Dt = { class: "flex-grow-1 d-flex flex-column ms-3" }, qt = { class: "eit-font--primary mb-0" }, Pt = { class: "eit-color--text mb-0" }, Tt = { class: "flex-shrink-0" }, Bt = {
+}, wt = { class: "row" }, Ct = { class: "col-12" }, St = { class: "d-flex" }, Rt = { class: "flex-shrink-0" }, jt = { class: "flex-grow-1" }, Dt = { class: "d-flex" }, qt = { class: "flex-grow-1 d-flex flex-column ms-3" }, Pt = { class: "eit-font--primary mb-0" }, Tt = { class: "eit-color--text mb-0" }, Bt = { class: "flex-shrink-0" }, Nt = {
   key: 0,
   class: "dropdown eit-dropdown d-none d-lg-block"
-}, Nt = {
+}, Lt = {
   href: "javascript:",
   class: "eit-btn-action",
   "data-bs-toggle": "dropdown"
-}, Lt = { class: "dropdown-menu dropdown-custom-menu" }, Mt = {
+}, Mt = { class: "dropdown-menu dropdown-custom-menu" }, zt = {
   key: 0,
   class: "mx-2"
-}, zt = {
+}, At = {
   key: 1,
   class: "mx-2"
-}, At = {
+}, Ot = {
   key: 2,
   class: "m-2"
-}, Ot = /* @__PURE__ */ s("div", { class: "eit-border--bottom eit-border--color" }, null, -1), Et = [
-  Ot
-], Vt = {
+}, Et = /* @__PURE__ */ s("div", { class: "eit-border--bottom eit-border--color" }, null, -1), Vt = [
+  Et
+], Ft = {
   key: 3,
   class: "mx-2"
-}, Ft = {
+}, Ht = {
   key: 4,
   class: "mx-2"
-}, Ht = { class: "row flex-grow-1" }, It = { class: "col-12 d-flex flex-column flex-grow-1" }, Kt = { class: "eit-slide__content flex-grow-1" }, Yt = {
+}, It = { class: "row flex-grow-1" }, Kt = { class: "col-12 d-flex flex-column flex-grow-1" }, Yt = { class: "eit-slide__content flex-grow-1" }, Ut = {
   __name: "DetailComponent",
   props: {
     //Data
@@ -822,15 +822,15 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       return e(), n("section", {
         class: $(["eit-slide d-flex flex-column", [t.slide && "eit-slide--right", t.slideSmall && "eit-slide--small"]])
       }, [
-        a.loading ? (e(), j(U, {
+        a.loading ? (e(), j(Y, {
           key: 0,
           type: "detail"
         })) : c("", !0),
         a.loading ? c("", !0) : (e(), n(m, { key: 1 }, [
-          s("div", $t, [
-            s("div", wt, [
-              s("div", Ct, [
-                s("div", St, [
+          s("div", wt, [
+            s("div", Ct, [
+              s("div", St, [
+                s("div", Rt, [
                   s("button", {
                     class: "eit-btn eit-btn--gray eit-btn--square",
                     onClick: r
@@ -845,25 +845,25 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                     })
                   ])
                 ]),
-                s("div", Rt, [
-                  s("div", jt, [
-                    s("div", Dt, [
-                      s("h4", qt, [
+                s("div", jt, [
+                  s("div", Dt, [
+                    s("div", qt, [
+                      s("h4", Pt, [
                         s("strong", null, [
                           D(_.$slots, "title")
                         ])
                       ]),
-                      s("p", Pt, [
+                      s("p", Tt, [
                         D(_.$slots, "subtitle")
                       ])
                     ]),
-                    s("div", Tt, [
-                      a.dropdown ? (e(), n("div", Bt, [
-                        s("a", Nt, [
+                    s("div", Bt, [
+                      a.dropdown ? (e(), n("div", Nt, [
+                        s("a", Lt, [
                           f(g, { icon: "fa-solid fa-ellipsis" })
                         ]),
-                        s("ul", Lt, [
-                          a.editRecord ? (e(), n("li", Mt, [
+                        s("ul", Mt, [
+                          a.editRecord ? (e(), n("li", zt, [
                             s("a", {
                               onClick: u,
                               class: "dropdown-item dropdown-custom-menu-item",
@@ -876,7 +876,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               b(" " + v(t.editRecord), 1)
                             ])
                           ])) : c("", !0),
-                          a.downloadRecord ? (e(), n("li", zt, [
+                          a.downloadRecord ? (e(), n("li", At, [
                             s("a", {
                               onClick: p,
                               class: "dropdown-item dropdown-custom-menu-item",
@@ -889,8 +889,8 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               b(" " + v(a.downloadRecord), 1)
                             ])
                           ])) : c("", !0),
-                          t.deleteRecord || t.enabledDisabledRecord ? (e(), n("li", At, Et)) : c("", !0),
-                          a.enabledDisabledRecord ? (e(), n("li", Vt, [
+                          t.deleteRecord || t.enabledDisabledRecord ? (e(), n("li", Ot, Vt)) : c("", !0),
+                          a.enabledDisabledRecord ? (e(), n("li", Ft, [
                             s("a", {
                               onClick: l,
                               class: "dropdown-item dropdown-custom-menu-item",
@@ -912,7 +912,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
                               ], 64)) : c("", !0)
                             ])
                           ])) : c("", !0),
-                          a.deleteRecord ? (e(), n("li", Ft, [
+                          a.deleteRecord ? (e(), n("li", Ht, [
                             s("a", {
                               onClick: d,
                               class: "dropdown-item dropdown-custom-menu-item eit-color--red",
@@ -933,9 +933,9 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
               ])
             ])
           ]),
-          s("div", Ht, [
-            s("div", It, [
-              s("div", Kt, [
+          s("div", It, [
+            s("div", Kt, [
+              s("div", Yt, [
                 D(_.$slots, "component")
               ])
             ])
@@ -945,10 +945,10 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Ut = { class: "d-flex justify-content-between align-items-center" }, Gt = ["onClick"], Zt = {
+}, Gt = { class: "d-flex justify-content-between align-items-center" }, Zt = ["onClick"], Jt = {
   key: 0,
   class: "eit-tabs__badge"
-}, Jt = { class: "d-flex flex-column" }, Qt = {
+}, Qt = { class: "d-flex flex-column" }, Wt = {
   __name: "TabComponent",
   props: {
     //Data
@@ -969,7 +969,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       o.value = l;
     };
     return (l, u) => (e(), n(m, null, [
-      s("div", Ut, [
+      s("div", Gt, [
         s("ul", {
           class: $(`eit-tabs ${i.className}`)
         }, [
@@ -983,18 +983,18 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
               class: $(["eit-tabs__item__link", o.value === p ? "active" : ""])
             }, [
               b(v(d.name) + " ", 1),
-              d.number ? (e(), n("span", Zt, v(a(d.number)), 1)) : c("", !0)
-            ], 10, Gt)
+              d.number ? (e(), n("span", Jt, v(a(d.number)), 1)) : c("", !0)
+            ], 10, Zt)
           ]))), 128))
         ], 2),
         D(l.$slots, "dropdown")
       ]),
-      s("div", Jt, [
+      s("div", Qt, [
         D(l.$slots, `tab-${o.value}`)
       ])
     ], 64));
   }
-}, Wt = ["innerHTML"], Xt = {
+}, Xt = ["innerHTML"], eo = {
   __name: "HighlightComponent",
   props: {
     code: {
@@ -1015,13 +1015,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
     const i = t, a = q("");
     return (async () => {
       const r = `${i.code}`;
-      a.value = await ce(r, {
+      a.value = await de(r, {
         lang: i.lang,
         theme: i.theme
       });
-    })(), (r, l) => (e(), n("div", { innerHTML: a.value }, null, 8, Wt));
+    })(), (r, l) => (e(), n("div", { innerHTML: a.value }, null, 8, Xt));
   }
-}, eo = { class: "eit-dialog__content" }, to = { class: "d-flex justify-content-between align-items-center" }, oo = { class: "d-flex gap-2 justify-content-end mt-3" }, so = {
+}, to = { class: "eit-dialog__content" }, oo = { class: "d-flex justify-content-between align-items-center" }, so = { class: "d-flex gap-2 justify-content-end mt-3" }, no = {
   __name: "DialogComponent",
   props: {
     className: {
@@ -1071,7 +1071,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
     }, _ = () => {
       r("emitSubmit");
     };
-    return ie(() => {
+    return re(() => {
       document.addEventListener("keyup", p);
     }), i({ showDialog: u, closeDialog: d }), (y, g) => {
       const C = P("font-awesome-icon");
@@ -1079,15 +1079,15 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
         ref_key: "dialog",
         ref: l,
         class: $(["eit-dialog", o.className]),
-        onKeyup: Y(d, ["esc"])
+        onKeyup: K(d, ["esc"])
       }, [
-        s("div", eo, [
-          t.loading ? (e(), j(F(oe), {
+        s("div", to, [
+          t.loading ? (e(), j(V(se), {
             key: 0,
             size: "70"
           })) : c("", !0),
           t.loading ? c("", !0) : (e(), n(m, { key: 1 }, [
-            s("div", to, [
+            s("div", oo, [
               D(y.$slots, "head"),
               s("button", {
                 onClick: d,
@@ -1101,13 +1101,13 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
             }, [
               D(y.$slots, "content")
             ], 2),
-            s("div", oo, [
-              f(F(K), {
+            s("div", so, [
+              f(V(I), {
                 onClick: d,
                 className: "eit-btn-outline--gray",
                 text: "Volver"
               }),
-              o.btnSubmit ? (e(), j(F(K), {
+              o.btnSubmit ? (e(), j(V(I), {
                 key: 0,
                 className: o.btnSubmitConfig.className,
                 text: o.btnSubmitConfig.text,
@@ -1122,15 +1122,15 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ], 34);
     };
   }
-}, no = { class: "row" }, ao = { class: "col" }, lo = /* @__PURE__ */ s("h2", { class: "eit-font__size--x4 eit-color--text eit-font__weight--300 eit-border--bottom eit-border--color mb-3" }, [
+}, ao = { class: "row" }, lo = { class: "col" }, io = /* @__PURE__ */ s("h2", { class: "eit-font__size--x4 eit-color--text eit-font__weight--300 eit-border--bottom eit-border--color mb-3" }, [
   /* @__PURE__ */ s("strong", { class: "eit-font__weight--900" }, "Props")
-], -1), io = { class: "eit-table--overflow" }, ro = { class: "table eit-table" }, co = /* @__PURE__ */ s("thead", null, [
+], -1), ro = { class: "eit-table--overflow" }, co = { class: "table eit-table" }, uo = /* @__PURE__ */ s("thead", null, [
   /* @__PURE__ */ s("tr", null, [
     /* @__PURE__ */ s("th", null, "Name"),
     /* @__PURE__ */ s("th", null, "Type"),
     /* @__PURE__ */ s("th", null, "Default")
   ])
-], -1), uo = {
+], -1), fo = {
   __name: "PropsComponent",
   props: {
     data: {
@@ -1140,12 +1140,12 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
   },
   setup(t) {
     const i = t;
-    return (a, o) => (e(), n("div", no, [
-      s("div", ao, [
-        lo,
-        s("div", io, [
-          s("table", ro, [
-            co,
+    return (a, o) => (e(), n("div", ao, [
+      s("div", lo, [
+        io,
+        s("div", ro, [
+          s("table", co, [
+            uo,
             s("tbody", null, [
               (e(!0), n(m, null, T(i.data, (r) => (e(), n("tr", {
                 key: r.name
@@ -1169,7 +1169,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ])
     ]));
   }
-}, fo = { class: "eit-progress eit-progress--30" }, po = { key: 1 }, mo = /* @__PURE__ */ s("span", { class: "spinner-border spinner-border-sm" }, null, -1), _o = {
+}, po = { class: "eit-progress eit-progress--30" }, mo = { key: 1 }, _o = /* @__PURE__ */ s("span", { class: "spinner-border spinner-border-sm" }, null, -1), ho = {
   __name: "ProgressBarComponent",
   props: {
     percentage: {
@@ -1187,10 +1187,10 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
   },
   setup(t) {
     const i = t, a = S(() => parseFloat(i.percentage)), o = S(() => a.value === 0 ? 0 : 100 - a.value);
-    return (r, l) => (e(), n("div", fo, [
+    return (r, l) => (e(), n("div", po, [
       s("div", {
         class: $(["eit-progress__bar", `eit-progress__bar--${i.type}`]),
-        style: I(`width: ${i.percentage}%`)
+        style: H(`width: ${i.percentage}%`)
       }, [
         a.value !== 0 ? (e(), n(m, { key: 0 }, [
           i.percentage > 5 ? (e(), n(m, { key: 0 }, [
@@ -1200,33 +1200,33 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ], 6),
       s("div", {
         class: "eit-progress__bar eit-progress__bar--transparent",
-        style: I(`width: ${o.value === 0 ? 100 : o.value}%`)
+        style: H(`width: ${o.value === 0 ? 100 : o.value}%`)
       }, [
         i.loading ? c("", !0) : (e(), n(m, { key: 0 }, [
           o.value === 0 || o.value > 5 ? (e(), n(m, { key: 0 }, [
             b(v(o.value) + "% ", 1)
           ], 64)) : c("", !0)
         ], 64)),
-        i.loading ? (e(), n("span", po, [
-          mo,
+        i.loading ? (e(), n("span", mo, [
+          _o,
           b(" Cargando... ")
         ])) : c("", !0)
       ], 4)
     ]));
   }
-}, ho = { class: "d-flex" }, yo = { class: "flex-shrink-0 eit-toast__left" }, go = {
+}, yo = { class: "d-flex" }, go = { class: "flex-shrink-0 eit-toast__left" }, vo = {
   key: "success",
   class: "eit-toast__icon eit-font__size--x7"
-}, vo = {
+}, bo = {
   key: "error",
   class: "eit-toast__icon eit-font__size--x7"
-}, bo = {
+}, ko = {
   key: "warning",
   class: "eit-toast__icon eit-font__size--x7"
-}, ko = {
+}, xo = {
   key: "info",
   class: "eit-toast__icon eit-font__size--x7"
-}, xo = { class: "flex-grow-1 ms-3" }, $o = { class: "d-flex" }, wo = { class: "flex-grow-1 me-3" }, Co = { class: "eit-toast__title" }, So = { class: "eit-toast__text" }, Ro = { class: "flex-shrink-0" }, jo = {
+}, $o = { class: "flex-grow-1 ms-3" }, wo = { class: "d-flex" }, Co = { class: "flex-grow-1 me-3" }, So = { class: "eit-toast__title" }, Ro = { class: "eit-toast__text" }, jo = { class: "flex-shrink-0" }, Do = {
   __name: "ToastComponent",
   props: {
     type: {
@@ -1268,33 +1268,33 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
         s("div", {
           class: $(["eit-toast box-shadow", `eit-toast--${a.data.type}`])
         }, [
-          s("div", ho, [
-            s("div", yo, [
-              a.type === "success" ? (e(), n("span", go, [
+          s("div", yo, [
+            s("div", go, [
+              a.type === "success" ? (e(), n("span", vo, [
                 f(g, { icon: "fa-solid fa-circle-check" })
               ])) : c("", !0),
-              a.type === "error" ? (e(), n("span", vo, [
+              a.type === "error" ? (e(), n("span", bo, [
                 f(g, { icon: "fa-solid fa-circle-xmark" })
               ])) : c("", !0),
-              a.type === "warning" ? (e(), n("span", bo, [
+              a.type === "warning" ? (e(), n("span", ko, [
                 f(g, { icon: "fa-solid fa-triangle-exclamation" })
               ])) : c("", !0),
-              a.type === "info" ? (e(), n("span", ko, [
+              a.type === "info" ? (e(), n("span", xo, [
                 f(g, { icon: "fa-solid fa-circle-info" })
               ])) : c("", !0)
             ]),
-            s("div", xo, [
-              s("div", $o, [
-                s("div", wo, [
-                  s("p", Co, [
+            s("div", $o, [
+              s("div", wo, [
+                s("div", Co, [
+                  s("p", So, [
                     a.data.code ? (e(), n(m, { key: 0 }, [
                       b(v(a.data.code), 1)
                     ], 64)) : c("", !0),
                     b(" " + v(a.data.title), 1)
                   ]),
-                  s("p", So, v(a.data.message), 1)
+                  s("p", Ro, v(a.data.message), 1)
                 ]),
-                s("div", Ro, [
+                s("div", jo, [
                   s("a", {
                     onClick: y[0] || (y[0] = (C) => p()),
                     href: "javascript:",
@@ -1310,19 +1310,19 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Do = { class: "d-flex" }, qo = { class: "flex-shrink-0 eit-popover__left" }, Po = {
+}, qo = { class: "d-flex" }, Po = { class: "flex-shrink-0 eit-popover__left" }, To = {
   key: "success",
   class: "eit-popover__icon eit-font__size--x7"
-}, To = {
+}, Bo = {
   key: "error",
   class: "eit-popover__icon eit-font__size--x7"
-}, Bo = {
+}, No = {
   key: "warning",
   class: "eit-popover__icon eit-font__size--x7"
-}, No = {
+}, Lo = {
   key: "info",
   class: "eit-popover__icon eit-font__size--x7"
-}, Lo = { class: "flex-grow-1 ms-3" }, Mo = { class: "d-flex" }, zo = { class: "flex-grow-1 me-3" }, Ao = { class: "eit-popover__title" }, Oo = { class: "eit-popover__text" }, Eo = { class: "flex-shrink-0" }, Vo = {
+}, Mo = { class: "flex-grow-1 ms-3" }, zo = { class: "d-flex" }, Ao = { class: "flex-grow-1 me-3" }, Oo = { class: "eit-popover__title" }, Eo = { class: "eit-popover__text" }, Vo = { class: "flex-shrink-0" }, Fo = {
   __name: "PopoverComponent",
   props: {
     type: {
@@ -1362,33 +1362,33 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
         s("div", {
           class: $(["eit-popover box-shadow", `eit-popover--${a.data.type}`])
         }, [
-          s("div", Do, [
-            s("div", qo, [
-              a.type === "success" ? (e(), n("span", Po, [
+          s("div", qo, [
+            s("div", Po, [
+              a.type === "success" ? (e(), n("span", To, [
                 f(_, { icon: "fa-solid fa-circle-check" })
               ])) : c("", !0),
-              a.type === "error" ? (e(), n("span", To, [
+              a.type === "error" ? (e(), n("span", Bo, [
                 f(_, { icon: "fa-solid fa-circle-xmark" })
               ])) : c("", !0),
-              a.type === "warning" ? (e(), n("span", Bo, [
+              a.type === "warning" ? (e(), n("span", No, [
                 f(_, { icon: "fa-solid fa-triangle-exclamation" })
               ])) : c("", !0),
-              a.type === "info" ? (e(), n("span", No, [
+              a.type === "info" ? (e(), n("span", Lo, [
                 f(_, { icon: "fa-solid fa-circle-info" })
               ])) : c("", !0)
             ]),
-            s("div", Lo, [
-              s("div", Mo, [
-                s("div", zo, [
-                  s("p", Ao, [
+            s("div", Mo, [
+              s("div", zo, [
+                s("div", Ao, [
+                  s("p", Oo, [
                     a.data.code ? (e(), n(m, { key: 0 }, [
                       b(v(a.data.code), 1)
                     ], 64)) : c("", !0),
                     b(" " + v(a.data.title), 1)
                   ]),
-                  s("p", Oo, v(a.data.message), 1)
+                  s("p", Eo, v(a.data.message), 1)
                 ]),
-                s("div", Eo, [
+                s("div", Vo, [
                   s("a", {
                     onClick: p[0] || (p[0] = (y) => u()),
                     href: "javascript:",
@@ -1404,16 +1404,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       ], 2);
     };
   }
-}, Fo = ["type", "maxlength", "placeholder", "disabled"], Ho = {
+}, Ho = ["type", "maxlength", "placeholder", "disabled"], Io = {
   key: 0,
   class: "eit-label-float"
-}, Io = {
+}, Ko = {
   key: 1,
   class: "eit-input__display__icon eit-input__display__float-left--icon"
-}, Ko = {
+}, Yo = {
   key: 2,
   class: "eit-input__display__icon eit-input__display__float-right--icon"
-}, Yo = {
+}, Uo = {
   __name: "InputComponent",
   props: {
     inputType: {
@@ -1494,39 +1494,39 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       C && (l.value = C);
     }), N(l, () => {
       r("emitValue", u.value ? l.value : "");
-    }), E(() => {
+    }), O(() => {
       o.inputMask && (l.value = o.inputMask(l.value)), o.submitted && g();
-    }), i({ clean: g }), (C, h) => (e(), n("div", {
+    }), i({ clean: g }), (C, R) => (e(), n("div", {
       class: $(_.value)
     }, [
       A(s("input", {
         autocomplete: "off",
         class: $(["form-control eit-input", d.value]),
         type: o.inputType,
-        "onUpdate:modelValue": h[0] || (h[0] = (R) => l.value = R),
+        "onUpdate:modelValue": R[0] || (R[0] = (h) => l.value = h),
         maxlength: o.maxLength,
-        onKeypress: h[1] || (h[1] = (R) => o.keyPress && o.keyPress(R)),
+        onKeypress: R[1] || (R[1] = (h) => o.keyPress && o.keyPress(h)),
         placeholder: p.value,
-        onKeyup: Y(y, ["enter"]),
+        onKeyup: K(y, ["enter"]),
         disabled: o.isDisabled
-      }, null, 42, Fo), [
+      }, null, 42, Ho), [
         [
-          re,
+          ce,
           l.value,
           void 0,
           { trim: !0 }
         ]
       ]),
-      o.floatLabel ? (e(), n("label", Ho, v(o.floatLabel), 1)) : c("", !0),
-      o.floatLeft ? (e(), n("span", Io, [
+      o.floatLabel ? (e(), n("label", Io, v(o.floatLabel), 1)) : c("", !0),
+      o.floatLeft ? (e(), n("span", Ko, [
         D(C.$slots, "float-left")
       ])) : c("", !0),
-      o.floatRight ? (e(), n("span", Ko, [
+      o.floatRight ? (e(), n("span", Yo, [
         D(C.$slots, "float-right")
       ])) : c("", !0)
     ], 2));
   }
-}, Uo = {
+}, Go = {
   __name: "SelectComponent",
   props: {
     //Data
@@ -1591,27 +1591,27 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
   setup(t, { expose: i, emit: a }) {
     const o = t, r = a, l = q(null), u = S(
       () => o.validation ? o.validation(l.value) : !0
-    ), d = S(() => !u.value && o.requiredField && o.error ? "is-invalid" : ""), p = () => Array.isArray(l.value) ? o.data.filter((h) => !l.value.some((R) => R.id === h.id)) : o.data, _ = () => l.value ? o.data.filter((h) => h.id !== l.value.id) : o.data, y = S(() => o.multiple ? p() : _()), g = (h) => o.selectable ? o.selectable(h) : (R) => R.includes(R);
+    ), d = S(() => !u.value && o.requiredField && o.error ? "is-invalid" : ""), p = () => Array.isArray(l.value) ? o.data.filter((R) => !l.value.some((h) => h.id === R.id)) : o.data, _ = () => l.value ? o.data.filter((R) => R.id !== l.value.id) : o.data, y = S(() => o.multiple ? p() : _()), g = (R) => o.selectable ? o.selectable(R) : (h) => h.includes(h);
     N(
       () => o.selected,
-      (h) => {
-        h && (l.value = h);
+      (R) => {
+        R && (l.value = R);
       },
       { immediate: !0 }
     ), N(l, () => {
       r("emitValue", u.value ? l.value : null);
-    }), E(() => {
+    }), O(() => {
       o.submitted && C();
     });
     const C = () => {
       l.value = o.multiple ? [] : null;
     };
-    return i({ clean: C }), (h, R) => {
-      const w = P("v-select");
-      return e(), j(w, {
+    return i({ clean: C }), (R, h) => {
+      const U = P("v-select");
+      return e(), j(U, {
         options: y.value,
         modelValue: l.value,
-        "onUpdate:modelValue": R[0] || (R[0] = (O) => l.value = O),
+        "onUpdate:modelValue": h[0] || (h[0] = (w) => l.value = w),
         label: t.labelCustom,
         multiple: t.multiple,
         placeholder: t.placeHolder,
@@ -1620,14 +1620,14 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
         disabled: o.isDisabled,
         selectable: g
       }, {
-        "no-options": H(() => [
+        "no-options": F(() => [
           b(" No hay más resultados. ")
         ]),
         _: 1
       }, 8, ["options", "modelValue", "label", "multiple", "placeholder", "class", "clearable", "disabled"]);
     };
   }
-}, Go = ["maxlength", "placeholder"], Zo = {
+}, Zo = ["maxlength", "placeholder"], Jo = {
   __name: "TextareaResizeComponent",
   props: {
     //Data
@@ -1675,7 +1675,7 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       }
     ), N(u, () => {
       l.value.style.height = "50px", l.value.style.height = `${l.value.scrollHeight}px`, r("emitValue", d.value ? u.value : "");
-    }), E(() => {
+    }), O(() => {
       o.submitted && _();
     }), i({ clean: _ }), (y, g) => A((e(), n("textarea", {
       ref_key: "textarea",
@@ -1685,16 +1685,16 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
       autocomplete: "off",
       class: $(["form-control eit-textarea eit-textarea-resize", p.value]),
       placeholder: t.placeHolder
-    }, null, 10, Go)), [
+    }, null, 10, Zo)), [
       [
-        X,
+        ee,
         u.value,
         void 0,
         { trim: !0 }
       ]
     ]);
   }
-}, Jo = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Qo = { class: "p-3 eit-loading" }, oe = {
+}, Qo = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20style='margin:%20auto;%20display:%20block;%20shape-rendering:%20auto;'%20width='200px'%20height='200px'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='xMidYMid'%3e%3crect%20x='17.5'%20y='30'%20width='15'%20height='40'%20fill='%23009da6'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='18;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='64;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.2s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='42.5'%20y='30'%20width='15'%20height='40'%20fill='%2379cace'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%20begin='-0.1s'%3e%3c/animate%3e%3c/rect%3e%3crect%20x='67.5'%20y='30'%20width='15'%20height='40'%20fill='%23a9e4e7'%3e%3canimate%20attributeName='y'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='20.999999999999996;30;30'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3canimate%20attributeName='height'%20repeatCount='indefinite'%20dur='1s'%20calcMode='spline'%20keyTimes='0;0.5;1'%20values='58.00000000000001;40;40'%20keySplines='0%200.5%200.5%201;0%200.5%200.5%201'%3e%3c/animate%3e%3c/rect%3e%3c/svg%3e", Wo = { class: "p-3 eit-loading" }, se = {
   __name: "LoadingComponent",
   props: {
     size: {
@@ -1705,44 +1705,44 @@ const ue = ["disabled"], fe = /* @__PURE__ */ s("div", { class: "spinner-border 
   },
   setup(t) {
     const i = t;
-    return (a, o) => (e(), n("div", Qo, [
+    return (a, o) => (e(), n("div", Wo, [
       s("img", {
-        style: I(`width:${i.size}px`),
-        src: Jo
+        style: H(`width:${i.size}px`),
+        src: Qo
       }, null, 4)
     ]));
   }
-}, W = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, X = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  AlertComponent: te,
+  AlertComponent: oe,
   BadgeComponent: L,
-  BreadcrumbComponent: ye,
-  ButtonComponent: K,
-  DetailComponent: Yt,
-  DialogComponent: so,
-  HighlightComponent: Xt,
-  InputComponent: Yo,
-  LoadingComponent: oe,
-  PaginationComponent: xt,
-  PopoverComponent: Vo,
-  ProgressBarComponent: _o,
-  PropsComponent: uo,
-  SelectComponent: Uo,
-  SkeletonComponent: U,
-  TabComponent: Qt,
-  TableComponent: yt,
-  TextareaResizeComponent: Zo,
-  ToastComponent: jo
+  BreadcrumbComponent: ge,
+  ButtonComponent: I,
+  DetailComponent: Ut,
+  DialogComponent: no,
+  HighlightComponent: eo,
+  InputComponent: Uo,
+  LoadingComponent: se,
+  PaginationComponent: $t,
+  PopoverComponent: Fo,
+  ProgressBarComponent: ho,
+  PropsComponent: fo,
+  SelectComponent: Go,
+  SkeletonComponent: Y,
+  TabComponent: Wt,
+  TableComponent: gt,
+  TextareaResizeComponent: Jo,
+  ToastComponent: Do
 }, Symbol.toStringTag, { value: "Module" }));
-function Wo(t, i) {
-  const a = ee(), o = S(() => a.meta.requiresAuth ? t.config.darkTheme ? i.logotipo.logo_dark : i.logotipo.logo_light : i.platformDarkTheme ? i.logotipo.logo_dark : i.logotipo.logo_light), r = S(() => t.config.darkTheme ? i.logotipo.isotipo_dark : i.logotipo.isotipo_light);
+function Xo(t, i) {
+  const a = te(), o = S(() => a.meta.requiresAuth ? t.config.darkTheme ? i.logotipo.logo_dark : i.logotipo.logo_light : i.platformDarkTheme ? i.logotipo.logo_dark : i.logotipo.logo_light), r = S(() => t.config.darkTheme ? i.logotipo.isotipo_dark : i.logotipo.isotipo_light);
   return { logotipo: o, isotipo: r };
 }
-const us = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const fs = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  useLogos: Wo
+  useLogos: Xo
 }, Symbol.toStringTag, { value: "Module" }));
-function Xo() {
+function es() {
   function t(l) {
     return !(l == null || typeof l == "string" && l.trim() === "" || typeof l == "object" && Object.keys(l).length === 0 || Array.isArray(l) && l.length === 0);
   }
@@ -1768,7 +1768,7 @@ function Xo() {
     validatePhone: r
   };
 }
-function es() {
+function ts() {
   function t(r) {
     return r.replace(/[.-]/g, "").replace(/^(\d{1,2})(\d{3})(\d{3})(\w{1})$/, "$1.$2.$3-$4");
   }
@@ -1783,7 +1783,7 @@ function es() {
   }
   return { inputMaskRut: t, inputMaskCurrency: i, inputMaskPhone: a, inputOnlyLetters: o };
 }
-function ts() {
+function os() {
   function t(i) {
     let a = String.fromCharCode(i.keyCode);
     if (/^[0-9Kk.-]/.test(a)) return !0;
@@ -1791,7 +1791,7 @@ function ts() {
   }
   return { keyPressRut: t };
 }
-function os() {
+function ss() {
   function t(i) {
     const { sort: a, data: o } = i, { keys: r, index: l, asc: u } = a, d = r[l];
     return o.sort((p, _) => {
@@ -1801,9 +1801,9 @@ function os() {
   }
   return { sortTable: t };
 }
-z.extend(de);
+z.extend(ue);
 z.locale("es");
-function ss() {
+function ns() {
   function t(d) {
     return z(d).format("DD/MM/YYYY");
   }
@@ -1837,7 +1837,7 @@ function ss() {
     formatCurrencyToBack: u
   };
 }
-function ns() {
+function as() {
   function t(i, a) {
     return a ? {
       content: i,
@@ -1848,23 +1848,23 @@ function ns() {
   }
   return { handleTooltip: t };
 }
-const fs = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const ps = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  useFormat: ss,
-  useInputMask: es,
-  useKeypress: ts,
-  useTable: os,
-  useTooltip: ns,
-  useValidator: Xo
-}, Symbol.toStringTag, { value: "Module" })), ps = {
+  useFormat: ns,
+  useInputMask: ts,
+  useKeypress: os,
+  useTable: ss,
+  useTooltip: as,
+  useValidator: es
+}, Symbol.toStringTag, { value: "Module" })), ms = {
   install(t) {
-    Object.keys(W).forEach((i) => {
-      t.component(i, W[i]);
+    Object.keys(X).forEach((i) => {
+      t.component(i, X[i]);
     });
   }
 };
 export {
-  us as composables,
-  ps as default,
-  fs as utils
+  fs as composables,
+  ms as default,
+  ps as utils
 };

@@ -104,6 +104,11 @@ const handleCheckObject = (value) => {
 const handleCheckArray = (value) => {
   return Array.isArray(value)
 }
+
+//Status
+const handleRecordStatus = (row) => {
+  return Object.keys(row).includes('status') ? (!row.status && 'disabled') : '' 
+}
 </script>
 
 <template>
@@ -169,7 +174,7 @@ const handleCheckArray = (value) => {
             <tr 
               v-for="(row, index) in data" 
               :key="`row-${index}`"
-              :class="Object.keys(row).includes('status') ? (!row.status && 'disabled') : '' "
+              :class="handleRecordStatus"
             >
               <td v-for="(value, key) in row" :key="`value-${key}`">
                 <strong class="pe-3 d-lg-none"
