@@ -239,7 +239,7 @@ const handleRecordStatus = (row) => {
 
                   <template v-if="handleCheckString(value)">
                     <span class="eit-table__string">
-                      {{ value ? value : 'Sin datos' }}
+                      {{ value !== '' ? value : 'Sin datos' }}
                     </span>
                   </template>
 

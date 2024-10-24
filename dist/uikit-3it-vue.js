@@ -493,7 +493,7 @@ const pe = ["disabled"], me = /* @__PURE__ */ s("div", { class: "spinner-border 
                         text: x.name,
                         className: x.className
                       }, null, 8, ["text", "className"])) : c("", !0),
-                      h(x) ? (e(), n("span", Ye, g(x || "Sin datos"), 1)) : c("", !0),
+                      h(x) ? (e(), n("span", Ye, g(x !== "" ? x : "Sin datos"), 1)) : c("", !0),
                       S(x) ? (e(), n("span", Ue, " Sin datos ")) : c("", !0)
                     ], 64)) : c("", !0)
                   ]))), 128)),
