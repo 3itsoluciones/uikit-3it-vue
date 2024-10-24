@@ -190,12 +190,12 @@ const handleRecordStatus = (row) => {
                       href="javascript:"
                       class="eit-table__link"
                     >
-                      {{ value }}
+                      {{ value ? value : 'Sin datos' }}
                     </a>
                   </template>
 
                   <template v-if="!viewRecord">
-                    {{ value }}
+                    {{ value ? value : 'Sin datos' }}
                   </template>
                 </template>
 
@@ -232,7 +232,7 @@ const handleRecordStatus = (row) => {
 
                   <template v-if="handleCheckObject(value)">
                     <BadgeComponent
-                      :text="value.name"
+                      :text="item.name ? item.name : 'Sin datos'"
                       :className="value.className"
                     />
                   </template>
