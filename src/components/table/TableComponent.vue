@@ -105,10 +105,8 @@ const handleCheckArray = (value) => {
   return Array.isArray(value)
 }
 const handleCheckOthers = (value) => {
-  if (value === null || value === undefined) return true
-  if (typeof value === 'string' && value.trim() === '') return true
+  if (value === null || value === undefined || value === "") return true
 }
-
 //Status
 const handleRecordStatus = (row) => {
   return Object.keys(row).includes('status') ? (!row.status && 'disabled') : '' 
