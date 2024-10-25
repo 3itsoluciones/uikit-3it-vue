@@ -144,8 +144,6 @@ const withPopper = (dropdownList, component, { width }) => {
 	})
 	return () => popper.destroy()
 }
-  
-
 
 //Expose
 defineExpose({ clean })
@@ -178,26 +176,6 @@ defineExpose({ clean })
 		transition-property: none;
 		@extend .eit-color--text-soft;
 		@extend .eit-bg--color;
-		.vs__dropdown-option--highlight {
-			background-color: var(--eit-color-secondary);
-		}
-	}
-	.vs__dropdown-menu {
-		@extend .eit-bg--color;
-		@extend .eit-border--left;
-		@extend .eit-border--right;
-		@extend .eit-border--bottom;
-		@extend .eit-border--color;
-		@extend .eit-color--text;
-		.vs__dropdown-option {
-			min-height: 35px;
-			line-height: 35px;
-		}
-		.vs__dropdown-option--highlight {
-			background-color: var(--eit-color-secondary);
-		}
-	}
-	.vs__dropdown-menu {
 		.vs__dropdown-option--highlight {
 			background-color: var(--eit-color-secondary);
 		}
@@ -293,6 +271,28 @@ defineExpose({ clean })
 		}
 	}
 }
+
+.vs__dropdown-menu {
+	@extend .eit-bg--color;
+	@extend .eit-border--left;
+	@extend .eit-border--right;
+	@extend .eit-border--bottom;
+	@extend .eit-border--color;
+	@extend .eit-color--text;
+	.vs__dropdown-option {
+		min-height: 35px;
+		line-height: 35px;
+	}
+	.vs__dropdown-option--highlight {
+		background-color: var(--eit-color-secondary);
+	}
+}
+.vs__dropdown-menu {
+	.vs__dropdown-option--highlight {
+		background-color: var(--eit-color-secondary);
+	}
+}
+
 
 .v-select.drop-up.vs--open .vs__dropdown-toggle {
   border-radius: 0 0 4px 4px;
