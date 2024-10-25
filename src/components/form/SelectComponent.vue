@@ -67,7 +67,7 @@ const props = defineProps({
 const emit = defineEmits(['emitValue'])
 
 /** Variables **/
-const placement = ref('bottom')
+const placement = ref('top')
 const output = ref(null)
 const valid = computed(() =>
   props.validation ? props.validation(output.value) : true
@@ -155,6 +155,8 @@ defineExpose({ clean })
   <v-select
 		append-to-body
 		:calculate-position="withPopper"
+    true-value="top"
+    false-value="bottom"
     :options="filterOptions"
     v-model="output"
     :label="labelCustom"
