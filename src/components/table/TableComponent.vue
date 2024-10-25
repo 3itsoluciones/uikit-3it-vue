@@ -190,12 +190,12 @@ const handleRecordStatus = (row) => {
                       href="javascript:"
                       class="eit-table__link"
                     >
-                      {{ value ? value : 'Sin datos' }}
+                      {{ value !== '' ? value : 'Sin datos' }}
                     </a>
                   </template>
 
                   <template v-if="!viewRecord">
-                    {{ value ? value : 'Sin datos' }}
+                    {{ value !== '' ? value : 'Sin datos' }}
                   </template>
                 </template>
 

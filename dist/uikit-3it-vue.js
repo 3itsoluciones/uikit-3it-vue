@@ -459,9 +459,9 @@ const pe = ["disabled"], me = /* @__PURE__ */ s("div", { class: "spinner-border 
                         onClick: (E) => r(x),
                         href: "javascript:",
                         class: "eit-table__link"
-                      }, v(k || "Sin datos"), 9, Ie)) : c("", !0),
+                      }, v(k !== "" ? k : "Sin datos"), 9, Ie)) : c("", !0),
                       t.viewRecord ? c("", !0) : (e(), n(m, { key: 1 }, [
-                        b(v(k || "Sin datos"), 1)
+                        b(v(k !== "" ? k : "Sin datos"), 1)
                       ], 64))
                     ], 64)) : c("", !0),
                     Object.keys(x)[t.columnLink] !== z ? (e(), n(m, { key: 1 }, [
