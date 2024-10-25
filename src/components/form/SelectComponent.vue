@@ -67,7 +67,7 @@ const props = defineProps({
 const emit = defineEmits(['emitValue'])
 
 /** Variables **/
-const placement = ref('top')
+const placement = ref('bottom')
 const output = ref(null)
 const valid = computed(() =>
   props.validation ? props.validation(output.value) : true

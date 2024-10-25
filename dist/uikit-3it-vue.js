@@ -2499,7 +2499,7 @@ const Mi = {
   },
   emits: ["emitValue"],
   setup(e, { expose: t, emit: o }) {
-    const n = e, a = o, i = F("top"), c = F(null), s = N(
+    const n = e, a = o, i = F("bottom"), c = F(null), s = N(
       () => n.validation ? n.validation(c.value) : !0
     ), r = N(() => !s.value && n.requiredField && n.error ? "is-invalid" : ""), p = () => Array.isArray(c.value) ? n.data.filter((m) => !c.value.some((x) => x.id === m.id)) : n.data, f = () => c.value ? n.data.filter((m) => m.id !== c.value.id) : n.data, h = N(() => n.multiple ? p() : f()), w = (m) => n.selectable ? n.selectable(m) : (x) => x.includes(x);
     de(
