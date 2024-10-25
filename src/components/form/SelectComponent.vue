@@ -67,6 +67,7 @@ const props = defineProps({
 const emit = defineEmits(['emitValue'])
 
 /** Variables **/
+const placement = ref('top')
 const output = ref(null)
 const valid = computed(() =>
   props.validation ? props.validation(output.value) : true
@@ -120,7 +121,7 @@ const clean = () => {
 const withPopper = (dropdownList, component, { width }) => {
 	dropdownList.style.width = width
 	const popper = createPopper(component.$refs.toggle, dropdownList, {
-		placement: 'top',
+		placement: placement.value,
 		modifiers: [
 			{
 				name: 'offset',
