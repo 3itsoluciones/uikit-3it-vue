@@ -121,6 +121,8 @@ defineExpose({ clean })
 
 <template>
   <v-select
+		append-to-body
+    :calculate-position="withPopper"
     :options="filterOptions"
     v-model="output"
     :label="labelCustom"
