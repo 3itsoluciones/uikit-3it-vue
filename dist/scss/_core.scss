@@ -782,3 +782,116 @@ body {
 .tippy-box[data-theme~='main'][data-placement^='right'] > .tippy-arrow::before {
   border-right-color: var(--eit-color-primary);
 }
+
+//Vue Datepicker
+.dp__menu {
+  @extend .eit-box-shadow--center;
+  @extend .eit-bg--color;
+  @extend .eit-border--color;
+  &:focus {
+    @extend .eit-border--color;
+  }
+  .dp__instance_calendar {
+    .dp__menu_inner {
+      .dp--header-wrap {
+        .dp__month_year_wrap {
+          .dp__overlay_action {
+            @extend .eit-bg--color;
+            @extend .eit-bg--color;
+            &:hover {
+              @extend .eit-bg--color-mute;
+            }
+          }
+          .dp--arrow-btn-nav {
+            .dp__inner_nav {
+              @extend .eit-bg--color;
+              &:hover {
+                @extend .eit-bg--color-mute;
+              }
+            }
+          }
+          .dp__month_year_select {
+            @extend .eit-color--text;
+            @extend .eit-bg--color;
+            &:hover {
+              @extend .eit-bg--color-mute;
+            }
+          }
+          .dp__overlay {
+            .dp__overlay_container {
+              overflow: auto;
+              scrollbar-color: var(--eit-color-secondary) var(--eit-color-bg-mute);
+              scrollbar-width: thin
+            }
+            @extend .eit-bg--color;
+            .dp__overlay_row {
+              .dp__overlay_col {
+                .dp__overlay_cell {
+                  @extend .eit-color--text;
+                  &:not(.dp__overlay_cell_disabled):hover {
+                    @extend .eit-bg--color-mute;
+                  }
+                }
+                .dp__overlay_cell_pad {
+                  @extend .eit-color--text;
+                  &:not(.dp__overlay_cell_disabled):hover {
+                    @extend .eit-bg--color-mute;
+                  }
+                }
+                .dp__overlay_cell_disabled {
+                  color: var(--eit-color-border);
+                  @extend .eit-bg--color-soft;
+                  &:hover {
+                    @extend .eit-bg--color-soft;
+                  }
+                }
+                .dp__overlay_cell_active {
+                  @extend .eit-bg--secondary;
+                  @extend .eit-color--white;
+                }
+              }
+            }
+          }
+        }
+      }
+      .dp__calendar {
+        .dp__calendar_row {
+          .dp__calendar_item {
+            @extend .eit-color--text;
+            .dp__cell_disabled {
+              color: var(--eit-color-border);
+            }
+            .dp__cell_inner {
+              &:not(.dp__cell_disabled):hover {
+                @extend .eit-color--text;
+                @extend .eit-bg--color-mute;
+              }
+            }
+            .dp__today {
+              @extend .eit-color--secondary;
+              @extend .eit-border--secondary;
+              background-color: lch(from var(--eit-color-secondary) l c h / 0.05);
+            }
+            .dp__active_date {
+              @extend .eit-bg--secondary;
+              @extend .eit-color--white;
+            }
+          }
+        }
+        .dp__calendar_header {
+          .dp__calendar_header_item {
+            @extend .eit-color--text;
+          }
+        }
+        .dp__calendar_header_separator {
+          background: var(--eit-color-border);
+        }
+      }
+    }
+  }
+  .dp__arrow_bottom {
+    @extend .eit-bg--color;
+    @extend .eit-border--color;
+  }
+}
+
