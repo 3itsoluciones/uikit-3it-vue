@@ -8,7 +8,7 @@ dayjs.locale('es')
 export default function useFormat() {
   //Date
   function formatDate(value) {
-    const date = dayjs(value, 'YYYY-MM-DD').isValid() ? dayjs(value).format('DD/MM/YYYY') : 'Invalid Date'
+    const date = dayjs(value, "YYYY-MM-DD").format('DD/MM/YYYY')
     return date
   }
   function formatDateToBack(value) {
