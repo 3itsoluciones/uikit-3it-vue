@@ -55,14 +55,17 @@ const processedRoutes = computed(() => {
 </template>
 
 <style lang="scss">
-.eit-breadcrumb {
-  padding-left: 0;
-  display: flex;
-  list-style: none;
-  &__item + &__item::before {
-    content: '/';
-    padding: 0 0.5rem;
-    color: var(--eit-color-text-soft);
+  @use '@/assets/scss/core' as *;
+
+  .eit-breadcrumb {
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    &__item + &__item::before {
+      content: '/';
+      padding: 0 0.5rem;
+      color: var(--eit-color-text-soft);
+    }
   }
-}
+  
 </style>

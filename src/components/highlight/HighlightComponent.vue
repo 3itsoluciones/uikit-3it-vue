@@ -37,8 +37,11 @@ highlightCode()
 </template>
 
 <style lang="scss">
-.shiki {
-  margin-bottom: 0;
-  @include border-round(3px);
-}
+  @use '@/assets/scss/core' as *;
+
+  .shiki {
+    margin-bottom: 0;
+    @include border-round(3px);
+  }
+  
 </style>

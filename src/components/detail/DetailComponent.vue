@@ -221,65 +221,67 @@ const handleDownloadRecord = () => {
 </template>
 
 <style lang="scss">
-.eit-slide {
-  position: fixed;
-  padding: 25px;
-  @extend .eit-bg--color;
-  @extend .eit-box-shadow--center;
-  @include transition(
-    'opacity 0.3s ease-in-out, right 0.3s ease-in-out, bottom 0.3s ease-in-out'
-  );
-  @media (max-width: 991px) {
-    visibility: hidden;
-    left: 0;
-    right: 0;
-    margin: 0 4%;
-    bottom: -10px;
-    opacity: 0;
-    height: calc(100vh - 100px);
-    @include border-round(10px 10px 0 0);
-  }
-  @media (min-width: 992px) {
-    top: 0;
-    right: -40%;
-    width: 40%;
-    height: 100vh;
-    opacity: 0;
-  }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    right: -60%;
-    width: 60%;
-  }
-  @media (min-width: 1200px) and (max-width: 1919px) {
-    right: -50%;
-    width: 50%;
-  }
-  @media (min-width: 1920px) {
-    right: -40%;
-    width: 40%;
-  }
+  @use '@/assets/scss/core' as *;
 
-  &__content {
-    height: 0;
-    overflow-y: auto;
-    @extend .eit-scroll--custom;
-  }
-  &--right {
-    visibility: visible;
-    z-index: 999;
+  .eit-slide {
+    position: fixed;
+    padding: 25px;
+    @extend .eit-bg--color;
+    @extend .eit-box-shadow--center;
+    @include transition(
+      'opacity 0.3s ease-in-out, right 0.3s ease-in-out, bottom 0.3s ease-in-out'
+    );
     @media (max-width: 991px) {
-      opacity: 1;
-      bottom: 0;
-    }
-    @media (min-width: 992px) {
-      opacity: 1;
+      visibility: hidden;
+      left: 0;
       right: 0;
+      margin: 0 4%;
+      bottom: -10px;
+      opacity: 0;
+      height: calc(100vh - 100px);
+      @include border-round(10px 10px 0 0);
     }
-  }
-  &--small {
     @media (min-width: 992px) {
-      width: 400px;
+      top: 0;
+      right: -40%;
+      width: 40%;
+      height: 100vh;
+      opacity: 0;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      right: -60%;
+      width: 60%;
+    }
+    @media (min-width: 1200px) and (max-width: 1919px) {
+      right: -50%;
+      width: 50%;
+    }
+    @media (min-width: 1920px) {
+      right: -40%;
+      width: 40%;
+    }
+
+    &__content {
+      height: 0;
+      overflow-y: auto;
+      @extend .eit-scroll--custom;
+    }
+    &--right {
+      visibility: visible;
+      z-index: 999;
+      @media (max-width: 991px) {
+        opacity: 1;
+        bottom: 0;
+      }
+      @media (min-width: 992px) {
+        opacity: 1;
+        right: 0;
+      }
+    }
+    &--small {
+      @media (min-width: 992px) {
+        width: 400px;
+      }
     }
   }
-}
 </style>

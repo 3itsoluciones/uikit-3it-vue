@@ -58,52 +58,54 @@ const handleActiveTab = (index) => {
 </template>
 
 <style lang="scss">
-.eit-tabs {
-  display: inline-flex;
-  list-style: none;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
-  &__item {
-    &__link {
-      height: 48px;
-      padding: 0 15px;
-      text-decoration: none;
-      transition-property: none;
-      @extend .eit-flex--center;
-      @extend .eit-font__size--x2;
+  @use '@/assets/scss/core' as *;
+  
+  .eit-tabs {
+    display: inline-flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    &__item {
+      &__link {
+        height: 48px;
+        padding: 0 15px;
+        text-decoration: none;
+        transition-property: none;
+        @extend .eit-flex--center;
+        @extend .eit-font__size--x2;
+        @extend .eit-border--all;
+        @extend .eit-color--text-soft;
+        @extend .eit-bg--color;
+        @extend .eit-border--color;
+        @include border-round(3px);
+        &:hover,
+        &:focus {
+          @extend .eit-color--primary;
+          @extend .eit-border--primary;
+        }
+        &.active {
+          @extend .eit-color--primary;
+          @extend .eit-border--primary;
+          border-color: lch(from var(--eit-color-primary) l c h / 0.5);
+          background-color: lch(from var(--eit-color-primary) l c h / 0.05);
+        }
+      }
+    }
+    &__badge {
       @extend .eit-border--all;
-      @extend .eit-color--text-soft;
-      @extend .eit-bg--color;
-      @extend .eit-border--color;
-      @include border-round(3px);
-      &:hover,
-      &:focus {
-        @extend .eit-color--primary;
-        @extend .eit-border--primary;
-      }
-      &.active {
-        @extend .eit-color--primary;
-        @extend .eit-border--primary;
-        border-color: lch(from var(--eit-color-primary) l c h / 0.5);
-        background-color: lch(from var(--eit-color-primary) l c h / 0.05);
+      @extend .eit-bg--primary;
+      @extend .eit-color--white;
+      @extend .eit-font__size--x1;
+      @extend .eit-border--round-x3;
+      padding: 0 5px;
+      display: block;
+      margin-left: 5px;
+    }
+    &--small {
+      .eit-tabs__item__link {
+        height: 35px;
       }
     }
   }
-  &__badge {
-    @extend .eit-border--all;
-    @extend .eit-bg--primary;
-    @extend .eit-color--white;
-    @extend .eit-font__size--x1;
-    @extend .eit-border--round-x3;
-    padding: 0 5px;
-    display: block;
-    margin-left: 5px;
-  }
-  &--small {
-    .eit-tabs__item__link {
-      height: 35px;
-    }
-  }
-}
 </style>

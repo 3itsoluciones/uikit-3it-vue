@@ -104,118 +104,121 @@ defineExpose({ handleShowPopover, handleClosePopover })
   </div>
 </template>
 <style lang="scss">
-.eit-popover__container {
-  position: fixed;
-  padding: 1rem;
-  right: 0;
-  z-index: 2000;
-  @include transition('opacity 0.3s ease-in-out');
-  @include border-round(10px);
-  @extend .eit-bg--color;
-  @media (max-width: 767px) {
-  width: 100%;
-  }
-  &.top {
-    top: 0;
-  }
-  &.bottom {
-    bottom: 0;
-  }
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  }
-  &.hide {
-    opacity: 0;
-  }
-  &.hidden {
-    visibility: hidden;
-  }
-}
+  @use '@/assets/scss/core' as *;
 
-.eit-popover {
-  width: 400px;
-  padding: 15px;
-  border: 1px solid;
-  @include border-round(10px);
-  @media (max-width: 767px) {
+  .eit-popover__container {
+    position: fixed;
+    padding: 1rem;
+    right: 0;
+    z-index: 2000;
+    @include transition('opacity 0.3s ease-in-out');
+    @include border-round(10px);
+    @extend .eit-bg--color;
+    @media (max-width: 767px) {
     width: 100%;
+    }
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    &.hide {
+      opacity: 0;
+    }
+    &.hidden {
+      visibility: hidden;
+    }
   }
-  &__left {
-    width: 25px;
-  }
-  &__close {
-    @extend .eit-color--text;
-  }
-  &__title,
-  &__text {
-    margin-bottom: 0;
-  }
-  &__title {
-    @extend .eit-font--primary;
-    @extend .eit-font__size--x3;
-  }
-  &__text {
-    @extend .eit-font--primary;
-    @extend .eit-font__size--x1;
-  }
-  &__close {
-    @include transition('color 0.2s ease-in-out');
-    &:hover {
+
+  .eit-popover {
+    width: 400px;
+    padding: 15px;
+    border: 1px solid;
+    @include border-round(10px);
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    &__left {
+      width: 25px;
+    }
+    &__close {
       @extend .eit-color--text;
     }
+    &__title,
+    &__text {
+      margin-bottom: 0;
+    }
+    &__title {
+      @extend .eit-font--primary;
+      @extend .eit-font__size--x3;
+    }
+    &__text {
+      @extend .eit-font--primary;
+      @extend .eit-font__size--x1;
+    }
+    &__close {
+      @include transition('color 0.2s ease-in-out');
+      &:hover {
+        @extend .eit-color--text;
+      }
+    }
+    &--success {
+      & {
+        border-color: lch(from var(--eit-color-green) l c h / 0.2);
+        background-color: lch(from var(--eit-color-green) l c h / 0.2);
+      }
+      .eit-popover__title,
+      .eit-popover__icon {
+        @extend .eit-color--green;
+      }
+      .eit-popover__text {
+        @extend .eit-color--text;
+      }
+    }
+    &--error {
+      & {
+        border-color: lch(from var(--eit-color-red) l c h / 0.2);
+        background-color: lch(from var(--eit-color-red) l c h / 0.2);
+      }
+      .eit-popover__title,
+      .eit-popover__icon {
+        @extend .eit-color--red;
+      }
+      .eit-popover__text {
+        @extend .eit-color--text;
+      }
+    }
+    &--warning {
+      & {
+        border-color: lch(from var(--eit-color-yellow) l c h / 0.2);
+        background-color: lch(from var(--eit-color-yellow) l c h / 0.2);
+      }
+      .eit-popover__title,
+      .eit-popover__icon {
+        @extend .eit-color--yellow;
+      }
+      .eit-popover__text {
+        @extend .eit-color--text;
+      }
+    }
+    &--info {
+      & {
+        border-color: lch(from var(--eit-color-blue) l c h / 0.2);
+        background-color: lch(from var(--eit-color-blue) l c h / 0.2);
+      }
+      .eit-popover__title,
+      .eit-popover__icon {
+        @extend .eit-color--blue;
+      }
+      .eit-popover__text {
+        @extend .eit-color--text;
+      }
+    }
   }
-  &--success {
-    & {
-      border-color: lch(from var(--eit-color-green) l c h / 0.2);
-      background-color: lch(from var(--eit-color-green) l c h / 0.2);
-    }
-    .eit-popover__title,
-    .eit-popover__icon {
-      @extend .eit-color--green;
-    }
-    .eit-popover__text {
-      @extend .eit-color--text;
-    }
-  }
-  &--error {
-    & {
-      border-color: lch(from var(--eit-color-red) l c h / 0.2);
-      background-color: lch(from var(--eit-color-red) l c h / 0.2);
-    }
-    .eit-popover__title,
-    .eit-popover__icon {
-      @extend .eit-color--red;
-    }
-    .eit-popover__text {
-      @extend .eit-color--text;
-    }
-  }
-  &--warning {
-    & {
-      border-color: lch(from var(--eit-color-yellow) l c h / 0.2);
-      background-color: lch(from var(--eit-color-yellow) l c h / 0.2);
-    }
-    .eit-popover__title,
-    .eit-popover__icon {
-      @extend .eit-color--yellow;
-    }
-    .eit-popover__text {
-      @extend .eit-color--text;
-    }
-  }
-  &--info {
-    & {
-      border-color: lch(from var(--eit-color-blue) l c h / 0.2);
-      background-color: lch(from var(--eit-color-blue) l c h / 0.2);
-    }
-    .eit-popover__title,
-    .eit-popover__icon {
-      @extend .eit-color--blue;
-    }
-    .eit-popover__text {
-      @extend .eit-color--text;
-    }
-  }
-}
+  
 </style>

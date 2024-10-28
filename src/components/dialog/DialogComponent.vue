@@ -126,6 +126,7 @@
 </template>
 
 <style lang="scss">
+  @use '@/assets/scss/core' as *;
 
   .eit-dialog {
     display: none;

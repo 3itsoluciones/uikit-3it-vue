@@ -15,7 +15,10 @@ const props = defineProps({
 </template>
 
 <style lang="scss">
-.eit-loading {
-  @extend .eit-flex--center;
-}
-</style>
+  @use '@/assets/scss/core' as *;
+
+  .eit-loading {
+    @extend .eit-flex--center;
+  }
+  
+  </style>

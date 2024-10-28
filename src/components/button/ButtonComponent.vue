@@ -68,6 +68,8 @@ const emitEvent = (event) => {
 </template>
 
 <style lang="scss">
+  @use '@/assets/scss/core' as *;
+
 .eit-btn {
   height: 48px;
   padding: 0 15px;

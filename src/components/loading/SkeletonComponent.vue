@@ -171,49 +171,51 @@ const props = defineProps({
 </template>
 
 <style lang="scss">
-//Animation
-@keyframes eit-skeleton-loading-color {
-  0% {
-    background-color: lch(from var(--eit-color-black) l c h / 0.1);
-  }
-  100% {
-    background-color: lch(from var(--eit-color-black) l c h / 0.15);
-  }
-}
-@keyframes eit-skeleton-loading-color-light {
-  0% {
-    background-color: lch(from var(--eit-color-black) l c h / 0.05);
-  }
-  100% {
-    background-color: lch(from var(--eit-color-black) l c h / 0.13);
-  }
-}
-
-.eit-skeleton {
-  animation: eit-skeleton-loading-color-light 1s linear infinite alternate;
-  &__table-first-td {
-    @media (min-width: 992px) {
-      width: 50px;
+  @use '@/assets/scss/core' as *;
+  
+  //Animation
+  @keyframes eit-skeleton-loading-color {
+    0% {
+      background-color: lch(from var(--eit-color-black) l c h / 0.1);
+    }
+    100% {
+      background-color: lch(from var(--eit-color-black) l c h / 0.15);
     }
   }
-  &__title,
-  &__text {
-    width: 100%;
-    margin-bottom: 5px;
-    @include border-round(5px);
+  @keyframes eit-skeleton-loading-color-light {
+    0% {
+      background-color: lch(from var(--eit-color-black) l c h / 0.05);
+    }
+    100% {
+      background-color: lch(from var(--eit-color-black) l c h / 0.13);
+    }
   }
-  &__title {
-    height: 15px;
-    animation: eit-skeleton-loading-color 1s linear infinite alternate;
+
+  .eit-skeleton {
+    animation: eit-skeleton-loading-color-light 1s linear infinite alternate;
+    &__table-first-td {
+      @media (min-width: 992px) {
+        width: 50px;
+      }
+    }
+    &__title,
+    &__text {
+      width: 100%;
+      margin-bottom: 5px;
+      @include border-round(5px);
+    }
+    &__title {
+      height: 15px;
+      animation: eit-skeleton-loading-color 1s linear infinite alternate;
+    }
+    &__text {
+      height: 10px;
+    }
+    &__btn-square {
+      display: flex;
+      height: 50px;
+      width: 50px;
+      @include border-round(3px);
+    }
   }
-  &__text {
-    height: 10px;
-  }
-  &__btn-square {
-    display: flex;
-    height: 50px;
-    width: 50px;
-    @include border-round(3px);
-  }
-}
 </style>
