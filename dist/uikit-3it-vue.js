@@ -2775,13 +2775,13 @@ function Ki() {
   };
 }
 function Gi() {
-  function e(t, o) {
+  function e(t, o, n = "right") {
     return o ? {
       content: t,
       theme: "main",
-      placement: "right",
+      placement: n,
       appendTo: "parent"
-    } : { content: t, theme: "main", placement: "right" };
+    } : { content: t, theme: "main", placement: n };
   }
   return { handleTooltip: e };
 }
