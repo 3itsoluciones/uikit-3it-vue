@@ -59,7 +59,12 @@ const props = defineProps({
     type: Boolean,
     required: false,
     default: false
-  }
+  },
+  enabledActions: {
+    type: Boolean,
+    required: false,
+    default: true
+  },
 })
 
 //EMITS
@@ -169,7 +174,12 @@ const handleRecordStatus = (row) => {
                   </span>
                 </a>
               </th>
-              <th scope="col" class="text-center">Acciones</th>
+              <th 
+                v-if="enabledActions"
+                scope="col" 
+                class="text-center">
+                Acciones
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -251,7 +261,10 @@ const handleRecordStatus = (row) => {
 
                 </template>
               </td>
-              <td class="text-center">
+              <td 
+                v-if="enabledActions"
+                class="text-center"
+              >
                 <div class="dropdown eit-dropdown d-none d-lg-block">
                   <a
                     href="javascript:"
