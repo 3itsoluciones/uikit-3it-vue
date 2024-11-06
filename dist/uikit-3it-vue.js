@@ -2553,7 +2553,6 @@ const Li = {
     return t({ clean: y }), (m, x) => {
       const b = X("v-select");
       return l(), Y(b, {
-        "append-to-body": "",
         "calculate-position": O,
         options: h.value,
         modelValue: c.value,
