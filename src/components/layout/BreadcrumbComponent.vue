@@ -8,12 +8,8 @@ const processedRoutes = computed(() => {
   let paths = []
   let currentPath = ''
   route.matched.forEach((r, index) => {
-    if (r.redirect) {
-      console.log('redirect', r.redirect)
-      currentPath = '/' + r.redirect.path
-    } else {
-      currentPath += '/' + r.path.split('/')[index + 1]
-    }
+    if (r.redirect) currentPath = '/' + r.redirect.path
+    else currentPath += '/' + r.path.split('/')[index + 1]
     paths.push({
       name: r.name,
       title: r.meta.title || 'Sin título',

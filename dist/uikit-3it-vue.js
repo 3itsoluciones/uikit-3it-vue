@@ -72,7 +72,7 @@ const Kt = ["disabled"], Gt = /* @__PURE__ */ d("div", { class: "spinner-border 
     const t = $t(), o = N(() => {
       let n = [], a = "";
       return t.matched.forEach((i, c) => {
-        i.redirect ? (console.log("redirect", i.redirect), a = "/" + i.redirect.path) : a += "/" + i.path.split("/")[c + 1], n.push({
+        i.redirect ? a = "/" + i.redirect.path : a += "/" + i.path.split("/")[c + 1], n.push({
           name: i.name,
           title: i.meta.title || "Sin título",
           path: a,
