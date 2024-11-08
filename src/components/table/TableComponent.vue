@@ -173,22 +173,19 @@ const handleRecordStatus = (row) => {
                   >{{ columns[Object.keys(row).indexOf(key)] }}:</strong
                 >
 
-                <template v-for="action in actions" :key="action.name">
-                  <template v-if="Object.keys(row)[columnLink] === key">
-                    <template v-if="action.name === 'view'">
-                      <a
-                        @click="action.handler(row)"
-                        href="javascript:"
-                        class="eit-table__link"
-                      >
-                        {{ value ? value : 'Sin datos' }}
-                      </a>
-                    </template>
-
-                    <template v-if="action.name !== 'view'">
+                <template v-if="Object.keys(row)[columnLink] === key">
+                  <template v-if="actions.find((action) => action.name === 'view')">
+                    <a
+                      @click="handleViewRecord(row)"
+                      href="javascript:"
+                      class="eit-table__link"
+                    >
                       {{ value ? value : 'Sin datos' }}
-                    </template>
+                    </a>
+                  </template>
 
+                  <template v-else>
+                    {{ value ? value : 'Sin datos' }}
                   </template>
                 </template>
 
