@@ -184,11 +184,7 @@ const handleRecordStatus = (row) => {
                         {{ value ? value : 'Sin datos' }}
                       </a>
                     </template>
-                    <template v-if="action.name !== 'view'">
-                      {{ value ? value : 'Sin datos' }}
-                    </template>
                   </template>
-
                 </template>
 
                 <template v-if="Object.keys(row)[columnLink] !== key">
