@@ -176,7 +176,7 @@ const handleRecordStatus = (row) => {
                 <template v-if="Object.keys(row)[columnLink] === key">
                   <template v-if="actions.find((action) => action.name === 'view')">
                     <a
-                      @click="handleViewRecord(row)"
+                      @click="actions.find((action) => action.name === 'view' ? action.handler(row) : '')"
                       href="javascript:"
                       class="eit-table__link"
                     >
