@@ -35,10 +35,30 @@ const props = defineProps({
     required: false
   },
   //Actions
-  actions: {
-    type: Array,
+  viewRecord: {
+    type: String,
     required: false,
-    default: () => []
+    default: null
+  },
+  editRecord: {
+    type: String,
+    required: false,
+    default: null
+  },
+  deleteRecord: {
+    type: String,
+    required: false,
+    default: null
+  },
+  downloadRecord: {
+    type: String,
+    required: false,
+    default: null
+  },
+  enabledDisabledRecord: {
+    type: Boolean,
+    required: false,
+    default: false
   },
   enabledActions: {
     type: Boolean,
@@ -63,7 +83,7 @@ const emit = defineEmits([
 const handleViewRecord = (record) => {
   emit('viewRecord', record)
 }
-/* const handleEditRecord = (record) => {
+const handleEditRecord = (record) => {
   emit('editRecord', record)
 }
 const handleDeleteRecord = (record) => {
@@ -71,13 +91,13 @@ const handleDeleteRecord = (record) => {
 }
 const handleDownloadRecord = (record) => {
   emit('downloadRecord', record)
-} */
+}
 const handleSortTable = (index) => {
   emit('updateSort', { index: index, asc: !props.sort.asc })
 }
-/* const handleEnabledDisabledRecord = (record) => {
+const handleEnabledDisabledRecord = (record) => {
   emit('enabledDisabledRecord', record)
-} */
+}
 
 //Handles check
 const handleCheckString = (value) => {
@@ -245,55 +265,7 @@ const handleRecordStatus = (row) => {
                 v-if="enabledActions"
                 class="text-center"
               >
-              <div class="dropdown eit-dropdown d-none d-lg-block">
-                <a
-                  href="javascript:"
-                  class="eit-btn-action"
-                  data-bs-toggle="dropdown"
-                >
-                  <font-awesome-icon icon="fa-solid fa-ellipsis" />
-                </a>
-                <ul class="dropdown-menu dropdown-custom-menu">
-                  <li v-for="action in actions" :key="action.name" class="mx-2">
-                    <template v-if="action.booleanKey">
-                      <a
-                        @click="action.handler(row)"
-                        class="dropdown-item dropdown-custom-menu-item"
-                        href="javascript:"
-                      >
-                        <template v-if="!row[action.booleanKey]">
-                          <font-awesome-icon
-                            :icon="action.iconEnabled"
-                            :class="action.iconClassEnabled"
-                          />
-                          {{ action.labelEnabled }}
-                        </template>
-                        <template v-if="row[action.booleanKey]">
-                          <font-awesome-icon
-                            :icon="action.iconDisabled"
-                            :class="action.iconClassDisabled"
-                          />
-                          {{ action.labelDisabled }}
-                        </template>
-                      </a>
-                    </template>
-                    <template v-else>
-                      <a
-                        @click="action.handler(row)"
-                        class="dropdown-item dropdown-custom-menu-item"
-                        href="javascript:"
-                      >
-                        <font-awesome-icon
-                          :icon="action.icon"
-                          :class="action.iconClass"
-                        />
-                        {{ action.label }}
-                      </a>
-                    </template>
-                  </li>
-                </ul>
-              </div>
-<!--                 <div class="dropdown eit-dropdown d-none d-lg-block">
+                <div class="dropdown eit-dropdown d-none d-lg-block">
                   <a
                     href="javascript:"
                     class="eit-btn-action"
@@ -384,54 +356,12 @@ const handleRecordStatus = (row) => {
                       </a>
                     </li>
                   </ul>
-                </div> -->
+                </div>
                 <div
                   class="d-flex w-100 justify-content-between align-items-center d-lg-none text-end"
                 >
                   <strong>Acciones:</strong>
                   <div class="d-flex flex-wrap gap-2 ms-3">
-                    <template v-for="action in actions" :key="action.name">
-                      <template v-if="action.booleanKey">
-                        <template v-if="!row[action.booleanKey]">
-                          <a
-                            @click="action.handler(row)"
-                            href="javascript:"
-                            class="eit-btn eit-btn-outline--gray eit-btn--square"
-                          >
-                            <font-awesome-icon
-                              :icon="action.iconEnabled"
-                              :class="action.iconClassEnabled"
-                            />
-                          </a>
-                        </template>
-                        <template v-if="row[action.booleanKey]">
-                          <a
-                            @click="action.handler(row)"
-                            href="javascript:"
-                            class="eit-btn eit-btn-outline--gray eit-btn--square"
-                          >
-                            <font-awesome-icon
-                              :icon="action.iconDisabled"
-                              :class="action.iconClassDisabled"
-                            />
-                          </a>
-                        </template>
-                      </template>
-                      <template v-else>
-                        <a
-                          @click="action.handler(row)"
-                          href="javascript:"
-                          class="eit-btn eit-btn-outline--gray eit-btn--square"
-                        >
-                          <font-awesome-icon
-                            :icon="action.icon"
-                            :class="action.iconClass"
-                          />
-                        </a>
-                      </template>
-                    </template>
-                  </div>
-<!--                   <div class="d-flex flex-wrap gap-2 ms-3">
                     <a
                       v-if="viewRecord"
                       @click="handleViewRecord(row)"
@@ -505,7 +435,7 @@ const handleRecordStatus = (row) => {
                         class="eit-color--red"
                       />
                     </a>
-                  </div> -->
+                  </div>
                 </div>
               </td>
             </tr>
