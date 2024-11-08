@@ -4,6 +4,7 @@ import useKeypress from './useKeypress.js'
 import useTable from './useTable.js'
 import useFormat from './useFormat.js'
 import useTooltip from './useTooltip.js'
+import useTableAction from './useTableAction.js'
 
 export {
   useValidator,
@@ -11,5 +12,6 @@ export {
   useKeypress,
   useTable,
   useFormat,
-  useTooltip
+  useTooltip,
+  useTableAction
 }
