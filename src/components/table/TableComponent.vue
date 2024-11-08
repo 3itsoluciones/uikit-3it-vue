@@ -173,8 +173,8 @@ const handleRecordStatus = (row) => {
                   >{{ columns[Object.keys(row).indexOf(key)] }}:</strong
                 >
 
-                <template v-if="Object.keys(row)[columnLink] === key">
-                  <template v-for="action in actions" :key="action.name">
+                <template v-for="action in actions" :key="action.name">
+                  <template v-if="Object.keys(row)[columnLink] === key">
                     <template v-if="action.name === 'view'">
                       <a
                         @click="action.handler(row)"
@@ -184,6 +184,11 @@ const handleRecordStatus = (row) => {
                         {{ value ? value : 'Sin datos' }}
                       </a>
                     </template>
+
+                    <template v-if="action.name !== 'view'">
+                      {{ value ? value : 'Sin datos' }}
+                    </template>
+
                   </template>
                 </template>
 
