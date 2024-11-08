@@ -263,17 +263,17 @@ const handleRecordStatus = (row) => {
                       >
                         <template v-if="!row[action.booleanKey].status">
                           <font-awesome-icon
-                            :icon="action.iconEnabled"
-                            :class="action.iconClassEnabled"
+                            :icon="action.true.icon"
+                            :class="action.true.iconClass"
                           />
-                          {{ action.labelEnabled }}
+                          {{ action.true.label }}
                         </template>
                         <template v-if="row[action.booleanKey].status">
                           <font-awesome-icon
-                            :icon="action.iconDisabled"
-                            :class="action.iconClassDisabled"
+                            :icon="action.false.icon"
+                            :class="action.false.iconClass"
                           />
-                          {{ action.labelDisabled }}
+                          {{ action.false.label }}
                         </template>
                       </a>
                     </template>
@@ -392,27 +392,27 @@ const handleRecordStatus = (row) => {
                   <div class="d-flex flex-wrap gap-2 ms-3">
                     <template v-for="action in actions" :key="action.name">
                       <template v-if="action.booleanKey">
-                        <template v-if="!row[action.booleanKey]">
+                        <template v-if="!row[action.booleanKey].status">
                           <a
                             @click="action.handler(row)"
                             href="javascript:"
                             class="eit-btn eit-btn-outline--gray eit-btn--square"
                           >
                             <font-awesome-icon
-                              :icon="action.iconEnabled"
-                              :class="action.iconClassEnabled"
+                              :icon="action.true.icon"
+                              :class="action.true.iconClass"
                             />
                           </a>
                         </template>
-                        <template v-if="row[action.booleanKey]">
+                        <template v-if="row[action.booleanKey].status">
                           <a
                             @click="action.handler(row)"
                             href="javascript:"
                             class="eit-btn eit-btn-outline--gray eit-btn--square"
                           >
                             <font-awesome-icon
-                              :icon="action.iconDisabled"
-                              :class="action.iconClassDisabled"
+                              :icon="action.false.icon"
+                              :class="action.faise.iconClass"
                             />
                           </a>
                         </template>
