@@ -346,7 +346,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
       o("updateSort", { index: c, asc: !n.sort.asc });
     }, i = (c) => typeof c == "string", r = (c) => typeof c == "object" && c !== null && !Array.isArray(c), s = (c) => Array.isArray(c), l = (c) => {
       if (c == null) return !0;
-    }, p = (c) => Object.keys(c).includes("status") ? !c.status.status && "disabled" : "";
+    }, p = (c) => Object.keys(c).includes("status") ? !c.active.status && "disabled" : "";
     return (c, v) => {
       var _, O, b, x;
       const y = K("font-awesome-icon");
