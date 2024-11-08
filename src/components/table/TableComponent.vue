@@ -261,14 +261,14 @@ const handleRecordStatus = (row) => {
                         class="dropdown-item dropdown-custom-menu-item"
                         href="javascript:"
                       >
-                        <template v-if="!row[action.booleanKey].active">
+                        <template v-if="!row[action.booleanKey].status">
                           <font-awesome-icon
                             :icon="action.true.icon"
                             :class="action.true.iconClass"
                           />
                           {{ action.true.label }}
                         </template>
-                        <template v-if="row[action.booleanKey].active">
+                        <template v-if="row[action.booleanKey].status">
                           <font-awesome-icon
                             :icon="action.false.icon"
                             :class="action.false.iconClass"
@@ -392,7 +392,7 @@ const handleRecordStatus = (row) => {
                   <div class="d-flex flex-wrap gap-2 ms-3">
                     <template v-for="action in actions" :key="action.name">
                       <template v-if="action.booleanKey">
-                        <template v-if="!row[action.booleanKey].active">
+                        <template v-if="!row[action.booleanKey].status">
                           <a
                             @click="action.handler(row)"
                             href="javascript:"
@@ -404,7 +404,7 @@ const handleRecordStatus = (row) => {
                             />
                           </a>
                         </template>
-                        <template v-if="row[action.booleanKey].active">
+                        <template v-if="row[action.booleanKey].status">
                           <a
                             @click="action.handler(row)"
                             href="javascript:"
