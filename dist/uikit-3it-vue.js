@@ -415,7 +415,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
                     Object.keys(g)[e.columnLink] === x ? (c(), u(k, { key: 0 }, [
                       e.actions.find((C) => C.name === "view") ? (c(), u("a", {
                         key: 0,
-                        onClick: (C) => e.actions.find((S) => S.name === "view" ? S.handler(g) : ""),
+                        onClick: (C) => e.actions.find((S) => S.name === "view" && S.handler(g)),
                         href: "javascript:",
                         class: "eit-table__link"
                       }, D(v || "Sin datos"), 9, On)) : (c(), u(k, { key: 1 }, [

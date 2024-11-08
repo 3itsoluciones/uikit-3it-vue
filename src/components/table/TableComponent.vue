@@ -60,9 +60,9 @@ const emit = defineEmits([
 /** Methods **/
 
 //Handles emit
-const handleViewRecord = (record) => {
+/* const handleViewRecord = (record) => {
   emit('viewRecord', record)
-}
+} */
 /* const handleEditRecord = (record) => {
   emit('editRecord', record)
 }
@@ -176,7 +176,7 @@ const handleRecordStatus = (row) => {
                 <template v-if="Object.keys(row)[columnLink] === key">
                   <template v-if="actions.find((action) => action.name === 'view')">
                     <a
-                      @click="actions.find((action) => action.name === 'view' ? action.handler(row) : '')"
+                      @click="actions.find((action) => action.name === 'view' && action.handler(row))"
                       href="javascript:"
                       class="eit-table__link"
                     >
