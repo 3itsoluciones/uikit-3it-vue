@@ -412,7 +412,7 @@ const handleRecordStatus = (row) => {
                           >
                             <font-awesome-icon
                               :icon="action.false.icon"
-                              :class="action.faise.iconClass"
+                              :class="action.false.iconClass"
                             />
                           </a>
                         </template>

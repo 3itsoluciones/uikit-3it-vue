@@ -526,7 +526,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
                             }, [
                               $(y, {
                                 icon: v.false.icon,
-                                class: D(v.faise.iconClass)
+                                class: D(v.false.iconClass)
                               }, null, 8, ["icon", "class"])
                             ], 8, Vn)) : m("", !0)
                           ], 64)) : (c(), u("a", {
