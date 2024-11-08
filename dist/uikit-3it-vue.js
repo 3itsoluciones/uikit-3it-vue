@@ -471,15 +471,14 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
-                            A(D(g[v.booleanKey]) + " ", 1),
-                            g[v.booleanKey] ? m("", !0) : (c(), u(k, { key: 0 }, [
+                            g[v.booleanKey].status ? m("", !0) : (c(), u(k, { key: 0 }, [
                               $(y, {
                                 icon: v.iconEnabled,
                                 class: j(v.iconClassEnabled)
                               }, null, 8, ["icon", "class"]),
                               A(" " + D(v.labelEnabled), 1)
                             ], 64)),
-                            g[v.booleanKey] ? (c(), u(k, { key: 1 }, [
+                            g[v.booleanKey].status ? (c(), u(k, { key: 1 }, [
                               $(y, {
                                 icon: v.iconDisabled,
                                 class: j(v.iconClassDisabled)
