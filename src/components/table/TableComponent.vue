@@ -94,7 +94,8 @@ const handleCheckOthers = (value) => {
 }
 //Status
 const handleRecordStatus = (row) => {
-  return Object.keys(row).includes('status') ? (!row.status && 'disabled') : '' 
+  //return actions.find((action) => action.name === 'enabledDisabled' && action.handler(row))
+  return Object.keys(row).includes('status') ? (!row.status && 'disabled') : ''
 }
 </script>
 
@@ -205,7 +206,7 @@ const handleRecordStatus = (row) => {
                     </div>
                   </template>
 
-                  <template v-if="key === 'status'">
+<!--                   <template v-if="key === 'status'">
                     <template v-if="value">
                       <BadgeComponent
                         text="Activo"
@@ -218,7 +219,7 @@ const handleRecordStatus = (row) => {
                         className="eit-badge__outline--gray"
                       />
                     </template>
-                  </template>
+                  </template> -->
 
                   <template v-if="handleCheckObject(value)">
                     <BadgeComponent
