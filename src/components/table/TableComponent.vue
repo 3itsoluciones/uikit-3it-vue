@@ -94,8 +94,7 @@ const handleCheckOthers = (value) => {
 }
 //Status
 const handleRecordStatus = (row) => {
-  //return actions.find((action) => action.name === 'enabledDisabled' && action.handler(row))
-  return Object.keys(row).includes('status') ? (!row.status && 'disabled') : ''
+  return Object.keys(row).includes('status') ? (!row.status.status && 'disabled') : ''
 }
 </script>
 
