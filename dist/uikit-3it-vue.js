@@ -471,6 +471,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
+                            A(D(g[v.booleanKey]) + " ", 1),
                             g[v.booleanKey] ? m("", !0) : (c(), u(k, { key: 0 }, [
                               $(y, {
                                 icon: v.iconEnabled,
