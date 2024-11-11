@@ -94,7 +94,7 @@ const handleCheckOthers = (value) => {
 }
 //Status
 const handleRecordStatus = (row) => {
-  return Object.keys(row).includes('status') ? (!row.status.status && 'disabled') : '' 
+  return Object.keys(row).includes('recordStatus') ? (!row.recordStatus.status && 'disabled') : '' 
 }
 </script>
 
@@ -205,21 +205,6 @@ const handleRecordStatus = (row) => {
                     </div>
                   </template>
 
-<!--                   <template v-if="key === 'status'">
-                    <template v-if="value">
-                      <BadgeComponent
-                        text="Activo"
-                        className="eit-badge__outline--secondary"
-                      />
-                    </template>
-                    <template v-if="!value">
-                      <BadgeComponent
-                        text="Inactivo"
-                        className="eit-badge__outline--gray"
-                      />
-                    </template>
-                  </template> -->
-
                   <template v-if="handleCheckObject(value)">
                     <BadgeComponent
                       :text="value.name ? value.name : 'Sin datos'"
@@ -261,14 +246,14 @@ const handleRecordStatus = (row) => {
                         class="dropdown-item dropdown-custom-menu-item"
                         href="javascript:"
                       >
-                        <template v-if="!row[action.booleanKey]">
+                        <template v-if="!row[action.booleanKey].status">
                           <font-awesome-icon
                             :icon="action.true.icon"
                             :class="action.true.iconClass"
                           />
                           {{ action.true.label }}
                         </template>
-                        <template v-if="row[action.booleanKey]">
+                        <template v-if="row[action.booleanKey].status">
                           <font-awesome-icon
                             :icon="action.false.icon"
                             :class="action.false.iconClass"
@@ -294,98 +279,6 @@ const handleRecordStatus = (row) => {
                   </li>
                 </ul>
               </div>
-<!--                 <div class="dropdown eit-dropdown d-none d-lg-block">
-                  <a
-                    href="javascript:"
-                    class="eit-btn-action"
-                    data-bs-toggle="dropdown"
-                  >
-                    <font-awesome-icon icon="fa-solid fa-ellipsis" />
-                  </a>
-                  <ul class="dropdown-menu dropdown-custom-menu">
-                    <li v-if="viewRecord" class="mx-2">
-                      <a
-                        @click="handleViewRecord(row)"
-                        class="dropdown-item dropdown-custom-menu-item"
-                        href="javascript:"
-                      >
-                        <font-awesome-icon
-                          icon="fa-regular fa-eye"
-                          class="eit-color--blue"
-                        />
-                        {{ viewRecord }}
-                      </a>
-                    </li>
-                    <li v-if="editRecord" class="mx-2">
-                      <a
-                        @click="handleEditRecord(row)"
-                        class="dropdown-item dropdown-custom-menu-item"
-                        href="javascript:"
-                      >
-                        <font-awesome-icon
-                          icon="fa-solid fa-square-pen"
-                          class="eit-color--yellow"
-                        />
-                        {{ editRecord }}
-                      </a>
-                    </li>
-                    <li v-if="downloadRecord" class="mx-2">
-                      <a
-                        @click="handleDownloadRecord(row)"
-                        class="dropdown-item dropdown-custom-menu-item"
-                        href="javascript:"
-                      >
-                        <font-awesome-icon
-                          icon="fa-solid fa-download"
-                          class="eit-color--blue"
-                        />
-                        {{ downloadRecord }}
-                      </a>
-                    </li>
-
-                    <li
-                      v-if="deleteRecord || enabledDisabledRecord"
-                      class="m-2"
-                    >
-                      <div class="eit-border--bottom eit-border--color"></div>
-                    </li>
-                    <li v-if="enabledDisabledRecord" class="mx-2">
-                      <a
-                        @click="handleEnabledDisabledRecord(row)"
-                        class="dropdown-item dropdown-custom-menu-item"
-                        href="javascript:"
-                      >
-                        <template v-if="!row.status">
-                          <font-awesome-icon
-                            icon="fa-regular fa-circle-check"
-                            class="eit-color--green"
-                          />
-                          Habilitar
-                        </template>
-                        <template v-if="row.status">
-                          <font-awesome-icon
-                            icon="fa-solid fa-ban"
-                            class="eit-color--red"
-                          />
-                          Deshabilitar
-                        </template>
-                      </a>
-                    </li>
-                    <li v-if="deleteRecord" class="mx-2">
-                      <a
-                        @click="handleDeleteRecord(index)"
-                        class="dropdown-item dropdown-custom-menu-item"
-                        href="javascript:"
-                      >
-                        <font-awesome-icon
-                          icon="fa-solid fa-trash"
-                          class="eit-color--red"
-                        />
-                        {{ deleteRecord }}
-                      </a>
-                    </li>
-                  </ul>
-                </div> -->
                 <div
                   class="d-flex w-100 justify-content-between align-items-center d-lg-none text-end"
                 >
@@ -432,81 +325,6 @@ const handleRecordStatus = (row) => {
                       </template>
                     </template>
                   </div>
-<!--                   <div class="d-flex flex-wrap gap-2 ms-3">
-                    <a
-                      v-if="viewRecord"
-                      @click="handleViewRecord(row)"
-                      href="javascript:"
-                      class="eit-btn eit-btn-outline--gray eit-btn--square"
-                    >
-                      <font-awesome-icon
-                        icon="fa-regular fa-eye"
-                        class="eit-color--blue"
-                      />
-                    </a>
-                    <a
-                      v-if="editRecord"
-                      @click="handleEditRecord(row)"
-                      href="javascript:"
-                      class="eit-btn eit-btn-outline--gray eit-btn--square"
-                    >
-                      <font-awesome-icon
-                        icon="fa-solid fa-square-pen"
-                        class="eit-color--yellow"
-                      />
-                    </a>
-                    <a
-                      v-if="downloadRecord"
-                      @click="handleDownloadRecord(row)"
-                      href="javascript:"
-                      class="eit-btn eit-btn-outline--gray eit-btn--square"
-                    >
-                      <font-awesome-icon
-                        icon="fa-solid fa-download"
-                        class="eit-color--blue"
-                      />
-                    </a>
-                    <template v-if="enabledDisabledRecord">
-                      <template v-if="!row.status">
-                        <a
-                          @click="handleEnabledDisabledRecord(row)"
-                          href="javascript:"
-                          v-tippy="{ content: 'Habilitar', theme: 'main' }"
-                          class="eit-btn eit-btn-outline--gray eit-btn--square"
-                        >
-                          <font-awesome-icon
-                            icon="fa-regular fa-circle-check"
-                            class="eit-color--green"
-                          />
-                        </a>
-                      </template>
-
-                      <template v-if="row.status">
-                        <a
-                          @click="handleEnabledDisabledRecord(row)"
-                          href="javascript:"
-                          v-tippy="{ content: 'Deshabilitar', theme: 'main' }"
-                          class="eit-btn eit-btn-outline--gray eit-btn--square"
-                        >
-                          <font-awesome-icon
-                            icon="fa-solid fa-ban"
-                            class="eit-color--red"
-                          />
-                        </a>
-                      </template>
-                    </template>
-                    <a
-                      v-if="deleteRecord"
-                      @click="handleDeleteRecord(index)"
-                      href="javascript:"
-                      class="eit-btn eit-btn-outline--gray eit-btn--square"
-                    >
-                      <font-awesome-icon
-                        icon="fa-solid fa-trash"
-                        class="eit-color--red"
-                      />
-                    </a>
-                  </div> -->
                 </div>
               </td>
             </tr>

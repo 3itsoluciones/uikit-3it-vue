@@ -346,7 +346,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
       o("updateSort", { index: c, asc: !n.sort.asc });
     }, i = (c) => typeof c == "string", r = (c) => typeof c == "object" && c !== null && !Array.isArray(c), s = (c) => Array.isArray(c), l = (c) => {
       if (c == null) return !0;
-    }, p = (c) => Object.keys(c).includes("status") ? !c.status.status && "disabled" : "";
+    }, p = (c) => Object.keys(c).includes("recordStatus") ? !c.recordStatus.status && "disabled" : "";
     return (c, v) => {
       var _, O, b, x;
       const y = K("font-awesome-icon");
@@ -459,14 +459,14 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
                             class: "dropdown-item dropdown-custom-menu-item",
                             href: "javascript:"
                           }, [
-                            g[m.booleanKey] ? h("", !0) : (d(), u(k, { key: 0 }, [
+                            g[m.booleanKey].status ? h("", !0) : (d(), u(k, { key: 0 }, [
                               $(y, {
                                 icon: m.true.icon,
                                 class: j(m.true.iconClass)
                               }, null, 8, ["icon", "class"]),
                               A(" " + D(m.true.label), 1)
                             ], 64)),
-                            g[m.booleanKey] ? (d(), u(k, { key: 1 }, [
+                            g[m.booleanKey].status ? (d(), u(k, { key: 1 }, [
                               $(y, {
                                 icon: m.false.icon,
                                 class: j(m.false.iconClass)
