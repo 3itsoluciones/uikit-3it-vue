@@ -267,6 +267,7 @@ const handleRecordStatus = (row) => {
                             :class="action.true.iconClass"
                           />
                           {{ action.true.label }}
+                          {{ row[action.booleanKey] }}
                         </template>
                         <template v-if="row[action.booleanKey]">
                           <font-awesome-icon

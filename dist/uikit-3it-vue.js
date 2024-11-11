@@ -464,7 +464,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
                                 icon: m.true.icon,
                                 class: j(m.true.iconClass)
                               }, null, 8, ["icon", "class"]),
-                              A(" " + D(m.true.label), 1)
+                              A(" " + D(m.true.label) + " " + D(g[m.booleanKey]), 1)
                             ], 64)),
                             g[m.booleanKey] ? (d(), u(k, { key: 1 }, [
                               $(y, {
