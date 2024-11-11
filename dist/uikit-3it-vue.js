@@ -2698,7 +2698,7 @@ function Mi() {
   function a(i) {
     return {
       name: "enabledDisabled",
-      booleanKey: "status",
+      booleanKey: "recordStatus",
       handler: i,
       true: {
         label: "Habilitar",
