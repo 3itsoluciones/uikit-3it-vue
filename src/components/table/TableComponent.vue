@@ -49,35 +49,15 @@ const props = defineProps({
 
 //EMITS
 const emit = defineEmits([
-  'viewRecord',
-  'editRecord',
-  'deleteRecord',
-  'downloadRecord',
   'updateSort',
-  'enabledDisabledRecord'
 ])
 
 /** Methods **/
 
 //Handles emit
-/* const handleViewRecord = (record) => {
-  emit('viewRecord', record)
-} */
-/* const handleEditRecord = (record) => {
-  emit('editRecord', record)
-}
-const handleDeleteRecord = (record) => {
-  emit('deleteRecord', record)
-}
-const handleDownloadRecord = (record) => {
-  emit('downloadRecord', record)
-} */
 const handleSortTable = (index) => {
   emit('updateSort', { index: index, asc: !props.sort.asc })
 }
-/* const handleEnabledDisabledRecord = (record) => {
-  emit('enabledDisabledRecord', record)
-} */
 
 //Handles check
 const handleCheckString = (value) => {
@@ -259,7 +239,6 @@ const handleRecordStatus = (row) => {
                             :class="action.false.iconClass"
                           />
                           {{ action.false.label }}
-                          {{ row[action.booleanKey] }}
                         </template>
                       </a>
                     </template>
