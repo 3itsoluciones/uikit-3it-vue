@@ -261,14 +261,14 @@ const handleRecordStatus = (row) => {
                         class="dropdown-item dropdown-custom-menu-item"
                         href="javascript:"
                       >
-                        <template v-if="!row[action.booleanKey].status">
+                        <template v-if="!row[action.booleanKey]">
                           <font-awesome-icon
                             :icon="action.true.icon"
                             :class="action.true.iconClass"
                           />
                           {{ action.true.label }}
                         </template>
-                        <template v-if="row[action.booleanKey].status">
+                        <template v-if="row[action.booleanKey]">
                           <font-awesome-icon
                             :icon="action.false.icon"
                             :class="action.false.iconClass"

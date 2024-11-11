@@ -39,7 +39,7 @@ export default function useTableAction() {
   function actionEnabledDisabled(handle) {
     return {
       name: 'enabledDisabled',
-      booleanKey: 'active',
+      booleanKey: 'status',
       handler: handle,
       true: {
         label: 'Habilitar',
