@@ -344,6 +344,7 @@ const handleRecordStatus = (row) => {
     &__string {
       display: -webkit-inline-box;
       line-clamp: 2;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
       @media (min-width: 992px) {
