@@ -19,5 +19,14 @@ export default function useTable() {
     })
     return data
   }
-  return { sortTable }
+  function changeStatus(item) {
+    if (item) return  { name: 'Activo', className: 'eit-badge eit-badge__outline--secondary', status: item } 
+    if (!item) return { name: 'Inactivo', className: 'eit-badge eit-badge__outline--gray', status: item }
+    return ''
+  }
+
+  return { 
+    sortTable, 
+    changeStatus 
+  }
 }
