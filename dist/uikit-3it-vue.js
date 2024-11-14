@@ -2375,7 +2375,7 @@ const $i = {
       b && (r.value = b);
     }, { immediate: !0 }), de(() => r.value, (b) => {
       b ? a("emitValue", s.value ? r.value : null) : a("emitValue", null);
-    }), Ne(() => {
+    }, { immediate: !0 }), Ne(() => {
       o.submitted && _();
     });
     const _ = () => {

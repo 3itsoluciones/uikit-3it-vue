@@ -104,7 +104,7 @@ watch(() => props.selected, (value) => {
 watch(() => output.value, (value) => { 
 	if(value) emit('emitValue', valid.value ? output.value : null)
 	else emit('emitValue', null)
-})
+}, { immediate: true })
 
 watchEffect(() => {
   if (props.submitted) clean()
