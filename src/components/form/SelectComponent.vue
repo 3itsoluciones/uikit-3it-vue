@@ -105,11 +105,15 @@ watch(
   { immediate: true }
 )
 
-watch(output, () => {
+watch(() => output.value, (value) => {
+	if(value) emit('emitValue', valid.value ? output.value : null)
+})
+
+/* watch(output, () => {
   //Emit
   emit('emitValue', valid.value ? output.value : null)
 })
-
+ */
 watchEffect(() => {
   if (props.submitted) clean()
 })
