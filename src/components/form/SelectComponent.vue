@@ -102,17 +102,10 @@ watch(() => props.selected, (value) => {
 },{ immediate: true })
 
 watch(() => output.value, (value) => { 
-	if(value) {
-		console.log("LIB", value)
-		emit('emitValue', valid.value ? output.value : null)
-	}
+	if(value) emit('emitValue', valid.value ? output.value : null)
+	else emit('emitValue', null)
 })
 
-/* watch(output, () => {
-  //Emit
-  emit('emitValue', valid.value ? output.value : null)
-})
- */
 watchEffect(() => {
   if (props.submitted) clean()
 })

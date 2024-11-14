@@ -290,7 +290,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
   href: "javascript:",
   class: "eit-btn-action",
   "data-bs-toggle": "dropdown"
-}, En = { class: "dropdown-menu dropdown-custom-menu" }, Tn = ["onClick"], Rn = ["onClick"], Nn = { class: "d-flex w-100 justify-content-between align-items-center d-lg-none text-end" }, Ln = /* @__PURE__ */ f("strong", null, "Acciones:", -1), Mn = { class: "d-flex flex-wrap gap-2 ms-3" }, qn = ["onClick"], Vn = ["onClick"], Hn = ["onClick"], zn = {
+}, En = { class: "dropdown-menu dropdown-custom-menu" }, Tn = ["onClick"], Rn = ["onClick"], Nn = { class: "d-flex w-100 justify-content-between align-items-center d-lg-none text-end" }, Mn = /* @__PURE__ */ f("strong", null, "Acciones:", -1), Ln = { class: "d-flex flex-wrap gap-2 ms-3" }, qn = ["onClick"], Vn = ["onClick"], Hn = ["onClick"], zn = {
   __name: "TableComponent",
   props: {
     //Data
@@ -484,8 +484,8 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
                       ])
                     ]),
                     f("div", Nn, [
-                      Ln,
-                      f("div", Mn, [
+                      Mn,
+                      f("div", Ln, [
                         (c(!0), u(k, null, W(e.actions, (m) => (c(), u(k, {
                           key: m.name
                         }, [
@@ -1044,7 +1044,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
       ])
     ]));
   }
-}, Lo = { class: "eit-progress eit-progress--30" }, Mo = { key: 1 }, qo = /* @__PURE__ */ f("span", { class: "spinner-border spinner-border-sm" }, null, -1), Vo = {
+}, Mo = { class: "eit-progress eit-progress--30" }, Lo = { key: 1 }, qo = /* @__PURE__ */ f("span", { class: "spinner-border spinner-border-sm" }, null, -1), Vo = {
   __name: "ProgressBarComponent",
   props: {
     percentage: {
@@ -1062,7 +1062,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
   },
   setup(e) {
     const t = e, n = N(() => parseFloat(t.percentage)), o = N(() => n.value === 0 ? 0 : 100 - n.value);
-    return (a, i) => (c(), u("div", Lo, [
+    return (a, i) => (c(), u("div", Mo, [
       f("div", {
         class: j(["eit-progress__bar", `eit-progress__bar--${t.type}`]),
         style: We(`width: ${t.percentage}%`)
@@ -1082,7 +1082,7 @@ const Ut = ["disabled"], Xt = /* @__PURE__ */ f("div", { class: "spinner-border 
             A(D(o.value) + "% ", 1)
           ], 64)) : h("", !0)
         ], 64)),
-        t.loading ? (c(), u("span", Mo, [
+        t.loading ? (c(), u("span", Lo, [
           qo,
           A(" Cargando... ")
         ])) : h("", !0)
@@ -1539,7 +1539,7 @@ function oe(e) {
     e.document
   )) || window.document).documentElement;
 }
-function Le(e) {
+function Me(e) {
   return ee(e) === "html" ? e : (
     // this is a quicker (but less type safe) way to save quite some bytes from the bundle
     // $FlowFixMe[incompatible-return]
@@ -1562,7 +1562,7 @@ function Ta(e) {
     if (o.position === "fixed")
       return null;
   }
-  var a = Le(e);
+  var a = Me(e);
   for (Je(a) && (a = a.host); I(a) && ["html", "body"].indexOf(ee(a)) < 0; ) {
     var i = te(a);
     if (i.transform !== "none" || i.perspective !== "none" || i.contain === "paint" || ["transform", "perspective"].indexOf(i.willChange) !== -1 || t && i.willChange === "filter" || t && i.filter && i.filter !== "none")
@@ -1607,14 +1607,14 @@ var Na = function(t, n) {
     placement: n.placement
   })) : t, At(typeof t != "number" ? t : Bt(t, Ce));
 };
-function La(e) {
+function Ma(e) {
   var t, n = e.state, o = e.name, a = e.options, i = n.elements.arrow, r = n.modifiersData.popperOffsets, s = Q(n.placement), l = et(s), p = [V, X].indexOf(s) >= 0, d = p ? "height" : "width";
   if (!(!i || !r)) {
     var v = Na(a.padding, n), y = Qe(i), _ = l === "y" ? q : V, O = l === "y" ? U : X, b = n.rects.reference[d] + n.rects.reference[l] - r[l] - n.rects.popper[d], x = r[l] - n.rects.reference[l], g = Oe(i), P = g ? l === "y" ? g.clientHeight || 0 : g.clientWidth || 0 : 0, m = b / 2 - x / 2, w = v[_], C = P - y[d] - v[O], S = P / 2 - y[d] / 2 + m, B = xe(w, S, C), R = l;
     n.modifiersData[o] = (t = {}, t[R] = B, t.centerOffset = B - S, t);
   }
 }
-function Ma(e) {
+function La(e) {
   var t = e.state, n = e.options, o = n.element, a = o === void 0 ? "[data-popper-arrow]" : o;
   a != null && (typeof a == "string" && (a = t.elements.popper.querySelector(a), !a) || Dt(t.elements.popper, a) && (t.elements.arrow = a));
 }
@@ -1622,8 +1622,8 @@ const qa = {
   name: "arrow",
   enabled: !0,
   phase: "main",
-  fn: La,
-  effect: Ma,
+  fn: Ma,
+  effect: La,
   requires: ["popperOffsets"],
   requiresIfExists: ["preventOverflow"]
 };
@@ -1672,7 +1672,7 @@ function vt(e) {
       _ -= E - o.width, _ *= l ? 1 : -1;
     }
   }
-  var L = Object.assign({
+  var M = Object.assign({
     position: s
   }, p && Va), G = d === !0 ? Ha({
     x: _,
@@ -1682,10 +1682,10 @@ function vt(e) {
     y: b
   };
   if (_ = G.x, b = G.y, l) {
-    var M;
-    return Object.assign({}, L, (M = {}, M[w] = P ? "0" : "", M[m] = g ? "0" : "", M.transform = (C.devicePixelRatio || 1) <= 1 ? "translate(" + _ + "px, " + b + "px)" : "translate3d(" + _ + "px, " + b + "px, 0)", M));
+    var L;
+    return Object.assign({}, M, (L = {}, L[w] = P ? "0" : "", L[m] = g ? "0" : "", L.transform = (C.devicePixelRatio || 1) <= 1 ? "translate(" + _ + "px, " + b + "px)" : "translate3d(" + _ + "px, " + b + "px, 0)", L));
   }
-  return Object.assign({}, L, (t = {}, t[w] = P ? b + "px" : "", t[m] = g ? _ + "px" : "", t.transform = "", t));
+  return Object.assign({}, M, (t = {}, t[w] = P ? b + "px" : "", t[m] = g ? _ + "px" : "", t.transform = "", t));
 }
 function za(e) {
   var t = e.state, n = e.options, o = n.gpuAcceleration, a = o === void 0 ? !0 : o, i = n.adaptive, r = i === void 0 ? !0 : i, s = n.roundOffsets, l = s === void 0 ? !0 : s, p = {
@@ -1797,7 +1797,7 @@ function ot(e) {
   return /auto|scroll|overlay|hidden/.test(n + a + o);
 }
 function Et(e) {
-  return ["html", "body", "#document"].indexOf(ee(e)) >= 0 ? e.ownerDocument.body : I(e) && ot(e) ? e : Et(Le(e));
+  return ["html", "body", "#document"].indexOf(ee(e)) >= 0 ? e.ownerDocument.body : I(e) && ot(e) ? e : Et(Me(e));
 }
 function we(e, t) {
   var n;
@@ -1805,7 +1805,7 @@ function we(e, t) {
   var o = Et(e), a = o === ((n = e.ownerDocument) == null ? void 0 : n.body), i = F(o), r = a ? [i].concat(i.visualViewport || [], ot(o) ? o : []) : o, s = t.concat(r);
   return a ? s : (
     // $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
-    s.concat(we(Le(r)))
+    s.concat(we(Me(r)))
   );
 }
 function Ke(e) {
@@ -1824,7 +1824,7 @@ function yt(e, t, n) {
   return t === Ot ? Ke(Ua(e, n)) : ue(t) ? Ga(t, n) : Ke(Xa(oe(e)));
 }
 function Za(e) {
-  var t = we(Le(e)), n = ["absolute", "fixed"].indexOf(te(e).position) >= 0, o = n && I(e) ? Oe(e) : e;
+  var t = we(Me(e)), n = ["absolute", "fixed"].indexOf(te(e).position) >= 0, o = n && I(e) ? Oe(e) : e;
   return ue(o) ? t.filter(function(a) {
     return ue(a) && Dt(a, o) && ee(a) !== "body";
   }) : [];
@@ -1895,12 +1895,12 @@ function $e(e, t) {
     bottom: T.bottom - C.bottom + g.bottom,
     left: C.left - T.left + g.left,
     right: T.right - C.right + g.right
-  }, L = e.modifiersData.offset;
-  if (y === _e && L) {
-    var G = L[a];
-    Object.keys(E).forEach(function(M) {
-      var ae = [X, U].indexOf(M) >= 0 ? 1 : -1, ie = [q, U].indexOf(M) >= 0 ? "y" : "x";
-      E[M] += G[ie] * ae;
+  }, M = e.modifiersData.offset;
+  if (y === _e && M) {
+    var G = M[a];
+    Object.keys(E).forEach(function(L) {
+      var ae = [X, U].indexOf(L) >= 0 ? 1 : -1, ie = [q, U].indexOf(L) >= 0 ? "y" : "x";
+      E[L] += G[ie] * ae;
     });
   }
   return E;
@@ -1944,25 +1944,25 @@ function ti(e) {
         allowedAutoPlacements: b
       }) : ne);
     }, []), C = t.rects.reference, S = t.rects.popper, B = /* @__PURE__ */ new Map(), R = !0, T = w[0], E = 0; E < w.length; E++) {
-      var L = w[E], G = Q(L), M = he(L) === pe, ae = [q, U].indexOf(G) >= 0, ie = ae ? "width" : "height", H = $e(t, {
-        placement: L,
+      var M = w[E], G = Q(M), L = he(M) === pe, ae = [q, U].indexOf(G) >= 0, ie = ae ? "width" : "height", H = $e(t, {
+        placement: M,
         boundary: d,
         rootBoundary: v,
         altBoundary: y,
         padding: p
-      }), Z = ae ? M ? X : V : M ? U : q;
+      }), Z = ae ? L ? X : V : L ? U : q;
       C[ie] > S[ie] && (Z = Ee(Z));
       var Se = Ee(Z), se = [];
       if (i && se.push(H[G] <= 0), s && se.push(H[Z] <= 0, H[Se] <= 0), se.every(function(fe) {
         return fe;
       })) {
-        T = L, R = !1;
+        T = M, R = !1;
         break;
       }
-      B.set(L, se);
+      B.set(M, se);
     }
     if (R)
-      for (var Pe = O ? 3 : 1, Me = function(ne) {
+      for (var Pe = O ? 3 : 1, Le = function(ne) {
         var ge = w.find(function(je) {
           var re = B.get(je);
           if (re)
@@ -1973,7 +1973,7 @@ function ti(e) {
         if (ge)
           return T = ge, "break";
       }, ye = Pe; ye > 0; ye--) {
-        var De = Me(ye);
+        var De = Le(ye);
         if (De === "break") break;
       }
     t.placement !== T && (t.modifiersData[o]._skip = !0, t.placement = T, t.reset = !0);
@@ -2086,20 +2086,20 @@ function ui(e) {
   } : Object.assign({
     mainAxis: 0,
     altAxis: 0
-  }, T), L = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null, G = {
+  }, T), M = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null, G = {
     x: 0,
     y: 0
   };
   if (S) {
     if (i) {
-      var M, ae = w === "y" ? q : V, ie = w === "y" ? U : X, H = w === "y" ? "height" : "width", Z = S[w], Se = Z + x[ae], se = Z - x[ie], Pe = _ ? -R[H] / 2 : 0, Me = P === pe ? B[H] : R[H], ye = P === pe ? -R[H] : -B[H], De = t.elements.arrow, fe = _ && De ? Qe(De) : {
+      var L, ae = w === "y" ? q : V, ie = w === "y" ? U : X, H = w === "y" ? "height" : "width", Z = S[w], Se = Z + x[ae], se = Z - x[ie], Pe = _ ? -R[H] / 2 : 0, Le = P === pe ? B[H] : R[H], ye = P === pe ? -R[H] : -B[H], De = t.elements.arrow, fe = _ && De ? Qe(De) : {
         width: 0,
         height: 0
-      }, ne = t.modifiersData["arrow#persistent"] ? t.modifiersData["arrow#persistent"].padding : jt(), ge = ne[ae], je = ne[ie], re = xe(0, B[H], fe[H]), qe = m ? B[H] / 2 - Pe - re - ge - E.mainAxis : Me - re - ge - E.mainAxis, Nt = m ? -B[H] / 2 + Pe + re + je + E.mainAxis : ye + re + je + E.mainAxis, Ve = t.elements.arrow && Oe(t.elements.arrow), Lt = Ve ? w === "y" ? Ve.clientTop || 0 : Ve.clientLeft || 0 : 0, at = (M = L == null ? void 0 : L[w]) != null ? M : 0, Mt = Z + qe - at - Lt, qt = Z + Nt - at, it = xe(_ ? Re(Se, Mt) : Se, Z, _ ? ce(se, qt) : se);
+      }, ne = t.modifiersData["arrow#persistent"] ? t.modifiersData["arrow#persistent"].padding : jt(), ge = ne[ae], je = ne[ie], re = xe(0, B[H], fe[H]), qe = m ? B[H] / 2 - Pe - re - ge - E.mainAxis : Le - re - ge - E.mainAxis, Nt = m ? -B[H] / 2 + Pe + re + je + E.mainAxis : ye + re + je + E.mainAxis, Ve = t.elements.arrow && Oe(t.elements.arrow), Mt = Ve ? w === "y" ? Ve.clientTop || 0 : Ve.clientLeft || 0 : 0, at = (L = M == null ? void 0 : M[w]) != null ? L : 0, Lt = Z + qe - at - Mt, qt = Z + Nt - at, it = xe(_ ? Re(Se, Lt) : Se, Z, _ ? ce(se, qt) : se);
       S[w] = it, G[w] = it - Z;
     }
     if (s) {
-      var st, Vt = w === "x" ? q : V, Ht = w === "x" ? U : X, le = S[C], Ae = C === "y" ? "height" : "width", rt = le + x[Vt], lt = le - x[Ht], He = [q, V].indexOf(g) !== -1, ct = (st = L == null ? void 0 : L[C]) != null ? st : 0, dt = He ? rt : le - B[Ae] - R[Ae] - ct + E.altAxis, ut = He ? le + B[Ae] + R[Ae] - ct - E.altAxis : lt, ft = _ && He ? Ra(dt, le, ut) : xe(_ ? dt : rt, le, _ ? ut : lt);
+      var st, Vt = w === "x" ? q : V, Ht = w === "x" ? U : X, le = S[C], Ae = C === "y" ? "height" : "width", rt = le + x[Vt], lt = le - x[Ht], He = [q, V].indexOf(g) !== -1, ct = (st = M == null ? void 0 : M[C]) != null ? st : 0, dt = He ? rt : le - B[Ae] - R[Ae] - ct + E.altAxis, ut = He ? le + B[Ae] + R[Ae] - ct - E.altAxis : lt, ft = _ && He ? Ra(dt, le, ut) : xe(_ ? dt : rt, le, _ ? ut : lt);
       S[C] = ft, G[C] = ft - le;
     }
     t.modifiersData[o] = G;
@@ -2374,7 +2374,7 @@ const $i = {
     de(() => o.selected, (b) => {
       b && (r.value = b);
     }, { immediate: !0 }), de(() => r.value, (b) => {
-      b && (console.log("LIB", b), a("emitValue", s.value ? r.value : null));
+      b ? a("emitValue", s.value ? r.value : null) : a("emitValue", null);
     }), Ne(() => {
       o.submitted && _();
     });
