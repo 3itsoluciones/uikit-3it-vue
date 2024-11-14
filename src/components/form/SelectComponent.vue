@@ -97,16 +97,15 @@ const handleSelectable = (option) => {
 }
 
 //Watch
-watch(
-  () => props.selected,
-  (value) => {
-    if (value) output.value = value
-  },
-  { immediate: true }
-)
+watch(() => props.selected, (value) => {
+  if (value) output.value = value
+},{ immediate: true })
 
-watch(() => output.value, (value) => {
-	if(value) emit('emitValue', valid.value ? output.value : null)
+watch(() => output.value, (value) => { 
+	if(value) {
+		console.log("LIB", value)
+		emit('emitValue', valid.value ? output.value : null)
+	}
 })
 
 /* watch(output, () => {
