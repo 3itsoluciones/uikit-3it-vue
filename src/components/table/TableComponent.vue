@@ -45,6 +45,15 @@ const props = defineProps({
     required: false,
     default: true
   },
+  //No result
+  noResultConfig: {
+    type: Object,
+    default: () => ({
+      type: 'info',
+      icon: 'fa-solid fa-info',
+      message: '<strong>No hay resultados</strong> para tu búsqueda.'
+    })
+  }
 })
 
 //EMITS
@@ -92,9 +101,9 @@ const handleRecordStatus = (row) => {
         <AlertComponent
           ref="alert"
           class="mb-3"
-          type="info"
-          icon="fa-solid fa-info"
-          message="<strong>No hay resultados</strong> para tu búsqueda."
+          :type="props.noResultConfig.type"
+          :icon="props.noResultConfig.icon"
+          :message="props.noResultConfig.message"
         />
       </template>
 
