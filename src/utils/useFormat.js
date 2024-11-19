@@ -11,6 +11,10 @@ export default function useFormat() {
     const date = dayjs(value, "YYYY-MM-DD").format('DD/MM/YYYY')
     return date
   }
+  function formatHour(value) {
+    const hour = dayjs(value).format('HH:mm')
+    return hour
+  }
   function formatDateToBack(value) {
     const date = dayjs(value).format('YYYY-MM-DD')
     return date
@@ -45,6 +49,7 @@ export default function useFormat() {
   }
   return { 
     formatDate, 
+    formatHour,
     formatDateToBack, 
     formatDateAgo, 
     formatRut, 
