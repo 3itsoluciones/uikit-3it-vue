@@ -335,6 +335,7 @@ const handleRecordStatus = (row) => {
       padding: 2px 10px;
       display: -webkit-inline-box;
       line-clamp: 1;
+      -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
       @extend .eit-bg--color-soft;
